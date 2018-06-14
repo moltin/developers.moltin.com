@@ -94,7 +94,7 @@ export default () => <Button productId="X" />
 
 ### Cart
 
-If you're displaying the "Add to Cart" [`Button`](shopkit-react.md#button) or [`Card`](shopkit-react.md#card) components, you'll want provide use the `<Cart />` component to provide your users with the ultimate checkout experience.
+You can use the Shopkit `<Cart />` component to provide a cart + checkout flow inside a modal.
 
 #### Usage
 
@@ -108,6 +108,28 @@ export default () => <Cart />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- |
-| ... | ... | ... | ... |
+| --- | --- | --- |
+| `color` | `#000` | No | Set a custom cart color |
+| `showItemCount` | `false` | No | Show the cart item count instead |
+
+### Product Grid
+
+You may display a grid of products using the `<ProductGrid />` component. Simply provide a Brand, Category or Collection ID and the component will render all associated products using the `<Product />` component.
+
+#### Usage
+
+```javascript
+import React from 'react'
+import { ProductGrid } from '@moltin/shopkit-react'
+
+export default () => <ProductGrid categoryId="X" />
+```
+
+#### Props
+
+| **Prop** | **Default** | **Required** | **Description** |
+| --- | --- | --- | --- |
+| `brandId` | `undefined` | No | Filter products by Brand |
+| `categoryId` | `undefined` | No | Filter products by Category |
+| `collectionId` | `undefined` | No | Filter products by Collection |
 
