@@ -33,7 +33,7 @@ The components below can be imported and configured for use inside your applicat
 
 The `<Card />` component is great for places you wish to embed single product views. The Card is also available without the description in portrait mode.
 
-![](../.gitbook/assets/product-widget-with-description%20%281%29.jpg)
+![Card with description](../.gitbook/assets/product-widget-with-description%20%281%29.jpg)
 
 #### Usage
 
@@ -59,7 +59,7 @@ export default () => <Card productId="X" showDescription />
 
 The `<Button />` component is great for places where you wish to embed eCommerce functionality. With a single button you can provide "Add to Cart" functionality with a quantity picker.
 
-![](../.gitbook/assets/screen-shot-2018-06-18-at-13.27.10.png)
+![Button with quantity select](../.gitbook/assets/screen-shot-2018-06-18-at-13.27.10.png)
 
 #### Usage
 
@@ -73,16 +73,16 @@ export default () => <Button id="X" showQty />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
 | `showQty` | `true` | No | Do you want to show the quantity field? |
 | `btnText` | Add to Cart | No | Provide custom button text |
-| `onSuccess` | `undefined` | No | Provide a custom function after add to cart is successful |
-| `onError` | `undefined` | No | Provide a custom function when add to cart fails |
 
 ### Cart
 
 You can use the Shopkit `<Cart />` component to provide a cart + checkout flow inside a modal.
+
+![](../.gitbook/assets/shopping-cart.png)
 
 #### Usage
 
@@ -120,4 +120,6 @@ export default () => <ProductGrid categoryId="X" />
 | `brandId` | `undefined` | No | Filter products by Brand |
 | `categoryId` | `undefined` | No | Filter products by Category |
 | `collectionId` | `undefined` | No | Filter products by Collection |
+
+
 
