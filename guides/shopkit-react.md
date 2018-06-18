@@ -19,7 +19,7 @@ ReactDOM.render(
   <ShopkitProvider clientId='j6hSilXRQfxKohTndUuVrErLcSJWP15P347L6Im0M4'}}>
     <App />
   </ShopkitProvider>,
-  document.getElementById('root')
+  document.querySelector('#root')
 )
 ```
 
