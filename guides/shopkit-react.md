@@ -10,20 +10,20 @@ Using [npm](https://www.npmjs.com/get-npm) or [Yarn](http://yarnpkg.com/), you'l
 npm install --save @moltin/shopkit-react
 ```
 
-Next inside your application, you will need to wrap your root component with the `<ShopkitProvider />`. You may also specify a global `clientId`.
+Next, inside your application, you need to wrap your root component with the `<ShopkitProvider />` and set your `clientId`. You can also set a custom `color`.
 
 ```javascript
 import { Provider as ShopkitProvider } from '@moltin/shopkit-react'
 
 ReactDOM.render(
-  <ShopkitProvider clientId='j6hSilXRQfxKohTndUuVrErLcSJWP15P347L6Im0M4'}}>
+  <ShopkitProvider clientId='j6hSilXRQfxKohTndUuVrErLcSJWP15P347L6Im0M4' color='red'>
     <App />
   </ShopkitProvider>,
   document.querySelector('#root')
 )
 ```
 
-Next you can use the components below inside your application and they will all share the same Moltin project. You can additionally specify a `color` that will be applied to buttons and borders.
+Next you can use the components below inside your application and they will all share the same Moltin project.
 
 ## Components
 
