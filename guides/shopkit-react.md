@@ -10,15 +10,15 @@ Using [npm](https://www.npmjs.com/get-npm) or [Yarn](http://yarnpkg.com/), you'l
 npm install --save @moltin/shopkit-react
 ```
 
-Next, inside your application, you need to wrap your root component with the `<ShopkitProvider />` and set your `clientId`. You can also set a custom `color`.
+Next, inside your application, you need to wrap your root component with the `<Shopkit />` and set your `clientId`. You can also set a custom `color`.
 
 ```javascript
-import { Provider as ShopkitProvider } from '@moltin/shopkit-react'
+import { Shopkit } from '@moltin/shopkit-react'
 
 ReactDOM.render(
-  <ShopkitProvider clientId='j6hSilXRQfxKohTndUuVrErLcSJWP15P347L6Im0M4' color='red'>
+  <Shopkit clientId='j6hSilXRQfxKohTndUuVrErLcSJWP15P347L6Im0M4' color='red'>
     <App />
-  </ShopkitProvider>,
+  </Shopkit>,
   document.querySelector('#root')
 )
 ```
@@ -29,19 +29,19 @@ Next you can use the components below inside your application and they will all 
 
 The components below can be imported and configured for use inside your application.
 
-### Card
+### Product
 
-The `<Card />` component is great for places you wish to embed single product views. The Card is also available without the description in portrait mode.
+The `<Product />` component is great for places you wish to embed single product views. The Product component is also available without the description in portrait mode.
 
-![Card with description](../.gitbook/assets/product-widget-with-description%20%281%29.jpg)
+![Product with description and quantity picker](../.gitbook/assets/product-widget-with-description%20%281%29.jpg)
 
 #### Usage
 
 ```javascript
 import React from 'react'
-import { Card } from '@moltin/shopkit-react'
+import { Product } from '@moltin/shopkit-react'
 
-export default () => <Card productId="X" showDescription />
+export default () => <Product id="X" showDescription showQty />
 ```
 
 #### Props
@@ -55,11 +55,36 @@ export default () => <Card productId="X" showDescription />
 | `hideBtn` | `false` | No | Hide the add to cart button |
 | `btnText` | Add to Cart | No | Provide custom button text |
 
+You may also use a function to render your own product view with render props. If you opt to use render props, you will need to use the `<Button />` component to handle the add to cart functionality.
+
+#### Render Props
+
+```javascript
+import React from 'react
+import { Product, Button } from '@moltin/react-shopkit'
+
+export default () => (
+  <Product id="1f6eaa8a-80dc-4b1d-a66d-4cc3a1f7f3bb">
+    {({ loading, error, data }) => {
+      if (loading) return <p>Loading!</p>
+      if (error) return <p>Error occured!</p>
+
+      return (
+        <div>
+          <h2>{data.name}</h2>
+          <Button id={data.id} />
+        </div>
+      )
+    }}
+  </Product>
+)
+```
+
 ### Button
 
 The `<Button />` component is great for places where you wish to embed eCommerce functionality. With a single button you can provide "Add to Cart" functionality with a quantity picker.
 
-![Button with quantity select](../.gitbook/assets/screen-shot-2018-06-18-at-13.27.10.png)
+![Button with quantity picker](../.gitbook/assets/screen-shot-2018-06-18-at-13.27.10.png)
 
 #### Usage
 
@@ -75,8 +100,8 @@ export default () => <Button id="X" showQty />
 | **Prop** | **Default** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
-| `showQty` | `true` | No | Do you want to show the quantity field? |
-| `btnText` | Add to Cart | No | Provide custom button text |
+| `showQty` | `true` | No | Show the quantity picker |
+| `text` | Add to Cart | No | Provide custom button text |
 
 ### Cart
 
