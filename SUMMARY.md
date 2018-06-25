@@ -46,7 +46,7 @@
 
 ## Guides
 
-* [Shopkit React](guides/shopkit-react.md)
+* [React Shopkit](guides/react-shopkit.md)
 
 ## Flow Guides
 

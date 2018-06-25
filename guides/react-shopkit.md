@@ -1,4 +1,4 @@
-# Shopkit React
+# React Shopkit
 
 Moltin Shopkit is a minimalist React component library that enables developers to easily embed commerce inside React powered applications.
 
