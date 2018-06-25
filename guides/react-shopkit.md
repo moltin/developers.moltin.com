@@ -133,6 +133,8 @@ export default () => <Cart />
 
 You may display a grid of products using the `<ProductGrid />` component. By default it will return all your products, paginated by `maxProducts`. You can also filter these products by Brand, Category and Collection.
 
+![Product Grid with description and quantity pickers](../.gitbook/assets/product-tile.jpg)
+
 #### Usage
 
 ```javascript
