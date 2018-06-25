@@ -47,17 +47,22 @@ export default () => <Product id="X" showDescription showQty />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
 | `showDescription` | `false` | No | Provide this prop to render the description in landscape mode |
 | `showSKU` | `false` | No | Display your product SKU |
 | `showQty` | `true` | No | Display the quantity picker |
 | `hideBtn` | `false` | No | Hide the add to cart button |
-| `btnText` | Add to Cart | No | Provide custom button text |
-
-You may also use a function to render your own product view with render props. If you opt to use render props, you will need to use the `<Button />` component to handle the add to cart functionality.
+| `btnText` | Add to Cart | No | Provide custom button `text` |
+| `children` | `undefined` | No | Provide a view with render props |
 
 #### Render Props
+
+You may also use a function to render your own product view with render props.
+
+{% hint style="info" %}
+If you opt to use render props, you will need to use the `<Button />` component to handle the add to cart functionality.
+{% endhint %}
 
 ```javascript
 import React from 'react
