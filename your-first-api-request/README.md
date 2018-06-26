@@ -1,4 +1,6 @@
-# Quick Start
+# Your first API requests
+
+The Moltin API is available to 
 
 ### 1. Obtain API keys
 
