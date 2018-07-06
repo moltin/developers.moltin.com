@@ -14,8 +14,8 @@ The following components are supported:
 
 * [`<Button />`](shopkit.md#button)
 * [`<Product />`](shopkit.md#product)
-* &lt;ProductGrid /&gt;
-* &lt;Cart /&gt;
+* [`<ProductGrid />`](shopkit.md#product-grid)
+* [`<Cart />`](shopkit.md#cart)
 
 ## Installation
 
