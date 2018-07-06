@@ -4,7 +4,15 @@
 * [Getting Started](getting-started.md)
 * [Your First API Request](your-first-api-request.md)
 * [Typical Checkout Flow](typical-checkout-flow.md)
-* [Quickstarts](quickstarts.md)
+* [Quickstarts](quickstarts/README.md)
+  * [React](quickstarts/react.md)
+  * [Angular](quickstarts/angular.md)
+  * [Node.js](quickstarts/node.js.md)
+  * [Next.js](quickstarts/next.js.md)
+  * [Shopkit](quickstarts/shopkit.md)
+  * [Swift](quickstarts/swift.md)
+  * [Vue](quickstarts/vue.md)
+  * [GraphQL](quickstarts/graphql.md)
 
 ## Developer Tools
 
