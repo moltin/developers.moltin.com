@@ -76,7 +76,7 @@ curl -X POST "https://api.moltin.com/v2/flows/wishlist/entries" \
 
 ### Create a customer wishlist
 
-The Moltin API allows [implicit authentication](../security/authentication.md) requests to `/flows` so to best protect customer IDs from leaking, you'll want to create a relationship from the customer to the wishlist.
+The Moltin API allows [implicit authentication]() requests to `/flows` so to best protect customer IDs from leaking, you'll want to create a relationship from the customer to the wishlist.
 
 Go ahead and create a Flow for customers if you do not already have one.
 

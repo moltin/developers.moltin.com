@@ -1,0 +1,36 @@
+# SDKs
+
+Moltin officially mains and supports both a [JavaScript SDK](https://github.com/moltin/js-sdk) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven by happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
+
+Full details on installing the SDKs and making [your first API request](../your-first-api-request.md) is documented [here](../your-first-api-request.md#1-install-sdk-recommended).
+
+## JavaScript SDK
+
+Supporting both [Node.js](https://nodejs.org) and the client-side, the JS SDK silently handles authentication token refresh and automatic cart reference generation as well as a simple DSL for accessing resources.
+
+The JS SDK is available via [Yarn](https://yarnpkg.com/en/package/@moltin/sdk) and [npm](https://www.npmjs.com/package/@moltin/sdk) to install.
+
+```bash
+yarn add @moltin/sdk # npm install --save @moltin/sdk
+```
+
+Browse the [README](https://github.com/moltin/js-sdk#moltin-javascript-sdk) for further instructions.
+
+## Swift SDK
+
+You'll want to install the Swift SDK to support your iOS, macOS, watchOS and tvOS applications.
+
+The Swift SDK is available to install via Cocoapods, Carthage and Swift Package Manager.
+
+Browse the [README](https://github.com/moltin/ios-sdk#moltin-ios-sdk) for further instructions.
+
+## Other SDKs
+
+We happily provide community driven SDKs that provide easy access to the Moltin API using your favorite language.
+
+Not all API features are available but feel free to contribute via a Pull Request.
+
+* [Ruby](https://github.com/moltin/ruby-sdk)
+* [PHP](https://github.com/moltin/php-sdk)
+* [Python](https://github.com/moltin/python-sdk)
+

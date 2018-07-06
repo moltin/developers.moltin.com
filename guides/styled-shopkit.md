@@ -1,4 +1,10 @@
-# React Shopkit
+# Styled Shopkit
+
+**Styled Shopkit** is built on Shopkit and enables you to embed ready made components that come with their own CSS and JSX.
+
+{% hint style="info" %}
+You can use [Shopkit](styled-shopkit.md) to render your own views and handle logic.
+{% endhint %}
 
 Moltin Shopkit is a minimalist React component library that enables developers to easily embed commerce inside React powered applications.
 
