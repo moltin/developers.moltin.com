@@ -1,6 +1,5 @@
 # Table of contents
 
-* [Welcome 👋](README.md)
 * [Introduction](introduction.md)
 * [Getting Started](getting-started.md)
 * [Your First API Request](your-first-api-request.md)
