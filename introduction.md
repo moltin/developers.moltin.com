@@ -1,4 +1,4 @@
-# Introduction
+# Welcome to Moltin
 
 Moltin is a microservice solution offering flexible API and scalable services tailored to the individual business needs. Use it to create a complete and bespoke e-commerce experience from managing inventory to checking out an order.
 

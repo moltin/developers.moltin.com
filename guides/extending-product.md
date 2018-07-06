@@ -1,7 +1,3 @@
----
-description: A walk through of how to extended the product object
----
-
 # Extending Product
 
 First step is to navigate to Flows

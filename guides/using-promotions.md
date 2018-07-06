@@ -1,7 +1,3 @@
----
-description: How to apply a discount to an entire brand/category
----
-
 # Using Promotions
 
 You need to set up the promotion first and add promotion codes to the promotion id.
