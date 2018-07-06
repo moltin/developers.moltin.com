@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](introduction.md)
+* [Welcome to Moltin](introduction.md)
 * [Getting Started](getting-started.md)
 * [Your First API Request](your-first-api-request.md)
 * [Typical Checkout Flow](typical-checkout-flow.md)
