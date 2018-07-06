@@ -4,6 +4,10 @@ One of the quickest ways to tell customers their orders have been shipped is by 
 
 Using [Twilio](https://www.twilio.com) and [Zeit Now](https://zeit.co/now) we can deploy a function that is automatically triggered on `order.shipped`.
 
+## How to use
+
+This guide will walk you through extending the Order resource via the Flows \(Custom Data\) API and deploying a function to handle sending the SMS.
+
 ## 1. Create a new Flow
 
 With the power of Flows we can extend the Moltin API with our own custom data. Let's extend the orders resource by creating a new flow.
@@ -84,12 +88,33 @@ curl -X POST https://api.moltin.com/v2/fields \
 
 ## 3. Deploy the function
 
-The function is available to clone from [GitHub](https://github.com/moltin-examples/moltin-twilio-shipping-sms) and designed to deploy to [Zeit Now](https://zeit.co/now). You'll need your Moltin client\_id and client\_secret during [setup](https://github.com/moltin-examples/moltin-twilio-shipping-sms#-setup).
+To successfully deploy the function you will need:
+
+* Account with Twilio
+* Account with Moltin
+* Account with Zeit Now
 
 ```bash
 git clone git@github.com:moltin-examples/moltin-twilio-shipping-sms.git
 cd moltin-twilio-shipping-sms
 npm install
+```
+
+Before you can deploy the function, you'll need to configure the `.env` with the required environment variables below to successfully deploy the function. You can see more about the following over at [GitHub](https://github.com/moltin-examples/moltin-twilio-shipping-sms#-setup).
+
+Inside the `moltin-twilio-shipping-sms` directory, **create a file** called `.env` and add the following:
+
+* `MOLTIN_CLIENT_ID`
+* `MOLTIN_CLIENT_SECRET`
+* `MOLTIN_WEBHOOK_SECRET`
+* `TWILIO_ACCOUNT_SID`
+* `TWILIO_AUTH_TOKEN`
+* `TWILIO_FROM_NUMBER`
+* `TWILIO_SMS_BODY`
+
+Once done, you're ready to deploy the function to Zeit Now! You'll need to install the `now-cli` if you don't already have it.
+
+```bash
 npm i -g now # if not already installed
 now
 ```
@@ -122,4 +147,6 @@ curl -X POST https://api.moltin.com/v2/integrations \
         }
      }'
 ```
+
+
 
