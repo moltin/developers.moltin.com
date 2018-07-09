@@ -58,14 +58,11 @@ curl -X POST https://api.moltin.com/v2/fields \
 
 ## 3. Deploy the function
 
-The function is available to clone from [GitHub](https://github.com/moltin-examples/moltin-short-order-id) and designed to deploy to [Zeit Now](https://zeit.co/now). You'll need your Moltin `client_id` and `client_secret` during [setup](https://github.com/moltin-examples/moltin-short-order-id#-setup).
+Using the [Now CLI](https://zeit.co/now) you can deploy directly from [GitHub](https://github.com/moltin-examples/short-order-id) and provide your store `client_id` and `client_secret`. You'll also want to create set `MOLTIN_WEBHOOK_SECRET` to a secure random token to protect unauthorized requests.
 
 ```bash
-git clone git@github.com:moltin-examples/moltin-short-order-id.git
-cd moltin-short-order-id
-npm install
-npm i -g now # if not already installed
-now
+npm i -g now # unless installed already
+now moltin-examples/short-order-id -e MOLTIN_CLIENT_ID=x MOLTIN_CLIENT_SECRET=x MOLTIN_WEBHOOK_SECRET=x
 ```
 
 {% hint style="warning" %}
@@ -74,7 +71,7 @@ Take note of the URL that is returned on successful deployment to Now.
 
 ## 4. Create a new webhook
 
-With the function deployed we can now tell Moltin to start subscribing to new orders created.
+With the function deployed we can now tell Moltin to start subscribing to new orders created. You'll also need to provide `MOLTIN_WEBHOOK_SECRET` as defined above.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/integrations \
@@ -91,7 +88,8 @@ curl -X POST https://api.moltin.com/v2/integrations \
           ],
           "integration_type": "webhook",
           "configuration": {
-            "url": "INSERT_URL_OF_FUNCTION_HERE"
+            "url": "INSERT_URL_OF_FUNCTION_HERE",
+            "secret_key": "MOLTIN_WEBHOOK_SECRET_VALUE_HERE"
           }
         }
      }'
