@@ -23,6 +23,7 @@
 
 ## Guides
 
+* [Custom Data](guides/custom-data.md)
 * [Related Products](guides/related-products.md)
 * [Email Receipts](guides/email-receipts.md)
 * [Short Order ID](guides/short-order-id.md)
@@ -33,5 +34,6 @@
 * [Shipping SMS](guides/shipping-sms.md)
 * [Handling Tax](guides/handling-tax.md)
 * [Using Promotions](guides/using-promotions.md)
+* [Create a Blog](guides/create-a-blog.md)
 * [Extending Product](guides/extending-product.md)
 
