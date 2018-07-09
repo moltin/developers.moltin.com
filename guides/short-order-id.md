@@ -6,7 +6,18 @@ Quite often you will interact with a customer and using a \`uuid\` to reference 
 
 One way to solve this issue would be to use the Custom Data API \(aka Flows\) to assign a field for `short_id` on an Order.
 
-## 1. Create a new Flow
+## 1. Get your access token
+
+You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
+
+```bash
+curl -X "POST" "https://api.moltin.com/oauth/access_token" \
+     -d "client_id=XXXX" \
+     -d "client_secret=XXXX" \
+     -d "grant_type=client_credentials"
+```
+
+## 2. Create a new Flow
 
 With the power of Flows we can extend the Moltin API with our own custom data. Let's extend the orders resource by creating a new flow.
 
@@ -31,7 +42,7 @@ curl -X POST https://api.moltin.com/v2/flows \
 
 Take note of the ID that is returned. You'll need this below.
 
-## 2. Create a Flow Field
+## 3. Create a Flow Field
 
 ```bash
 curl -X POST https://api.moltin.com/v2/fields \
@@ -56,7 +67,7 @@ curl -X POST https://api.moltin.com/v2/fields \
    
 ```
 
-## 3. Deploy the function
+## 4. Deploy the function
 
 Using the [Now CLI](https://zeit.co/now) you can deploy directly from [GitHub](https://github.com/moltin-examples/short-order-id) and provide your store `client_id` and `client_secret`. You'll also want to create set `MOLTIN_WEBHOOK_SECRET` to a secure random token to protect unauthorized requests.
 
@@ -69,7 +80,7 @@ now moltin-examples/short-order-id -e MOLTIN_CLIENT_ID=x MOLTIN_CLIENT_SECRET=x 
 Take note of the URL that is returned on successful deployment to Now.
 {% endhint %}
 
-## 4. Create a new webhook
+## 5. Create a new webhook
 
 With the function deployed we can now tell Moltin to start subscribing to new orders created. You'll also need to provide `MOLTIN_WEBHOOK_SECRET` as defined above.
 

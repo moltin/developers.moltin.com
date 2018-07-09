@@ -2,11 +2,20 @@
 
 One of the quickest ways to tell customers their orders have been shipped is by SMS. Using [Twilio](https://www.twilio.com) and [Zeit Now](https://zeit.co/now) we can deploy a function that is automatically triggered on `order.shipped`✨
 
-## How to use
+This guide will walk you through extending the Order resource via the Flows \([Custom Data](https://docs.moltin.com/advanced/custom-data)\) API and deploying a function to handle sending the SMS.
 
-This guide will walk you through extending the Order resource via the Flows \(Custom Data\) API and deploying a function to handle sending the SMS.
+## 1. Get your access token
 
-## 1. Create a new Flow
+You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
+
+```bash
+curl -X "POST" "https://api.moltin.com/oauth/access_token" \
+     -d "client_id=XXXX" \
+     -d "client_secret=XXXX" \
+     -d "grant_type=client_credentials"
+```
+
+## 2. Create a new Flow
 
 With the power of Flows we can extend the Moltin API with our own custom data. Let's extend the orders resource by creating a new flow.
 
@@ -31,7 +40,7 @@ curl -X POST https://api.moltin.com/v2/flows \
 
 Take note of the ID that is returned. You'll need this below.
 
-## 2. Create a few Flow Fields
+## 3. Create a few Flow Fields
 
 {% hint style="info" %}
 Replace `FLOW_ID` with the ID of the `orders` Flow you created.
@@ -84,7 +93,7 @@ curl -X POST https://api.moltin.com/v2/fields \
      }'
 ```
 
-## 3. Deploy the function
+## 4. Deploy the function
 
 To successfully deploy the function you will need:
 
@@ -105,14 +114,13 @@ You'll need the following ENV variables to successfully deploy the function.
 ```bash
 npm i -g now # unless installed already
 now moltin-examples/short-order-id -e MOLTIN_CLIENT_ID=x MOLTIN_CLIENT_SECRET=x MOLTIN_WEBHOOK_SECRET=x TWILIO_ACCOUNT_SID=x TWILIO_AUTH_TOKEN=x TWILIO_FROM_NUMBER=x TWILIO_SMS_BODY=x
-
 ```
 
 {% hint style="warning" %}
 Take note of the URL that is returned on successful deployment to Now.
 {% endhint %}
 
-## 4. Create a new webhook
+## 5. Create a new webhook
 
 With the function deployed we can now tell Moltin to start subscribing to new orders created.
 
