@@ -22,6 +22,21 @@ You'll want to install the Swift SDK to support your iOS, macOS, watchOS and tvO
 
 The Swift SDK is available to install via Cocoapods, Carthage and Swift Package Manager.
 
+```swift
+//In your podfile
+pod 'Moltin', '~> 3.0.11'
+
+//Then run pod install in your terminal to install
+```
+
+Once the SDK is installed to your workspace you are ready to use it anywhere you want.  
+
+```swift
+import moltin
+
+let moltin: Moltin = Moltin(withClientID: 'xxxx')
+```
+
 Browse the [README](https://github.com/moltin/ios-sdk#moltin-ios-sdk) for further instructions.
 
 ## Other SDKs
