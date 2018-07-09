@@ -1,8 +1,6 @@
 # Shipping SMS
 
-One of the quickest ways to tell customers their orders have been shipped is by SMS.
-
-Using [Twilio](https://www.twilio.com) and [Zeit Now](https://zeit.co/now) we can deploy a function that is automatically triggered on `order.shipped`.
+One of the quickest ways to tell customers their orders have been shipped is by SMS. Using [Twilio](https://www.twilio.com) and [Zeit Now](https://zeit.co/now) we can deploy a function that is automatically triggered on `order.shipped`✨
 
 ## How to use
 
@@ -90,19 +88,11 @@ curl -X POST https://api.moltin.com/v2/fields \
 
 To successfully deploy the function you will need:
 
-* Account with Twilio
-* Account with Moltin
-* Account with Zeit Now
+* Account with [Twilio](https://www.twilio.com/)
+* Account with [Moltin](https://dashboard.moltin.com/signup)
+* Account with [Zeit](https://zeit.co/now)
 
-```bash
-git clone git@github.com:moltin-examples/moltin-twilio-shipping-sms.git
-cd moltin-twilio-shipping-sms
-npm install
-```
-
-Before you can deploy the function, you'll need to configure the `.env` with the required environment variables below to successfully deploy the function. You can see more about the following over at [GitHub](https://github.com/moltin-examples/moltin-twilio-shipping-sms#-setup).
-
-Inside the `moltin-twilio-shipping-sms` directory, **create a file** called `.env` and add the following:
+You'll need the following ENV variables to successfully deploy the function.
 
 * `MOLTIN_CLIENT_ID`
 * `MOLTIN_CLIENT_SECRET`
@@ -112,11 +102,10 @@ Inside the `moltin-twilio-shipping-sms` directory, **create a file** called `.en
 * `TWILIO_FROM_NUMBER`
 * `TWILIO_SMS_BODY`
 
-Once done, you're ready to deploy the function to Zeit Now! You'll need to install the `now-cli` if you don't already have it.
-
 ```bash
-npm i -g now # if not already installed
-now
+npm i -g now # unless installed already
+now moltin-examples/short-order-id -e MOLTIN_CLIENT_ID=x MOLTIN_CLIENT_SECRET=x MOLTIN_WEBHOOK_SECRET=x TWILIO_ACCOUNT_SID=x TWILIO_AUTH_TOKEN=x TWILIO_FROM_NUMBER=x TWILIO_SMS_BODY=x
+
 ```
 
 {% hint style="warning" %}
@@ -142,7 +131,8 @@ curl -X POST https://api.moltin.com/v2/integrations \
           ],
           "integration_type": "webhook",
           "configuration": {
-            "url": "INSERT_URL_OF_FUNCTION_HERE"
+            "url": "INSERT_URL_OF_FUNCTION_HERE",
+            "secret_key": "MOLTIN_WEBHOOK_SECRET_VALUE_HERE"
           }
         }
      }'
