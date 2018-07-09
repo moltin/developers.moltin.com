@@ -1,20 +1,86 @@
+---
+description: >-
+  Extending the product object is a great way to customize the object to have
+  all of the information you need to display a product.
+---
+
 # Extending Product
 
-First step is to navigate to Flows
+## 1. Get your access token
 
-![](../.gitbook/assets/screen-shot-2018-06-13-at-12.48.58-pm.png)
+You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
 
-Then create a flow \(the create button in the top right\).  The import part here is the slug.  The slug will be the object you want to extend.  In this case use products.  Also make sure it is enabled.
+```bash
+curl -X "POST" "https://api.moltin.com/oauth/access_token" \
+     -d "client_id=XXXX" \
+     -d "client_secret=XXXX" \
+     -d "grant_type=client_credentials"
+```
 
-![](../.gitbook/assets/screen-shot-2018-06-13-at-12.49.46-pm.png)
+## 2. Create a new Flow
 
-Then from the flows view, hit the eyeball on the right side to navigate into the flow.  Once there click on the right hand side to add a field to the flow.  The field will be the actual value that is added to the schema.
+ Let's extend the moltin products resource by creating a new flow.
 
-![](../.gitbook/assets/screen-shot-2018-06-13-at-12.53.11-pm.png)
+{% hint style="info" %}
+If you already have a Flow for `products`, skip to [Create a Flow Field](short-order-id.md#2-create-a-flow-field). You'll need the ID of the products Flow to continue.
+{% endhint %}
 
-The slug used here will be how the field will be named in the schema.  For example slug review will be add a key review to the schema.
+```bash
+curl -X POST https://api.moltin.com/v2/flows \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+        "data": {
+          "type": "flow",
+          "name": "products extended",
+          "slug": "products",
+          "description": "Extend products resource with a custom flow so it can have all of the JSON you want and need.",
+          "enabled": true
+        }
+     }'
+```
 
-Now when you navigate to Products, you will see the custom field you just added.
+Take note of the ID that is returned. You'll need this below.
 
-![](../.gitbook/assets/screen-shot-2018-06-13-at-12.54.34-pm.png)
+## 3. Create a Flow Field.
+
+This field will be returned when you call the products object now.  In the below example we will add a review field so that products can now have a review tied to them.  \(Replace flow id with the above ID that was generated.\)
+
+```bash
+curl -X POST https://api.moltin.com/v2/fields \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+        "data": {
+          "type": "field",
+          "name": "review",
+          "slug": "review",
+          "description": "This is a review about the product",
+          "unique": true,
+          "enabled": true,
+          "relationships": {
+            "flow": {
+              "type": "flow",
+              "id": "FLOW_ID"
+            }
+          }
+        }
+     }'
+```
+
+## 4. Confirm your new field.
+
+Fetch some products and confirm the new field.  Note this new field will be available in the dashboard as custom data as well.
+
+```bash
+curl -X GET https://api.moltin.com/v2/products \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+```
+
+
+
+
+
+
 
