@@ -1,10 +1,8 @@
 # Create a Wishlist
 
-You can use the Moltin API to create wishlist functionality for your project. By design, we provide the tools to create extensive eCommerce functionality with the power of flows.
+You can use the Moltin API to extend your stores functionality by providing users the ability to save products to a wishlist.
 
-Using Flows to create a wishlist allows you to extend the functionality for your specific project and customize the entire experience for your users.
-
-### Create a custom Flow
+## 1. Create a new custom Flow
 
 Using the Moltin API, go ahead and create a flow for "**Wishlist**".
 
@@ -23,11 +21,13 @@ curl -X POST "https://api.moltin.com/v2/flows" \
     }'
 ```
 
-📝 Make a note of the created **Flow ID** as you'll to replace `WISHLIST_FLOW_ID` below.
+{% hint style="warning" %}
+Make sure to take note of the Flow ID returned, you'll need this below as `WISHLIST_FLOW_ID`.
+{% endhint %}
 
-### Create a Field
+## 2. Create a new Field
 
-Now you'll need to create a Flow Field so you can keep a record of a customers desired products. _This field should be marked as optional._
+In this step we will create a field for \`products\`. This field will store the customers desired products.
 
 ```bash
 curl -X POST "https://api.moltin.com/v2/fields" \
@@ -59,9 +59,9 @@ curl -X POST "https://api.moltin.com/v2/fields" \
     }'
 ```
 
-### Create an empty Entry
+## Create a Flow Entry
 
-Before we can associate products to wishlist entries, we must first create an empty entry that will next be used to relate products to the wishlist entry.
+With our custom Flow configured, we next create an empty Entry so we can associate products.
 
 ```bash
 curl -X POST "https://api.moltin.com/v2/flows/wishlist/entries" \
@@ -74,14 +74,68 @@ curl -X POST "https://api.moltin.com/v2/flows/wishlist/entries" \
     }'
 ```
 
-### Create a customer wishlist
+## 4. Add Product to Wishlist
 
-The Moltin API allows [implicit authentication]() requests to `/flows` so to best protect customer IDs from leaking, you'll want to create a relationship from the customer to the wishlist.
+With our custom Flow entry, we can now associate products with a wishlist entry.
 
-Go ahead and create a Flow for customers if you do not already have one.
+{% hint style="info" %}
+You'll need `ENTRY_ID` and `PRODUCT_FIELD_SLUG` from above to complete this request.
+{% endhint %}
 
 ```bash
-curl -X POST "https://api.moltin.com/v2/flows" \
+curl -X POST https://api.moltin.com/v2/flows/wishlist/entries/{ENTRY_ID}/relationships/{PRODUCT_FIELD_SLUG} \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+      "data": [
+        {
+            "type": "product",
+            "id": "ba9ba29d-06da-4ba9-9e2e-f0e776703324"
+        }
+      ]
+    }'
+```
+
+## 5. Get all Wishlists
+
+```bash
+curl https://api.moltin.com/v2/flows/wishlist \
+     -H "Authorization: Bearer XXXX"
+```
+
+The response will contain the associated products \*\*per entry\*\* like below.
+
+```javascript
+{
+  "data": {
+    "id": "{ENTRY_ID}",
+    "type": "entry",
+    "relationships": {
+      "products": {
+        "data": [
+          {
+            "type": "product",
+            "id": "ba9ba29d-06da-4ba9-9e2e-f0e776703324"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+Due to the `implicit` grant type, it is important we connect wishlist and customers. We'll do that next by extending the customer resource.
+
+## 6. Create a Customer Flow
+
+We now need to associate a wishlist to a customer.
+
+{% hint style="info" %}
+If you already have a Flow for `customers`, skip this step.
+{% endhint %}
+
+```bash
+curl -X POST https://api.moltin.com/v2/flows \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
@@ -95,12 +149,12 @@ curl -X POST "https://api.moltin.com/v2/flows" \
     }'
 ```
 
-📝 Make a note of the created **Flow ID** as you'll to replace `CUSTOMER_FLOW_ID` below.
+## 7. Configure relationship
 
-### Configure customers and wishlist flow
+Now let’s create the relationships field that will link a customer to a wishlist \(note that we’re going to create a 'one to many' relationship because we might want customers to create multiple wishlists\):
 
 ```bash
-curl -X POST "https://api.moltin.com/v2/fields" \
+curl -X POST https://api.moltin.com/v2/fields \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
@@ -120,7 +174,7 @@ curl -X POST "https://api.moltin.com/v2/fields" \
           "flow": {
             "data": {
               "type": "flow",
-              "id": "CUSTOMER_FLOW_ID"
+              "id": “{CUSTOMER_FLOW_ID}"
             }
           }
         }
@@ -128,7 +182,69 @@ curl -X POST "https://api.moltin.com/v2/fields" \
     }'
 ```
 
-### Relate a customer to wishlist
+We now have the ability to send updates to customers, including their relationships:
+
+```bash
+curl -X POST https://api.moltin.com/v2/customers/{CUSTOMER_ID}/relationships/wishlists \
+    -H "Authorization: Bearer XXXX" \
+    -d $'{
+     "data": [{
+        "type": "wishlist",
+        "id": "{WISHLIST_ENTRY_ID}"
+      }]
+    }'
+```
+
+## 8. Get customer wishlists
+
+We’ve saved the wishlist to a customer, so when we make API calls to get that customer we will now see the wishlist\(s\) directly on the customer data object. Don't forget to set `?include=wishlists` to get the wishlist objects.
+
+```bash
+curl -X GET https://api.moltin.com/v2/customers/{CUSTOMER_ID}?include=wishlists \
+     -H "Authorization: Bearer XXXX"
+```
+
+```bash
+{
+  "data": {
+    "id": "c8c1c511-beef-4812-9b7a-9f92c587217c",
+    "type": "customer",
+    "name": "Ron Swanson",
+    "email": "ron@swanson.com",
+    "password": true,
+    "relationships": [
+      ("wishlists": [
+        {
+          "type": "entry",
+          "id": "{WISHLIST_ENTRY_ID}"
+        }
+      ])
+    ],
+    "included": {
+      "wishlists": [
+        {
+          "id": "{WISHLIST_ENTRY_ID}",
+          "type": "entry",
+          "relationships": {
+            "products": {
+              "data": [
+                {
+                  "type": "product",
+                  "id": "ba9ba29d-06da-4ba9-9e2e-f0e776703324"
+                },
+                {
+                  "type": "product",
+                  "id": "394916e8-1d47-44a0-b5d0-a5a61b71bab8"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
 
 
