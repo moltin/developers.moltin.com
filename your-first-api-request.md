@@ -18,7 +18,7 @@ If you're using [Yarn](http://yarnpkg.com) or [npm](https://www.npmjs.com) to ma
 yarn add @moltin/sdk # npm install --save @moltin/sdk
 ```
 
-If you are using [webpack](https://webpack.js.org) you will need to add the following to your projects configuration file.
+If you are using [webpack](https://webpack.js.org), you will need to add the following to your projects configuration file.
 
 ```javascript
 node: {
@@ -105,7 +105,7 @@ let moltin = Moltin(withClientID: "<your client ID>")
 
 ## 3. Make your first API request
 
-You'll need to authenticate to make your first API request and every request must contain your `Bearer` token inside the `header`. If you're using an SDK, these silently handle authentication so you don't need to call the authenticate method directly.
+You'll need to authenticate to make your first API request and every request must contain your `Bearer` token inside the `header`. If you're using an SDK, these silently handle authentication, so you don't need to call the authenticate method directly.
 
 Below are some example API requests you can make. **Try them out!**
 
@@ -183,7 +183,7 @@ Save the file and run `node index.js` to see `products` logged to the console.
 Using a client-side library like [React](https://reactjs.org), [React Native](https://facebook.github.io/react-native), [Vue](https://vuejs.org) or [Angular](https://angular.io) simply add the JS SDK as a dependency to your project.
 
 {% hint style="warning" %}
-We don't recommend you authenticate with client credentials using this method
+We don't recommend you authenticate with client credentials using this method.
 {% endhint %}
 
 If you head to the [Dashboard](https://dashboard.moltin.com), add a product with an image and associated category or brand, you'll be able to query the results in your client application using the code below.
