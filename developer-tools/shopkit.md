@@ -10,7 +10,7 @@ You may also use [Styled Shopkit](styled-shopkit.md) to use predefined component
 
 Shopkit has several components that return a function you can use to render various types of components in your application.
 
-The following components are supported:
+Supported are the following components:
 
 * [`<Button />`](shopkit.md#button)
 * [`<Product />`](shopkit.md#product)
@@ -40,7 +40,7 @@ ReactDOM.render(
 )
 ```
 
-Next you can use the components below inside your application and they will all share the same Moltin project.
+Next, you can use the components listed below inside your application and they will all share the same Moltin project.
 
 ## Components
 
@@ -48,7 +48,7 @@ The components below can be imported and configured for use inside your applicat
 
 ### Button
 
-The quickest way to add Moltin to your website is to use the `<Button />` component. Simply specific a Product ID and instantly get add to cart functionality.
+The quickest way to add Moltin to your website is to use the `<Button />` component. Simply specify a Product ID and instantly have it added to the cart functionality.
 
 #### Props
 
@@ -112,7 +112,7 @@ export default () => (
 For pages you wish to display an array of products, you can use the `<ProductGrid />` component to render all `live` products, or products by category, collection or brand ID.
 
 {% hint style="warning" %}
-You will need to import `Button` if you wish to enable add to cart functionality.
+You will need to import `Button`, if you wish to enable add to cart functionality.
 {% endhint %}
 
 #### Props
@@ -153,7 +153,7 @@ export default () => (
 Shopkit abstracts the cart functionality to the `ShopkitProvider` component that wraps your entire application. Using the [React Context API](https://reactjs.org/docs/context.html#reactcreatecontext) internally we are able to manage all cart state in one place and make it available to all other components.
 
 {% hint style="warning" %}
-You will need to import `Button` if you wish to enable add to cart functionality.
+You will need to import `Button`, if you wish to enable add to cart functionality.
 {% endhint %}
 
 #### Props
