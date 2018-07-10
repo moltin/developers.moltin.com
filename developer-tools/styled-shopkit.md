@@ -1,6 +1,6 @@
 # Styled Shopkit
 
-**Styled Shopkit** is built on Shopkit and enables you to embed ready made components that come with their own CSS and JSX.
+**Styled Shopkit** is built on Shopkit, and enables you to embed ready made components that come with their own CSS and JSX.
 
 {% hint style="info" %}
 You can use [Shopkit](styled-shopkit.md) to render your own views and handle logic.
@@ -29,7 +29,7 @@ ReactDOM.render(
 )
 ```
 
-Next you can use the components below inside your application and they will all share the same Moltin project.
+Use the components listed below inside your application, and they will all share the same Moltin project.
 
 ## Components
 
@@ -137,7 +137,7 @@ export default () => <Cart />
 
 ### Product Grid
 
-You may display a grid of products using the `<ProductGrid />` component. By default it will return all your products, paginated by `maxProducts`. You can also filter these products by Brand, Category and Collection.
+You may display a grid of products using the `<ProductGrid />` component. By default, it will return all your products, paginated by `maxProducts`. You can also filter these products by Brand, Category and Collection.
 
 ![Product Grid with description and quantity pickers](../.gitbook/assets/product-tile.jpg)
 
