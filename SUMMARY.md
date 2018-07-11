@@ -37,4 +37,5 @@
 * [Create a Blog](guides/create-a-blog.md)
 * [Extending Product](guides/extending-product.md)
 * [Search services](guides/search-services.md)
+* [Creating a formatted order csv](guides/creating-a-formatted-order-csv.md)
 
