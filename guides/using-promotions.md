@@ -1,12 +1,21 @@
 # Using Promotions
 
-You need to set up the promotion first and add promotion codes to the promotion id.
+Promotions allow you to provide discounts to customers. By defining a Promotion and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
 
-#### To follow along with postman, import the below collection.
+The promotions you create will require codes to be attached to them, and these codes are subsequently used by end-users \(or your own system\) to apply promotions to carts, and provide the discounts stipulated.
+
+Set up a promotion in two simple steps:
+
+1. Set up a promotion.
+2. Add promotion code to the promotion ID.
+
+{% hint style="info" %}
+To follow along with Postman, import the collection using the link below:
 
 [https://www.getpostman.com/collections/58d18085e5dd9708cfd5](https://www.getpostman.com/collections/58d18085e5dd9708cfd5)
+{% endhint %}
 
-#### Create a promotion
+## 1. Create a Promotion
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -74,7 +83,7 @@ curl -X POST https://api.moltin.com/v2/promotions \
 {% endtab %}
 {% endtabs %}
 
-#### Create a custom Flow
+## 2. Create a custom Flow
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -120,9 +129,13 @@ curl -X POST "https://api.moltin.com/v2/flows" \
 {% endtab %}
 {% endtabs %}
 
-#### Create a Field
+## 3. Create a Field
 
-Now you'll need to create a Flow Field so you can keep a record of a the promotion and tie it to the brand. _This field should be marked as optional._
+Now, you'll need to create a Flow field, so you can keep a record of a the promotion and tie it to the brand. 
+
+{% hint style="info" %}
+This field should be marked as **optional**.
+{% endhint %}
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -199,7 +212,7 @@ curl -X POST "https://api.moltin.com/v2/fields" \
 {% endtab %}
 {% endtabs %}
 
-#### Create an empty Entry
+## 4. Create an empty Entry
 
 Before we can associate brand\(s\) to promotions, we must first create an empty entry that will next be used to relate the brand\(s\) to the promotion entry.
 
@@ -238,7 +251,7 @@ curl -X POST "https://api.moltin.com/v2/flows/Coolbrandjunepromo/entries" \
 {% endtab %}
 {% endtabs %}
 
-#### Relate a brand to promotion
+## 5. Relate a Brand to Promotion
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -271,5 +284,5 @@ curl -X POST "https://api.moltin.com/v2/flows/Coolbrandjunepromo/entries" \
 {% endtab %}
 {% endtabs %}
 
-Now when you pull down brands you will be able to see if the brand has a promotion applied to it.  This will give you everything you need to then apply the discount on the client side.
+Now, when you pull down brands, you'll be able to see if the brand has a promotion applied to it. This will give you everything you need to then apply the discount on the client side.
 
