@@ -1,14 +1,14 @@
 # Email Receipts
 
-One of the easiest ways to send email receipts is by using a webhook. The [Events API](https://docs.moltin.com/advanced/events) we are able to observe the `order.paid` event to trigger a function hosted on [Zeit Now](https://zeit.co/now) that sends an email with [Postmark](https://postmarkapp.com/).
+One of the easiest ways to send email receipts is by using a webhook. With the [Events API](https://docs.moltin.com/advanced/events), we are able to observe the `order.paid` event to trigger a function hosted on [Zeit Now](https://zeit.co/now) that sends an email with [Postmark](https://postmarkapp.com/).
 
 ## 1. Create a Postmark template
 
-You'll need to signup or login to [Postmark](https://postmarkapp.com/) to create a template. Once logged in, create a server, head to the templates section and select the option to "code your own".
+You'll need to sign up or log in to [Postmark](https://postmarkapp.com/) to create a template. Once logged in, create a server, head to the templates section, and select the option to "code your own".
 
 ![](../.gitbook/assets/screen-shot-2018-07-09-at-12.00.21.png)
 
-In this example we'll name our template `Order confirmation` and specify `Order Confirmation #{{order_ref}}` as the subject.
+In this example, we'll name our template `Order confirmation`, and specify `Order Confirmation #{{order_ref}}` as the subject.
 
 Inside the HTML body, provide the following:
 
@@ -49,7 +49,7 @@ Inside the HTML body, provide the following:
 </html>
 ```
 
-Save this template and take note of the template `ID`.
+Save this template, and take note of the template `ID`.
 
 ![Postmark template ID](../.gitbook/assets/screen-shot-2018-07-09-at-12.07.59.png)
 
@@ -64,7 +64,7 @@ You'll need the following ENV variables to successfully deploy the function.
 * `POSTMARK_TEMPLATE_ID` - The ID of the templated [created above](email-receipts.md#1-create-a-postmark-template)
 * `MOLTIN_WEBHOOK_SECRET` - A secure random token to prevent unauthorised requests
 
-Using the [Now CLI](https://zeit.co/now), you can deploy the function directly from GitHub and provide your ENV variables.
+Using the [Now CLI](https://zeit.co/now), you can deploy the function directly from GitHub, and provide your ENV variables.
 
 ```bash
 npm i -g now # unless installed already
@@ -77,7 +77,7 @@ Take note of the URL that is returned on successful deployment to Now.
 
 ## 3. Create a new webhook
 
-With the function deployed we can now tell Moltin to start subscribing to new orders paid.
+With the function deployed, we can now tell Moltin to start subscribing to new orders paid.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/integrations \
