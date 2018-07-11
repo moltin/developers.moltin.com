@@ -1,12 +1,16 @@
 # SDKs
 
-Moltin officially mains and supports both a [JavaScript SDK](https://github.com/moltin/js-sdk) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven by happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
+Moltin officially maintains and supports both a [JavaScript SDK](https://github.com/moltin/js-sdk) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven and happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
 
 Full details on installing the SDKs and making [your first API request](../your-first-api-request.md) is documented [here](../your-first-api-request.md#1-install-sdk-recommended).
 
 ## JavaScript SDK
 
-Supporting both [Node.js](https://nodejs.org) and the client-side, the JS SDK silently handles authentication token refresh and automatic cart reference generation as well as a simple DSL for accessing resources.
+Supporting both [Node.js](https://nodejs.org) and the client-side, the JS SDK silently handles the following:
+
+* refreshing authentication tokens,
+* generating automatic cart reference,
+* supporting a simple DSL for accessing resources.
 
 The JS SDK is available via [Yarn](https://yarnpkg.com/en/package/@moltin/sdk) and [npm](https://www.npmjs.com/package/@moltin/sdk) to install.
 
