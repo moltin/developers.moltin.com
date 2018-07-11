@@ -218,7 +218,49 @@ Moltin.Products.With(['main_image', 'brand', 'category']).All().then(products =>
 {% endtab %}
 
 {% tab title="Swift SDK" %}
+After you have added the Swift SDK you are ready to start.
 
+```swift
+import moltin
+```
+
+If you head to the [Dashboard](https://dashboard.moltin.com), add a product with an image and associated category or brand, you'll be able to query the results in your client application using the code below.
+
+### Get all Products
+
+```swift
+let moltin = Moltin(withClientID: "<your client ID>")
+
+self.moltin.product.all { (result: Result<PaginatedResponse<[moltin.Product]>>) in
+   switch result {
+       case .success(let response):
+            DispatchQueue.main.async {
+                print("Products", response.data)
+            }
+        case .failure(let error):
+            print("Products error", error)
+        }
+    }
+}
+```
+
+### Get all Products with main image, brands and categories
+
+```javascript
+let moltin = Moltin(withClientID: "<your client ID>")
+
+self.moltin.product.include([.mainImage, .brand, .category]).all { (result: Result<PaginatedResponse<[moltin.Product]>>) in
+   switch result {
+       case .success(let response):
+            DispatchQueue.main.async {
+                print("Products", response.data)
+            }
+        case .failure(let error):
+            print("Products error", error)
+        }
+    }
+}
+```
 {% endtab %}
 {% endtabs %}
 

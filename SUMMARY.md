@@ -36,4 +36,5 @@
 * [Using Promotions](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
 * [Extending Product](guides/extending-product.md)
+* [Search services](guides/search-services.md)
 
