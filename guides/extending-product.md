@@ -1,7 +1,7 @@
 ---
 description: >-
   Extending the product object is a great way to customize the object to have
-  all of the information you need to display a product.
+  all information you need to display a product.
 ---
 
 # Extending Product
@@ -40,11 +40,15 @@ curl -X POST https://api.moltin.com/v2/flows \
      }'
 ```
 
-Take note of the ID that is returned. You'll need this below.
+Take note of the ID that is returned. You'll need this to create a Flow field, as described below.
 
-## 3. Create a Flow Field.
+## 3. Create a Flow field
 
-This field will be returned when you call the products object now.  In the below example we will add a review field so that products can now have a review tied to them.  \(Replace flow id with the above ID that was generated.\)
+The Flow field will be returned when you call the products object. In the example below, we will add a review field, so that products can now have a review tied to them.
+
+{% hint style="info" %}
+Replace Flow ID with the ID that was generated above.
+{% endhint %}
 
 ```bash
 curl -X POST https://api.moltin.com/v2/fields \
@@ -68,9 +72,9 @@ curl -X POST https://api.moltin.com/v2/fields \
      }'
 ```
 
-## 4. Confirm your new field.
+## 4. Confirm your new field
 
-Fetch some products and confirm the new field.  Note this new field will be available in the dashboard as custom data as well.
+Fetch some products, and confirm the new field. Note this new field will be available in the dashboard as custom data as well.
 
 ```bash
 curl -X GET https://api.moltin.com/v2/products \
