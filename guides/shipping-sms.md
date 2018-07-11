@@ -1,6 +1,6 @@
 # Shipping SMS
 
-One of the quickest ways to tell customers their orders have been shipped is by SMS. Using [Twilio](https://www.twilio.com) and [Zeit Now](https://zeit.co/now) we can deploy a function that is automatically triggered on `order.shipped`✨
+One of the quickest ways to tell customers their orders have been shipped is by SMS. Using [Twilio](https://www.twilio.com) and [Zeit Now](https://zeit.co/now), we can deploy a function that is automatically triggered on `order.shipped`✨
 
 This guide will walk you through extending the Order resource via the Flows \([Custom Data](https://docs.moltin.com/advanced/custom-data)\) API and deploying a function to handle sending the SMS.
 
@@ -38,7 +38,7 @@ curl -X POST https://api.moltin.com/v2/flows \
      }'
 ```
 
-Take note of the ID that is returned. You'll need this below.
+Take note of the ID that is returned. You'll need this to create a new Flow field, as described below.
 
 ## 3. Create a few Flow Fields
 
@@ -46,7 +46,7 @@ Take note of the ID that is returned. You'll need this below.
 Replace `FLOW_ID` with the ID of the `orders` Flow you created.
 {% endhint %}
 
-In this step we will create a field for `phone_number` that will be used to send the SMS to.
+In this step, we will create a field for `phone_number` that will be used to send the SMS to.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/fields \
@@ -69,7 +69,7 @@ curl -X POST https://api.moltin.com/v2/fields \
      }'
 ```
 
-Next we will store a boolean flag for `shipping_sms_sent` that is used to determine if an SMS should be sent.
+Next, we will store a boolean flag for `shipping_sms_sent` that is used to determine if an SMS should be sent.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/fields \
@@ -101,7 +101,7 @@ To successfully deploy the function you will need:
 * Account with [Moltin](https://dashboard.moltin.com/signup)
 * Account with [Zeit](https://zeit.co/now)
 
-You'll need the following ENV variables to successfully deploy the function.
+You'll need the following ENV variables to successfully deploy the function:
 
 * `MOLTIN_CLIENT_ID`
 * `MOLTIN_CLIENT_SECRET`
@@ -122,7 +122,7 @@ Take note of the URL that is returned on successful deployment to Now.
 
 ## 5. Create a new webhook
 
-With the function deployed we can now tell Moltin to start subscribing to new orders created.
+With the function deployed, we can now tell Moltin to start subscribing to new orders created.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/integrations \
