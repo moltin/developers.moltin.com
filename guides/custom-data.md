@@ -8,6 +8,8 @@ The Moltin API aims to provide predictable, easy to use, RESTful endpoints that 
 
 The most common usage of the Flows API is to extend resources like products, customers and orders. If you wish to store extra fields per product, such as `manufactured_date` for customers or a string field to store a `colour` hexadecimal for the product for use on the UI, you'll want to extend the `products` resource.
 
+Click the links below to view examples of how to use Flows to extend resources.
+
 {% page-ref page="related-products.md" %}
 
 {% page-ref page="extending-product.md" %}
@@ -17,6 +19,8 @@ The most common usage of the Flows API is to extend resources like products, cus
 ## New resources
 
 With the power of Flows, you are able to use Moltin to power product reviews, wishlists, blog articles, staff profile pages, and many more.
+
+Click the links below to view examples of how to use Flows to create new resources.
 
 {% page-ref page="create-a-wishlist.md" %}
 
