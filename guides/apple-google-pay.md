@@ -12,13 +12,13 @@ Feel free to skip to the end and grab the completed example project.
 
 In terminal
 
-```text
+```bash
 git clone https://github.com/moltin-examples/applepay-starter.git
 ```
 
 Then navigate into the new directory, and install the cocopods.
 
-```text
+```bash
 pod install
 ```
 
@@ -87,11 +87,9 @@ Open _BuyProductViewController.swift_ and add the following import to the top of
 import PassKit
 ```
 
-
-
 Next, locate `applePayPressed(sender:)`; you execute this when the user attempts to purchase an item. To do this, you’ll need to create a `PKPaymentRequest` and a `PKPaymentAuthorizationViewController`.
 
-Add the following code to the body of `applePayPressed(sender:)`:
+Add the following code to the body of `applePayPressed(sender:)`:,
 
 ```swift
 // TODO: - Fill in implementation
@@ -104,7 +102,7 @@ Add the following code just under the `IBOutlet` properties of `BuySwagViewContr
 
 ```swift
 let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]  // Add in any extra support payments.
-let ApplePaySwagMerchantID = "merchant.com.YOURDOMAIN.ApplePaySwag" // Fill in your merchant ID here!
+let ApplePayMerchantID = "merchant.com.YOURDOMAIN.ApplePayMoltin" // Fill in your merchant ID here!
 ```
 
 In the viewDidLoad check to see if the user can use Apple pay.
@@ -113,15 +111,37 @@ In the viewDidLoad check to see if the user can use Apple pay.
 applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
 ```
 
-### 
+Now start filling out the request in `applePayPressed(sender:)`, under the `let request = PKPaymentRequest()`
 
-### 7.  Implement Apple pay delegates
+```swift
+request.merchantIdentifier = ApplePayMerchantID
+request.supportedNetworks = SupportedPaymentNetworks
+request.merchantCapabilities = PKMerchantCapability.capability3DS
+request.countryCode = "US"
+request.currencyCode = "USD"
+```
+
+Create an array of `PKPaymentSummaryItem` objects that provide the user with a breakdown the items they’re purchasing.  We will add more detail to this array in the next step.
+
+```swift
+//Item information formatting
+    let productToBuy = PKPaymentSummaryItem(label: product?.name ?? "", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withoutTax.amount)!/100)), type: .final)
+    let total = PKPaymentSummaryItem(label: "Total with Tax", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withTax.amount)!/100)))
+    //PKPaymentSummaryItem Array
+    request.paymentSummaryItems = [productToBuy,total]
+```
+
+Run the app and confirm you are now seeing apple pay when you hit the apple pay button on the buy scene.
+
+![](../.gitbook/assets/screen-shot-2018-07-16-at-2.04.21-pm.png)
+
+### 7.  Handling Shipping, Billing and Contact information
 
 ......
 
-### 8.  Handling Shipping, Billing and Contact information
 
-......
+
+### 8.  Implement Apple pay delegates
 
 ### 9.  Creating checkout
 

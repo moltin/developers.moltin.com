@@ -6,25 +6,27 @@ description: Outlines how Moltin can work with Search microservice
 
 ## ElasticSearch by Amazon web service
 
-## Prerequisite
+## Prerequisites
 
-You will need to have an AWS account.  You will have to have an ElasticSearch \(ES\) account set up.  You will be using a Lambda to grab all of your moltin products and sending to your account.  You can set the lambda to run as frequency as you want.  This will ensure your search will be kept in line with your Moltin products
+* [AWS account](https://aws.amazon.com/free/?sc_channel=PS&sc_campaign=acquisition_UK&sc_publisher=google&sc_medium=cloud_computing_b&sc_content=aws_account_e&sc_detail=aws%20account&sc_category=cloud_computing&sc_segment=67181347609&sc_matchtype=e&sc_country=UK&s_kwcid=AL!4422!3!67181347609!e!!g!!aws%20account&ef_id=WxeaQAAAAH8uURMJ:20180717082004:s)
+* [ElasticSearch \(ES\)](https://www.elastic.co/products/elasticsearch)
+* [Lambda](https://aws.amazon.com/lambda/) to grab your Moltin products and send them to your account.  You can set the Lambda to run as frequently as you want. This will ensure your search will be kept in line with your Moltin products.
 
 ## 1. Get the code from GitHub
 
-In terminal
+In terminal:
 
 ```bash
 git clone https://github.com/moltin-examples/searchhelpers-lambdas.git
 ```
 
-Then navigate into the new directory, and install the modules.
+Then navigate into the new directory, and install the modules:
 
 ```bash
 npm install
 ```
 
-## 2.  Update your moltin keys and ES domain
+## 2.  Update your Moltin keys and ES domain
 
 ```javascript
 const Moltin = MoltinGateway({
@@ -43,7 +45,7 @@ var id = '1';
 
 ## 3. Zip the package
 
-This zip will be uploaded to the lambda.  Navigate to the directory.
+This zip will be uploaded to the Lambda. Navigate to the directory.
 
 ```bash
 zip -r moltinsearchlambda.zip *
@@ -53,7 +55,7 @@ This will generate a zip file in your directory.
 
 ## 4. Upload zip to a Lambda
 
-Check here to see how to make a lambda if you do not have one ready.
+Check here to see how to make a Lambda, if you do not have one ready.
 
 {% embed data="{\"url\":\"https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html\",\"type\":\"link\",\"title\":\"Create a Simple Lambda\\n         \\t\\t\\tFunction - AWS Lambda\\n      \",\"description\":\"Follow the steps in this section to create a simple Lambda function.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://docs.aws.amazon.com/images/favicon.ico\",\"aspectRatio\":0}}" %}
 
@@ -61,23 +63,21 @@ Check here to see how to make a lambda if you do not have one ready.
 
 ## 5. Update handler
 
-The handler name formate is, filename.function name.  In this case it will be elasticsearch.handler.
+The handler name formate is filename.function name. In this case it will be elasticsearch.handler.
 
 ## 6. Test
 
-In the top right, hit test.  If this is the first test, you may need to remove the json so it will be a blank event test.  Testing will fetch all of your products from moltin and send them to ES.
+In the top right, hit test.  If this is the first test, you may need to remove the json, so it will be a blank event test. Testing will fetch all your products from Moltin, and send them to ES.
 
 ### 6a.  Confirm the data
 
-Confirm data In your elastic search dashboard navigate to your Kibana link. Once there you, go to dev tools and you can quickly query your data to confirm all of your products are there. \(note you may need to add permissions to use the Kidana UI.\)
+To confirm data in your elastic search dashboard, navigate to your Kibana link. Once there you, go to dev tools, and you can quickly query your data to confirm whether all your products are there. Note you may need to add permissions to use the Kidana UI.
 
+## 7. Set up automation \(triggers\)
 
-
-## 7. Setting up automation \(triggers\)
-
-Set trigger [https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html) This will determine how often your search function is synced with your moltin products. Depending on how many times you add a new products should determine how often you need to trigger this.
+Set trigger [https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html) This will determine how often your search function is synced with your Moltin products. The number of times you need to trigger this depends on how many times you add a new product.
 
 ## Customization and moving forward
 
-The code is as basic as possible.  It is meant to get you started.  You will need to tweak and adjust for your business needs.  Moltin + AWS gives a lot of flexibility.
+The code is as basic as possible. It is meant to get you started. You will need to tweak and adjust for your business needs, which shouldn't be a problem, as Moltin + AWS gives a lot of flexibility.
 
