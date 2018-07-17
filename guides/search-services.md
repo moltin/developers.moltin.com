@@ -1,5 +1,8 @@
 ---
-description: Outlines how Moltin can work with Search microservice
+description: >-
+  Outlines how Moltin can work with Search microservice.  Using third party
+  search services with Moltin allows you to build advance search functionality
+  for your customers.
 ---
 
 # Search services
@@ -79,5 +82,5 @@ Set trigger [https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambd
 
 ## Customization and moving forward
 
-The code is as basic as possible. It is meant to get you started. You will need to tweak and adjust for your business needs, which shouldn't be a problem, as Moltin + AWS gives a lot of flexibility.
+The code is as basic as possible. It is meant to get you started and integrated with a search service. You will need to tweak and adjust for your business needs, which shouldn't be a problem, as Moltin + AWS gives a lot of flexibility.
 
