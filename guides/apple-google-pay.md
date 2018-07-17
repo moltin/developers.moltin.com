@@ -135,25 +135,94 @@ Run the app and confirm you are now seeing apple pay when you hit the apple pay 
 
 ![](../.gitbook/assets/screen-shot-2018-07-16-at-2.04.21-pm.png)
 
-### 7.  Handling Shipping, Billing and Contact information
+### 7.  Handling Shipping
 
-......
+We will be adding a static billing amount to start.  Billing needs are going to differ greatly on what your store is selling.
+
+```swift
+let shippingPrice: NSDecimalNumber = NSDecimalNumber(string: "5.0")
+let shipping = PKPaymentSummaryItem(label: "Shipping", amount: shippingPrice)
+let totalPrice = PKPaymentSummaryItem(label: "Total amount", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withTax.amount)!)/100).adding(shippingPrice))
+        
+//PKPaymentSummaryItem Array
+request.paymentSummaryItems = [productToBuy,shipping, totalPrice]
+```
 
 
 
 ### 8.  Implement Apple pay delegates
 
-### 9.  Creating checkout
+In _BuyProductViewController.swift_, add the following extension to `BuyProductViewController` that implements `PKPaymentAuthorizationViewControllerDelegate`:
 
-......
+```swift
+//Bottom of file
+extension BuyProductViewController: PKPaymentAuthorizationViewControllerDelegate {
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: @escaping ((PKPaymentAuthorizationStatus) -> Void)) {
+        completion(PKPaymentAuthorizationStatus.success)
+    }
+    
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
+```
 
-### 10.  Process order
+To be able to use the apply pay delegate class you need to set it in above`BuyProductViewController` class.  In the `applePayPressed(sender:)`, set it up using the below.
 
-......
+```swift
+applePayController?.delegate = self
+```
 
-### 11.  Authorize Payment
+### 9.  Creating checkout in Moltin
 
-......
+In `BuyProductViewController`in the PKPaymentAuthorizationViewControllerDelegate you will be sending a successful apple pay order to moltin.
+
+Getting customers information
+
+```text
+
+```
+
+Processing an order with moltin
+
+```swift
+ self.moltin.cart.checkout(cart: AppDelegate.cartID, withCustomer: customer, withBillingAddress: address, withShippingAddress: nil) { (result) in
+    switch result {
+        case .success(let order):
+            DispatchQueue.main.async {
+                completion(order)
+            }
+        default: break
+        }
+    }
+```
+
+Paying for the order can be done by varies payment gateways, [https://docs.moltin.com/payments/gateways](https://docs.moltin.com/payments/gateways).  In this example we will us manual, which will allow you complete the transaction than handle the payment processing any way you want.
+
+In the moltin Dashboard you need to enable manual checkout.  In Gateways, click enable within the manual gateway and save, [https://dashboard.moltin.com/app/settings/gateways/manual](https://dashboard.moltin.com/app/settings/gateways/manual).
+
+```swift
+let paymentMethod = ManuallyAuthorizePayment()
+self.moltin.cart.pay(forOrderID: order?.id ?? "", withPaymentMethod: paymentMethod) { (result) in
+    switch result {
+    case .success(let status):
+        DispatchQueue.main.async {
+            completion(orderPayed)
+            print("Paid for order: \(status)")
+        }
+    case .failure(let error):
+        completion(orderPayed)
+        print("Could not pay for order: \(error)")
+    }
+}
+
+```
+
+Completed PKPaymentAuthorizationViewControllerDelegate
+
+```swift
+
+```
 
 
 
