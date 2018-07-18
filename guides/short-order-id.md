@@ -55,6 +55,8 @@ curl -X POST https://api.moltin.com/v2/fields \
           "slug": "short_id",
           "description": "This is a short ID managed by a webhook.",
           "unique": true,
+          "field_type": "string",
+          "required": false,
           "enabled": true,
           "relationships": {
             "flow": {
@@ -71,9 +73,15 @@ curl -X POST https://api.moltin.com/v2/fields \
 
 Using the [Now CLI](https://zeit.co/now) you can deploy directly from [GitHub](https://github.com/moltin-examples/short-order-id) and provide your store `client_id` and `client_secret`. You'll also want to create and set `MOLTIN_WEBHOOK_SECRET` to a secure random token to protect unauthorized requests.
 
+You'll need the following ENV variables to successfully deploy the function:
+
+* MOLTIN\_CLIENT\_ID
+* MOLTIN\_CLIENT\_SECRET
+* MOLTIN\_WEBHOOK\_SECRET
+
 ```bash
 npm i -g now # unless installed already
-now moltin-examples/short-order-id -e MOLTIN_CLIENT_ID=x MOLTIN_CLIENT_SECRET=x MOLTIN_WEBHOOK_SECRET=x
+now moltin-examples/short-order-id
 ```
 
 {% hint style="warning" %}
