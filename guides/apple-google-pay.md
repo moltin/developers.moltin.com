@@ -125,10 +125,10 @@ Create an array of `PKPaymentSummaryItem` objects that provide the user with a b
 
 ```swift
 //Item information formatting
-    let productToBuy = PKPaymentSummaryItem(label: product?.name ?? "", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withoutTax.amount)!/100)), type: .final)
-    let total = PKPaymentSummaryItem(label: "Total with Tax", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withTax.amount)!/100)))
-    //PKPaymentSummaryItem Array
-    request.paymentSummaryItems = [productToBuy,total]
+let productToBuy = PKPaymentSummaryItem(label: product?.name ?? "", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withoutTax.amount)!/100)), type: .final)
+let total = PKPaymentSummaryItem(label: "Total with Tax", amount: NSDecimalNumber(decimal:Decimal((self.product?.meta.displayPrice?.withTax.amount)!/100)))
+//PKPaymentSummaryItem Array, we will be adding too.
+request.paymentSummaryItems = [productToBuy,total]
 ```
 
 Run the app and confirm you are now seeing apple pay when you hit the apple pay button on the buy scene.
@@ -177,23 +177,36 @@ applePayController?.delegate = self
 
 In `BuyProductViewController`in the PKPaymentAuthorizationViewControllerDelegate you will be sending a successful apple pay order to moltin.
 
-Getting customers information
+Getting customers information.  It will be returned from the PKPaymentAuthorizationViewControllerDelegate in the payment object.
 
-```text
+Setting up customer.
 
+```swift
+let customer = Customer(withEmail: payment.billingContact?.emailAddress, withName: payment.shippingContact?.name?.familyName)
+```
+
+Setting up address.  \(note shipping and billing may vary\)
+
+```swift
+let address = Address(withFirstName: (payment.shippingContact?.name?.givenName)!, withLastName: payment.shippingContact?.name?.familyName ?? "")
+address.line1 = payment.shippingContact?.postalAddress?.street
+address.county = payment.shippingContact?.postalAddress?.city
+address.country = payment.shippingContact?.postalAddress?.country
+address.postcode = payment.shippingContact?.postalAddress?.postalCode
 ```
 
 Processing an order with moltin
 
 ```swift
- self.moltin.cart.checkout(cart: AppDelegate.cartID, withCustomer: customer, withBillingAddress: address, withShippingAddress: nil) { (result) in
-    switch result {
-        case .success(let order):
-            DispatchQueue.main.async {
-                completion(order)
+self.moltin.cart.checkout(cart: AppDelegate.cartID, withCustomer: customer, withBillingAddress: address, withShippingAddress: address)
+    { (result) in
+       switch result {
+            case .success(let order):
+                DispatchQueue.main.async {
+                print(order)
+                }
+            default: break
             }
-        default: break
-        }
     }
 ```
 
@@ -207,24 +220,86 @@ self.moltin.cart.pay(forOrderID: order?.id ?? "", withPaymentMethod: paymentMeth
     switch result {
     case .success(let status):
         DispatchQueue.main.async {
-            completion(orderPayed)
             print("Paid for order: \(status)")
         }
     case .failure(let error):
-        completion(orderPayed)
         print("Could not pay for order: \(error)")
     }
 }
 
 ```
 
-Completed PKPaymentAuthorizationViewControllerDelegate
+Within the above checkout, add in the below to complete the transaction.
 
 ```swift
-
+let paymentMethod = ManuallyAuthorizePayment()
+    self.moltin.cart.pay(forOrderID: order.id, withPaymentMethod: paymentMethod) { (result) in
+        switch result {
+            case .success(let status):
+                DispatchQueue.main.async {
+                    controller.dismiss(animated: true, completion: nil)
+                    print("Paid for order: \(status)")
+                }
+             case .failure(let error):
+                  controller.dismiss(animated: true, completion: nil)
+                  print("Could not pay for order: \(error)")
+                 }
+    }
 ```
 
+Your PKPaymentAuthorizationViewControllerDelegate should look like the below.
 
+```swift
+extension BuyProductViewController: PKPaymentAuthorizationViewControllerDelegate
+{
+    
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: @escaping
+    ((PKPaymentAuthorizationStatus) -> Void))
+    {
+        completion(PKPaymentAuthorizationStatus.success)
+        ///Customer
+        let customer = Customer(withEmail: payment.billingContact?.emailAddress, withName: payment.shippingContact?.name?.familyName)
+    
+        //Address
+        let address = Address(withFirstName: (payment.shippingContact?.name?.givenName)!, withLastName: payment.shippingContact?.name?.familyName ?? "")
+        address.line1 = payment.shippingContact?.postalAddress?.street
+        address.county = payment.shippingContact?.postalAddress?.city
+        address.country = payment.shippingContact?.postalAddress?.country
+        address.postcode = payment.shippingContact?.postalAddress?.postalCode
+        
+         self.moltin.cart.checkout(cart: AppDelegate.cartID, withCustomer: customer, withBillingAddress: address, withShippingAddress: address)
+         { (result) in
+            switch result {
+            case .success(let order):
+                DispatchQueue.main.async {
+                    let paymentMethod = ManuallyAuthorizePayment()
+                    self.moltin.cart.pay(forOrderID: order.id, withPaymentMethod: paymentMethod) { (result) in
+                        switch result {
+                            case .success(let status):
+                                DispatchQueue.main.async {
+                                    print("Paid for order: \(status)")
+                                    controller.dismiss(animated: true, completion: nil)
+
+                                }
+                            case .failure(let error):
+                                print("Could not pay for order: \(error)")
+                                controller.dismiss(animated: true, completion: nil)
+                            }
+                        }
+                    }
+                    default: break
+                }
+            }
+        }
+
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController)
+    {
+        controller.dismiss(animated: true, completion: nil)
+        
+    }
+}
+
+```
 
 ### Moving forward.
 
@@ -233,6 +308,8 @@ Completed PKPaymentAuthorizationViewControllerDelegate
 
 
 ### Completed example project
+
+
 
 
 
