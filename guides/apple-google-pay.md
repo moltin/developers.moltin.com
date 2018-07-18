@@ -303,13 +303,18 @@ extension BuyProductViewController: PKPaymentAuthorizationViewControllerDelegate
 
 ### Moving forward.
 
-.....
+If you’d like to read more in depth on Apple Pay, you can check out the developer site at [https://developer.apple.com/apple-pay/](https://developer.apple.com/apple-pay/). The site also has a list of the other payment platforms other than Stripe that support Apple Pay.
 
+There are many other features of Apple Pay that you could challenge yourself to add to your app:
 
+* Calculate sales tax on the server and update the tax amount in `summaryItems`.
+* Change the available shipping methods based on the ZIP code.
+* Read the order information on the server and verify that the address is valid as a shipping destination.
+* Create your own customized Apple Pay button by following the Apple Pay guidelines.
 
 ### Completed example project
 
-
+[https://github.com/moltin-examples/applepay-example](https://github.com/moltin-examples/applepay-example)
 
 
 
