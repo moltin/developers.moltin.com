@@ -75,9 +75,9 @@ Using the [Now CLI](https://zeit.co/now) you can deploy directly from [GitHub](h
 
 You'll need the following ENV variables to successfully deploy the function:
 
-* MOLTIN\_CLIENT\_ID
-* MOLTIN\_CLIENT\_SECRET
-* MOLTIN\_WEBHOOK\_SECRET
+* `MOLTIN_CLIENT_ID`
+* `MOLTIN_CLIENT_SECRET`
+* `MOLTIN_WEBHOOK_SECRET`
 
 ```bash
 npm i -g now # unless installed already
