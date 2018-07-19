@@ -308,7 +308,7 @@ extension BuyProductViewController: PKPaymentAuthorizationViewControllerDelegate
 
 ```
 
-### Moving forward.
+### Moving forward
 
 If you’d like to read more in-depth information on Apple Pay, you can check out [their developer](https://developer.apple.com/apple-pay/) site. The site also has a list of other payment platforms, other than Stripe, that support Apple Pay.
 
