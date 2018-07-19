@@ -1,5 +1,7 @@
 ---
-description: A walk through of using apple pay and google pay
+description: >-
+  A walkthrough of implementing an Apple Pay and/or Google Pay into an existing
+  project.
 ---
 
 # Apple / Google Pay
@@ -8,78 +10,83 @@ description: A walk through of using apple pay and google pay
 
 Feel free to skip to the end and grab the completed example project.
 
-###  1. **Get** the code from GitHub
+###  **Get** the code from GitHub
 
-In terminal
+In terminal:
 
 ```bash
 git clone https://github.com/moltin-examples/applepay-starter.git
 ```
 
-Then navigate into the new directory, and install the cocopods.
+Then navigate into the new directory, and install the cocopods:
 
 ```bash
 pod install
 ```
 
-### 2.  Setting up the project
+### Set up the project
 
-Open the workspace project and run to confirm everything is working.
+Open the workspace project, and run to confirm everything is working.
 
 ![](../.gitbook/assets/screen-shot-2018-07-16-at-11.00.42-am.png)
 
-### 3.  Displaying a product
+### Display a product
 
-The app as it stands is a simple _Master/Detail_ application that shows a list of products from a moltin demo store in the _master_ view. Tap on any product to navigate to a _detail_ view which shows a bigger picture of the swag as well as a more detailed description.
+The app as it stands is a simple _Master/Detail_ application that shows a list of products from a Moltin demo store in the _master_ view. Tap on any product to navigate to a _detail_ view which shows a bigger picture of the swag as well as a more detailed description.
 
-#### 3a. Update to your Moltin Store
+#### Update your Moltin Store
 
-Update the store id in MoltinProductsViewController to use your products.
+Update the store ID in MoltinProductsViewController to use your products:
 
 ```swift
 //Replace with your client id
 let moltin = Moltin(withClientID: "u8cV0fAtS8ELXcyxWY2r4deLTHs1i3NkgV8rt7ZqWX")
 ```
 
-### 4.  Set up apple pay credentials
+### Set up Apple Pay credentials
 
-Go to [http://developer.apple.com](http://developer.apple.com/) and log in to your developer account. Go to _Member Center_ and click on _Certificates, Identifiers & Profiles\Identifiers\App IDs_.
-
-Click on the _+_ button to create a new App ID, name it _Apple MoltinProducts \(_or your app name\) and give it a Bundle ID of the format _com.YOURDOMAIN.MoltinProducts \(_use your own here, if you already have a project\). Make sure that _Explicit App ID_ is selected, as wildcard App IDs aren’t able to make payments with Apple Pay. Finally, check the _Apple Pay_ checkbox under _App Services_, click _Continue_ and then click _Submit_ to complete the creation of your new App ID.
-
-Next, click on _Merchant IDs_ under _Identifiers_ in the left navigation pane
-
-Click _+_ to create a new merchant ID; use whatever description and merchant identifier you’d like. Generally, it’s recommended to create merchant identifiers in the reverse domain style that start with `merchant`, similar to bundle IDs. Click _Continue_ and then click _Register_ to create your new merchant ID.
+1. Go to [http://developer.apple.com](http://developer.apple.com/) and log in to your developer account. Go to _Member Center_ and click on _Certificates, Identifiers & Profiles\Identifiers\App IDs_.
+2. Click on the _+_ button to create a new App ID.
+3. Name the Apple ID with either you app's name or preset Moltin name: _Apple MoltinProducts,_ and give it a Bundle ID of the format: _com.YOURDOMAIN.MoltinProducts._ If you already have a project, substitute the names accordingly. 
+4. Make sure that _Explicit App ID_ is selected, as wildcard App IDs aren’t able to make payments with Apple Pay. 
+5. Check the _Apple Pay_ checkbox under _App Services_, click _Continue_ and then click _Submit_ to complete the creation of your new App ID.
+6. Click on _Merchant IDs_ under _Identifiers_ in the left navigation pane.
+7. Click _+_ to create a new merchant ID; use whatever description and merchant identifier you’d like. Generally, it’s recommended to create merchant identifiers in the reverse domain style that start with `merchant`, similar to bundle IDs.
+8. Click _Continue_ and then click _Register_ to create your new merchant ID.
 
 Now that your App ID and merchant ID are set up, head back to Xcode to get your project ready for Apple Pay.
 
-Select the _MoltinProducts_ project in the left navigation bar, then select the _MoltinProducts_ target and change the _Bundle Identifier_ to match the one you created above. Ensure that the _Team_ selection box is pointing to the development team under which you created your App ID and merchant ID.
+1. Select the _MoltinProducts_ project in the left navigation bar, then select the _MoltinProducts_ target and change the _Bundle Identifier_ to match the one you created above.
+2. Ensure that the _Team_ selection box is pointing to the development team under which you created your App ID and merchant ID.
+3. Click the _Capabilities_ tab, expand the _Apple Pay_ section, and ensure that the switch on the right is set to _ON_. 
+4. Push the _refresh_ button below the merchant ID list. You should see the list populates with the merchant ID you added on the developer portal, if it wasn’t there already.
+5. Select the checkbox next to your merchant ID.
 
-Next, click the _Capabilities_ tab. Expand the _Apple Pay_ section and ensure that the switch on the right is set to _ON_. Then push the _refresh_ button below the merchant ID list; you should see the list populate with the merchant ID you added on the developer portal, if it wasn’t there already.
-
-Finally, check the checkbox next to your merchant ID.
-
-The three items in the _Steps_ section should all have checkmarks next to them to indicate that you’ve satisfied all of the requirements for using Apply Pay in your app. If one isn’t checked, retrace your steps to make sure you’ve taken care of all the details.
+{% hint style="info" %}
+These three steps outlined in the previous sections \(**Setup a project**, **Display a product** and **Setup Apple Pay credentials**\) should all have checkmarks next to them to indicate that you’ve satisfied all requirements for using Apply Pay in your app. If one isn’t checked, retrace your steps to make sure you’ve taken care of all the details.
+{% endhint %}
 
 You now have Apple Pay enabled in your app.
 
-### 5.  Add Apple pay button
+### Add Apple pay button
 
-Open _Main.storyboard_ and take a look at the the _Buy Product_ scene
+Open _Main.storyboard_ and take a look at the the _Buy Product_ scene.
 
 ![](../.gitbook/assets/screen-shot-2018-07-16-at-1.02.34-pm.png)
 
 Apple has a very specific set of Apple Pay guidelines to adhere to, which extends to the buttons in your app. Take a few minutes to review these guidelines at the Apple Pay developer site [https://developer.apple.com/apple-pay/](https://developer.apple.com/apple-pay/).
 
-_Note:_ The _Apple Pay Buttons and Resources_ link at the Apple Pay developer site above provides you with a zip file containing an extensive collection of approved button resources for Apple Pay.
+{% hint style="info" %}
+The _Apple Pay Buttons and Resources_ link at the Apple Pay developer site above provides you with a zip file containing an extensive collection of approved button resources for Apple Pay.
+{% endhint %}
 
 You will find a set of Apple Pay images ready for use in the starter project’s _Image.xcassets_.
 
-Using the _Buy Product_  Interface Builder, select the Apple Pay button and change the image to _ApplePay_. Give your button an empty title instead of the default “button” title. Your scene should now look as follows
+Using the _Buy Product_  Interface Builder, select the Apple Pay button and change the image to _ApplePay_. Give your button an empty title instead of the default “button” title. Your scene should now look as follows:
 
 ![](../.gitbook/assets/screen-shot-2018-07-16-at-1.06.27-pm.png)
 
-### 6.  Create Apple pay request
+### Create Apple pay request
 
 Open _BuyProductViewController.swift_ and add the following import to the top of the file:
 
@@ -135,9 +142,9 @@ Run the app and confirm you are now seeing apple pay when you hit the apple pay 
 
 ![](../.gitbook/assets/screen-shot-2018-07-16-at-2.04.21-pm.png)
 
-### 7.  Handling Shipping
+### Handling shipping
 
-We will be adding a static billing amount to start.  Billing needs are going to differ greatly on what your store is selling.
+We will be adding a static billing amount to start. Billing needs are going to differ greatly on what your store is selling.
 
 ```swift
 let shippingPrice: NSDecimalNumber = NSDecimalNumber(string: "5.0")
@@ -150,7 +157,7 @@ request.paymentSummaryItems = [productToBuy,shipping, totalPrice]
 
 
 
-### 8.  Implement Apple pay delegates
+### Implement Apple pay delegates
 
 In _BuyProductViewController.swift_, add the following extension to `BuyProductViewController` that implements `PKPaymentAuthorizationViewControllerDelegate`:
 
@@ -167,17 +174,17 @@ extension BuyProductViewController: PKPaymentAuthorizationViewControllerDelegate
 }
 ```
 
-To be able to use the apply pay delegate class you need to set it in above`BuyProductViewController` class.  In the `applePayPressed(sender:)`, set it up using the below.
+To be able to use the Apple pay, delegate class you need to set in above`BuyProductViewController` class. In the `applePayPressed(sender:)`, set it up using the code below.
 
 ```swift
 applePayController?.delegate = self
 ```
 
-### 9.  Creating checkout in Moltin
+### Create checkout in Moltin
 
-In `BuyProductViewController`in the PKPaymentAuthorizationViewControllerDelegate you will be sending a successful apple pay order to moltin.
+In `BuyProductViewController`in the PKPaymentAuthorizationViewControllerDelegate, you will be sending a successful Apple pay order to Moltin.
 
-Getting customers information.  It will be returned from the PKPaymentAuthorizationViewControllerDelegate in the payment object.
+Getting customers information. It will be returned from the PKPaymentAuthorizationViewControllerDelegate in the payment object.
 
 Setting up customer.
 
@@ -185,7 +192,7 @@ Setting up customer.
 let customer = Customer(withEmail: payment.billingContact?.emailAddress, withName: payment.shippingContact?.name?.familyName)
 ```
 
-Setting up address.  \(note shipping and billing may vary\)
+Setting up address.  Note that shipping and billing may vary.
 
 ```swift
 let address = Address(withFirstName: (payment.shippingContact?.name?.givenName)!, withLastName: payment.shippingContact?.name?.familyName ?? "")
@@ -195,7 +202,7 @@ address.country = payment.shippingContact?.postalAddress?.country
 address.postcode = payment.shippingContact?.postalAddress?.postalCode
 ```
 
-Processing an order with moltin
+Processing an order with Moltin.
 
 ```swift
 self.moltin.cart.checkout(cart: AppDelegate.cartID, withCustomer: customer, withBillingAddress: address, withShippingAddress: address)
@@ -210,9 +217,9 @@ self.moltin.cart.checkout(cart: AppDelegate.cartID, withCustomer: customer, with
     }
 ```
 
-Paying for the order can be done by varies payment gateways, [https://docs.moltin.com/payments/gateways](https://docs.moltin.com/payments/gateways).  In this example we will us manual, which will allow you complete the transaction than handle the payment processing any way you want.
+Paying for the order can be done by various [payment gateways](https://docs.moltin.com/payments/gateways). In this example we will use the manual payment type, which allows you to complete the transaction that handles the payment processing any way you want.
 
-In the moltin Dashboard you need to enable manual checkout.  In Gateways, click enable within the manual gateway and save, [https://dashboard.moltin.com/app/settings/gateways/manual](https://dashboard.moltin.com/app/settings/gateways/manual).
+In the [Moltin Dashboard](https://dashboard.moltin.com/login) you need to enable manual checkout. In Gateways, click **Enable** within the manual gateway and the click **Save**.
 
 ```swift
 let paymentMethod = ManuallyAuthorizePayment()
@@ -303,13 +310,13 @@ extension BuyProductViewController: PKPaymentAuthorizationViewControllerDelegate
 
 ### Moving forward.
 
-If you’d like to read more in depth on Apple Pay, you can check out the developer site at [https://developer.apple.com/apple-pay/](https://developer.apple.com/apple-pay/). The site also has a list of the other payment platforms other than Stripe that support Apple Pay.
+If you’d like to read more in-depth information on Apple Pay, you can check out [their developer](https://developer.apple.com/apple-pay/) site. The site also has a list of other payment platforms, other than Stripe, that support Apple Pay.
 
 There are many other features of Apple Pay that you could challenge yourself to add to your app:
 
 * Calculate sales tax on the server and update the tax amount in `summaryItems`.
 * Change the available shipping methods based on the ZIP code.
-* Read the order information on the server and verify that the address is valid as a shipping destination.
+* Read the order information on the server, and verify that the address is valid as a shipping destination.
 * Create your own customized Apple Pay button by following the Apple Pay guidelines.
 
 ### Completed example project
