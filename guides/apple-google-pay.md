@@ -321,7 +321,7 @@ There are many other features of Apple Pay that you could challenge yourself to 
 
 ### Completed example project
 
-[https://github.com/moltin-examples/applepay-example](https://github.com/moltin-examples/applepay-example)
+Hang on while we work on this!
 
 
 
