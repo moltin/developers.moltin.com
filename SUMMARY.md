@@ -27,7 +27,7 @@
 * [Related Products](guides/related-products.md)
 * [Email Receipts](guides/email-receipts.md)
 * [Short Order ID](guides/short-order-id.md)
-* [Apple / Google Pay](guides/apple-google-pay.md)
+* [Apple Pay](guides/apple-google-pay.md)
 * [Accept PayPal Payments](guides/accept-paypal-payments.md)
 * [Create a Wishlist](guides/create-a-wishlist.md)
 * [Handle Shipping](guides/handle-shipping.md)
