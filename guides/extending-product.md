@@ -4,7 +4,7 @@ description: >-
   all information you need to display a product.
 ---
 
-# Extending Product
+# Extend a Product
 
 ## 1. Get your access token
 

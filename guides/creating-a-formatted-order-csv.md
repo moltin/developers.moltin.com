@@ -4,7 +4,7 @@ description: >-
   items.
 ---
 
-# Creating a formatted order csv
+# Create a formatted order csv
 
 ## 1. Get your access token {#1-get-your-access-token}
 
