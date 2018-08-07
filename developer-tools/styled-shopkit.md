@@ -53,7 +53,7 @@ export default () => <Product id="X" showDescription showQty />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
 | `showDescription` | `false` | No | Provide this prop to render the description in landscape mode |
 | `showSKU` | `false` | No | Display your product SKU |
@@ -109,7 +109,7 @@ export default () => <Button id="X" showQty />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
 | `showQty` | `true` | No | Show the quantity picker |
 | `text` | Add to Cart | No | Provide custom button text |
@@ -132,7 +132,7 @@ export default () => <Cart />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 | `showCartTotal` | `false` | No | Show the cart total, instead of item count |
 
 ### Product Grid
@@ -153,7 +153,7 @@ export default () => <ProductGrid categoryId="X" />
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `maxProducts` | `12` | No | Set the max products per page |
 | `brandId` | `undefined` | No | Filter products by Brand |
 | `categoryId` | `undefined` | No | Filter products by Category |

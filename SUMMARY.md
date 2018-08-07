@@ -1,9 +1,10 @@
 # Table of contents
 
 * [Welcome to Moltin](introduction.md)
-* [Getting Started](getting-started.md)
+* [Getting Started](getting-started/README.md)
+  * [Setup](getting-started/setup.md)
+  * [Launch Checklist](getting-started/launch-checklist.md)
 * [Your First API Request](your-first-api-request.md)
-* [Typical Checkout Flow](typical-checkout-flow.md)
 * [Quickstarts](quickstarts/README.md)
   * [React](quickstarts/react.md)
   * [Angular](quickstarts/angular.md)
@@ -33,8 +34,8 @@
 * [Handle Shipping](guides/handle-shipping.md)
 * [Handle Tax](guides/handling-tax.md)
 * [Use Promotions](guides/using-promotions.md)
-* [Shipping SMS](guides/shipping-sms.md)
 * [Create a Blog](guides/create-a-blog.md)
+* [Shipping SMS](guides/shipping-sms.md)
 * [Extend a Product](guides/extending-product.md)
 * [Search services](guides/search-services.md)
 * [Create a formatted order csv](guides/creating-a-formatted-order-csv.md)

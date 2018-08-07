@@ -53,7 +53,7 @@ The quickest way to add Moltin to your website is to use the `<Button />` compon
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
 | `cartId` | `undefined` | No | A custom cart ID \(otherwise created automatically\) |
 | `children` | `undefined` | **Yes** | A custom render function for your product |
@@ -80,7 +80,7 @@ The `<Product />` component is great place to start for rendering individual pro
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `id` | `undefined` | **Yes** | Your Moltin product ID |
 | `children` | `undefined` | **Yes** | A custom render function for your product |
 
@@ -118,7 +118,7 @@ You will need to import `Button`, if you wish to enable add to cart functionalit
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `maxProducts` | `12` | No | Set the max products per page |
 | `categoryId` | `undefined` | No | Filter products by Category |
 | `collectionId` | `undefined` | No | Filter products by Collection |
@@ -159,7 +159,7 @@ You will need to import `Button`, if you wish to enable add to cart functionalit
 #### Props
 
 | **Prop** | **Default** | **Required** | **Description** |
-| --- | --- |
+| :--- | :--- | :--- | :--- |
 |  |  |  |  |
 
 #### Example
