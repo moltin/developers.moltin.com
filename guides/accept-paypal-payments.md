@@ -1,4 +1,4 @@
 # Accept PayPal Payments
 
-Jamie / George
+Drew / Jamie
 

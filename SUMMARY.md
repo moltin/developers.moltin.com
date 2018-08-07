@@ -35,9 +35,10 @@
 * [Handle Tax](guides/handling-tax.md)
 * [Use Promotions](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
-* [Shipping SMS](guides/shipping-sms.md)
 * [Extend a Product](guides/extending-product.md)
+* [Shipping SMS](guides/shipping-sms.md)
 * [Search services](guides/search-services.md)
 * [Create a formatted order csv](guides/creating-a-formatted-order-csv.md)
+* [Implement Own Payment Gateway](guides/implement-own-payment-gateway.md)
 * [Work with Inventory](guides/work-with-inventory.md)
 
