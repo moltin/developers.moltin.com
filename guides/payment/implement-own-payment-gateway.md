@@ -2,7 +2,7 @@
 description: A walkthrough on implementing own manual payment gateway
 ---
 
-# Implement Own Payment Gateway
+# Own Payment Gateway
 
 ### What's an own gateway
 

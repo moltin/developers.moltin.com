@@ -36,6 +36,6 @@
 * [Using Product Variations](guides/using-product-variations.md)
 * [Payment](guides/payment/README.md)
   * [Apple Pay](guides/payment/apple-google-pay.md)
-  * [Implement Own Payment Gateway](guides/payment/implement-own-payment-gateway/README.md)
-    * [Payment Request API](guides/payment/implement-own-payment-gateway/payment-request-api.md)
+  * [Payment Request API](guides/payment/payment-request-api.md)
+  * [Own Payment Gateway](guides/payment/implement-own-payment-gateway.md)
 
