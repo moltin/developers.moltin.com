@@ -8,10 +8,10 @@
 * [Example Projects](example-projects/README.md)
   * [Angular](example-projects/angular.md)
   * [React + Shopkit](example-projects/shopkit.md)
-  * [Next.js](example-projects/next.js.md)
   * [Swift](example-projects/swift.md)
   * [Vue](example-projects/vue.md)
   * [GraphQL](example-projects/graphql.md)
+  * [Next.js](example-projects/next.js.md)
 
 ## Developer Tools
 
