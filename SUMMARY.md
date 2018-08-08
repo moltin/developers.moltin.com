@@ -5,22 +5,19 @@
   * [Setup](getting-started/setup.md)
   * [Launch Checklist](getting-started/launch-checklist.md)
 * [Your First API Request](your-first-api-request.md)
-* [Quickstarts](quickstarts/README.md)
-  * [React](quickstarts/react.md)
-  * [Angular](quickstarts/angular.md)
-  * [Node.js](quickstarts/node.js.md)
-  * [Next.js](quickstarts/next.js.md)
-  * [Shopkit](quickstarts/shopkit.md)
-  * [Swift](quickstarts/swift.md)
-  * [Vue](quickstarts/vue.md)
-  * [GraphQL](quickstarts/graphql.md)
+* [Example Projects](example-projects/README.md)
+  * [Angular](example-projects/angular.md)
+  * [React + Shopkit](example-projects/shopkit.md)
+  * [Next.js](example-projects/next.js.md)
+  * [Swift](example-projects/swift.md)
+  * [Vue](example-projects/vue.md)
+  * [GraphQL](example-projects/graphql.md)
 
 ## Developer Tools
 
 * [Postman](developer-tools/postman.md)
 * [SDKs](developer-tools/sdks.md)
 * [Shopkit](developer-tools/shopkit.md)
-* [Styled Shopkit](developer-tools/styled-shopkit.md)
 
 ## Guides
 
@@ -34,9 +31,10 @@
 * [Use Promotions](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
 * [Extend a Product](guides/extending-product.md)
-* [Shipping SMS](guides/shipping-sms.md)
 * [Search services](guides/search-services.md)
 * [Create a formatted order csv](guides/creating-a-formatted-order-csv.md)
-* [Implement Own Payment Gateway](guides/implement-own-payment-gateway.md)
 * [Work with Inventory](guides/work-with-inventory.md)
+* [Shipping SMS](guides/shipping-sms.md)
+* [Using Product Variations](guides/using-product-variations.md)
+* [Implement Own Payment Gateway](guides/implement-own-payment-gateway.md)
 

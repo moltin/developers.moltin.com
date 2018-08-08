@@ -5,7 +5,7 @@ Moltin Shopkit is a minimalist component library that enables developers to easi
 Shopkit is built on top of the Moltin [JS SDK](https://github.com/moltin/js-sdk), removing all of the setup boilerplate to get up and running with React.
 
 {% hint style="info" %}
-You may also use [Styled Shopkit](styled-shopkit.md) to use predefined components that have their own CSS and markup.
+You may also use [Styled Shopkit]() to use predefined components that have their own CSS and markup.
 {% endhint %}
 
 Shopkit has several components that return a function you can use to render various types of components in your application.
