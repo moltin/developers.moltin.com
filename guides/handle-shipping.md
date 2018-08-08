@@ -1,4 +1,0 @@
-# Handle Shipping
-
-Jamie
-

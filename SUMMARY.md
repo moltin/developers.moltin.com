@@ -25,9 +25,7 @@
 * [Related Products](guides/related-products.md)
 * [Email Receipts](guides/email-receipts.md)
 * [Short Order ID](guides/short-order-id.md)
-* [Apple Pay](guides/apple-google-pay.md)
 * [Create a Wishlist](guides/create-a-wishlist.md)
-* [Handle Shipping](guides/handle-shipping.md)
 * [Use Promotions](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
 * [Extend a Product](guides/extending-product.md)
@@ -36,5 +34,7 @@
 * [Shipping SMS](guides/shipping-sms.md)
 * [Work with Inventory](guides/work-with-inventory.md)
 * [Using Product Variations](guides/using-product-variations.md)
-* [Implement Own Payment Gateway](guides/implement-own-payment-gateway.md)
+* [Payment](guides/payment/README.md)
+  * [Apple Pay](guides/payment/apple-google-pay.md)
+  * [Implement Own Payment Gateway](guides/payment/implement-own-payment-gateway.md)
 

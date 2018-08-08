@@ -38,7 +38,7 @@ pod install
 Open the workspace project in Xcode, and run to confirm everything is working.  
 
 
-![](../.gitbook/assets/screen-shot-2018-07-16-at-11.00.42-am.png)
+![](../../.gitbook/assets/screen-shot-2018-07-16-at-11.00.42-am.png)
 
 ### Display a product
 
@@ -85,7 +85,7 @@ You now have Apple Pay enabled in your app.
 
 Open **Main.storyboard** and take a look at the the **Buy Product** scene.
 
-![](../.gitbook/assets/screen-shot-2018-07-16-at-1.02.34-pm.png)
+![](../../.gitbook/assets/screen-shot-2018-07-16-at-1.02.34-pm.png)
 
 Apple has a very specific set of Apple Pay guidelines to adhere to, which extends to the buttons in your app. Take a few minutes to review these guidelines at the Apple Pay developer site [https://developer.apple.com/apple-pay/](https://developer.apple.com/apple-pay/).
 
@@ -97,7 +97,7 @@ You will find a set of Apple Pay images ready for use in the starter project’s
 
 Using the **Buy Product**  Interface Builder, select the **Apple Pay** button, and change the image to **ApplePay**. Give your button an empty title instead of the default “button” title. Your scene should now look as follows:
 
-![](../.gitbook/assets/screen-shot-2018-07-16-at-1.06.27-pm.png)
+![](../../.gitbook/assets/screen-shot-2018-07-16-at-1.06.27-pm.png)
 
 ### Create Apple Pay request
 
@@ -153,7 +153,7 @@ Using the **Buy Product**  Interface Builder, select the **Apple Pay** button, a
 
 9. Run the app to confirm whether you see Apple Pay when you hit the **Apple Pay** button on the buy scene.
 
-![](../.gitbook/assets/screen-shot-2018-07-16-at-2.04.21-pm.png)
+![](../../.gitbook/assets/screen-shot-2018-07-16-at-2.04.21-pm.png)
 
 ### Handle shipping
 
