@@ -47,7 +47,7 @@ curl -X POST https://api.moltin.com/v2/variations \
 {% endtab %}
 {% endtabs %}
 
-## 3. Create a product options
+## 3. Create a product option
 
 Product options are the actual variation options that you want to make available for your project. This is were you'll be able to outline the size you want to offer, i.e. small, medium or large.
 
