@@ -59,30 +59,8 @@ curl -X POST https://api.moltin.com/v2/fields \
           "slug": "phone_number",
           "description": "This is the phone number for the customer.",
           "enabled": true,
-          "relationships": {
-            "flow": {
-              "type": "flow",
-              "id": "FLOW_ID"
-            }
-          }
-        }
-     }'
-```
-
-Next, we will store a boolean flag for `shipping_sms_sent` that is used to determine if an SMS should be sent.
-
-```bash
-curl -X POST https://api.moltin.com/v2/fields \
-     -H "Authorization: XXXX" \
-     -H "Content-Type: application/json" \
-     -d $'{
-        "data": {
-          "type": "boolean",
-          "name": "Shipping SMS Sent (managed by webhook)",
-          "slug": "shipping_sms_sent",
-          "description": "This is a SMS flag managed by a webhook.",
-          "default": false,
-          "enabled": true,
+          "field_type": "string",
+          "required": false,
           "relationships": {
             "flow": {
               "type": "flow",
@@ -113,7 +91,7 @@ You'll need the following ENV variables to successfully deploy the function:
 
 ```bash
 npm i -g now # unless installed already
-now moltin-examples/short-order-id -e MOLTIN_CLIENT_ID=x MOLTIN_CLIENT_SECRET=x MOLTIN_WEBHOOK_SECRET=x TWILIO_ACCOUNT_SID=x TWILIO_AUTH_TOKEN=x TWILIO_FROM_NUMBER=x TWILIO_SMS_BODY=x
+now moltin-examples/twilio-shipping-sms
 ```
 
 {% hint style="warning" %}

@@ -33,8 +33,8 @@
 * [Extend a Product](guides/extending-product.md)
 * [Search services](guides/search-services.md)
 * [Create a formatted order csv](guides/creating-a-formatted-order-csv.md)
-* [Work with Inventory](guides/work-with-inventory.md)
 * [Shipping SMS](guides/shipping-sms.md)
+* [Work with Inventory](guides/work-with-inventory.md)
 * [Using Product Variations](guides/using-product-variations.md)
 * [Implement Own Payment Gateway](guides/implement-own-payment-gateway.md)
 
