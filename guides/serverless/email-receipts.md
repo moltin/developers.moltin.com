@@ -6,7 +6,7 @@ One of the easiest ways to send email receipts is by using a webhook. With the [
 
 You'll need to sign up or log in to [Postmark](https://postmarkapp.com/) to create a template. Once logged in, create a server, head to the templates section, and select the option to "code your own".
 
-![](../.gitbook/assets/screen-shot-2018-07-09-at-12.00.21.png)
+![](../../.gitbook/assets/screen-shot-2018-07-09-at-12.00.21.png)
 
 In this example, we'll name our template `Order confirmation`, and specify `Order Confirmation #{{order_ref}}` as the subject.
 
@@ -51,7 +51,7 @@ Inside the HTML body, provide the following:
 
 Save this template, and take note of the template `ID`.
 
-![Postmark template ID](../.gitbook/assets/screen-shot-2018-07-09-at-12.07.59.png)
+![Postmark template ID](../../.gitbook/assets/screen-shot-2018-07-09-at-12.07.59.png)
 
 Postmark have a great selection of templates that you can use. [Check them out](https://postmarkapp.com/why/templates)!
 

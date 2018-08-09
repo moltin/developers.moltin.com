@@ -22,7 +22,7 @@ curl -X "POST" "https://api.moltin.com/oauth/access_token" \
  Let's extend the moltin products resource by creating a new flow.
 
 {% hint style="info" %}
-If you already have a Flow for `products`, skip to [Create a Flow Field](short-order-id.md#2-create-a-flow-field). You'll need the ID of the products Flow to continue.
+If you already have a Flow for `products`, skip to [Create a Flow Field](serverless/short-order-id.md#2-create-a-flow-field). You'll need the ID of the products Flow to continue.
 {% endhint %}
 
 ```bash
