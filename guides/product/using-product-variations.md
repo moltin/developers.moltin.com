@@ -2,7 +2,7 @@
 
 Variations allow you to organize your products per certain characteristics, such as color or size. Use variations to manage your stock more efficiently.
 
-## 1. Get your access token
+### 1. Get your access token
 
 You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
 
@@ -13,7 +13,7 @@ curl -X "POST" "https://api.moltin.com/oauth/access_token" \
      -d "grant_type=client_credentials"
 ```
 
-## 2. Create a product variation
+### 2. Create a product variation
 
 This will be a variation of a product you **already have** in Moltin. To create a product, use [Moltin dashboard](https://dashboard.moltin.com) or [Moltin's API](https://docs.moltin.com/catalog/products). 
 
@@ -47,7 +47,7 @@ curl -X POST https://api.moltin.com/v2/variations \
 {% endtab %}
 {% endtabs %}
 
-## 3. Create a product option
+### 3. Create a product option
 
 Product options are the actual variation options that you want to make available for your project. This is were you'll be able to outline the size you want to offer, i.e. small, medium or large.
 
@@ -116,7 +116,7 @@ Replace `variationId` with the **ID** that you generated for the particular vari
 
 Repeat the step for every option you want to add. In the example above, we've added small, medium and large options \(see the Response tab for details\).
 
-## 4. Create modifiers for your options
+### 4. Create modifiers for your options
 
 Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU so that each of them have a unique value. 
 
@@ -226,7 +226,7 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
 
 Repeat the step for every option you want to add a modifier to. In the example above, we've added small, medium and large options and slug and SKU modifiers \(see the Response tab for details\).
 
-## 5. Create the Product Variations
+### 5. Create the Product Variations
 
 Now, we need to allocate the above logic to the product itself. In this example this would be the shirt.
 
@@ -407,7 +407,7 @@ Replace `parentId` with the **ID** of the base product.
 Replace `name` with the **name** you used for the product variation \(step 1\).
 {% endhint %}
 
-## Child Variations in use {#3-tie-the-variation-to-the-parent-product}
+### Child Variations in use
 
 For adding a product defined by a variation to a cart or checking it out, make sure to use the **child product ID**, not the product ID.
 
