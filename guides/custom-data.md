@@ -10,9 +10,9 @@ The most common usage of the Flows API is to extend resources like products, cus
 
 Click the links below to view examples of how to use Flows to extend resources.
 
-{% page-ref page="related-products.md" %}
+{% page-ref page="product/related-products.md" %}
 
-{% page-ref page="extending-product.md" %}
+{% page-ref page="product/extending-product.md" %}
 
 {% page-ref page="serverless/short-order-id.md" %}
 

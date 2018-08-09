@@ -1,4 +1,4 @@
-# Using Product Variations
+# Product Variations
 
 Variations allow you to organize your products per certain characteristics, such as color or size. Use variations to manage your stock more efficiently.
 
