@@ -51,6 +51,8 @@ curl -X POST https://api.moltin.com/v2/variations \
 
 Product options are the actual variation options that you want to make available for your project. This is were you'll be able to outline the size you want to offer, i.e. small, medium or large.
 
+Within our ecosystem, a `variation` is simply a container for a number of `options`. 
+
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
@@ -118,7 +120,9 @@ Repeat the step for every option you want to add. In the example above, we've ad
 
 Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU, as these are unique values. 
 
-**add link to** [**modifiers article**](https://moltin.com/blog/2017/06/magic-modifiers/) **when imported from blog.**
+{% hint style="info" %}
+For more details, see: Modifiers.
+{% endhint %}
 
 {% tabs %}
 {% tab title="cURL" %}
