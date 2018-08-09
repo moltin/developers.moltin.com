@@ -118,7 +118,7 @@ Repeat the step for every option you want to add. In the example above, we've ad
 
 ## 4. Create modifiers for your options
 
-Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU, as these are unique values. 
+Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU so that each of them have a unique value. 
 
 {% hint style="info" %}
 For more details, see: Modifiers.
