@@ -62,7 +62,7 @@ Check here to see how to make a Lambda, if you do not have one ready.
 
 {% embed data="{\"url\":\"https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html\",\"type\":\"link\",\"title\":\"Create a Simple Lambda\\n         \\t\\t\\tFunction - AWS Lambda\\n      \",\"description\":\"Follow the steps in this section to create a simple Lambda function.\",\"icon\":{\"type\":\"icon\",\"url\":\"https://docs.aws.amazon.com/images/favicon.ico\",\"aspectRatio\":0}}" %}
 
-![Under function code select zip](../.gitbook/assets/screen-shot-2018-07-12-at-12.00.48-pm.png)
+![Under function code select zip](../../.gitbook/assets/screen-shot-2018-07-12-at-12.00.48-pm.png)
 
 ## 5. Update handler
 

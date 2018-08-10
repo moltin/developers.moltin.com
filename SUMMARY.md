@@ -25,7 +25,6 @@
 * [Create a Wishlist](guides/create-a-wishlist.md)
 * [Use Promotions](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
-* [Search services](guides/search-services.md)
 * [Create a formatted order csv](guides/creating-a-formatted-order-csv.md)
 * [Work with Inventory](guides/work-with-inventory.md)
 * [Product](guides/product/README.md)
@@ -40,4 +39,5 @@
   * [Short Order ID](guides/serverless/short-order-id.md)
   * [Email Receipts](guides/serverless/email-receipts.md)
   * [Shipping SMS](guides/serverless/shipping-sms.md)
+  * [Search services](guides/serverless/search-services.md)
 
