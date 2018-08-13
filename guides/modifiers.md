@@ -124,14 +124,16 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
 
 ### Product Price Modifiers
 
-Price modifiers help adjust the price of a product. As this kind of modifier deals with prices, the `value` of this modifier must be a collection of currency values, similar to that when specifying a product price. 
+Price modifiers help adjust the price of a product. As this kind of modifier deals with prices, the `value` of this modifier must be a collection of currency values \(similar to that when specifying a product price\). 
 
-Price collection on a modifier itself.
+While the modifier can have any number of currencies applied to it, only the currencies specified on the actual base product will be subjected to any modifiers. Use Moltin [dashboard](https://dashboard.moltin.com) or [API](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/products) to specify the base product price.
 
-While the modifier can have any number of currencies applied to it, only the currencies specified on the actual base product will be subjected to any modifiers. For example, if you have USD and GBP values on a base product, and apply a modifier that alters GBP, AUD and EUR, the ONLY currency value affected will be GBP; the USD value will remain the same, and no other currencies will be set on the variation product.
+**For example:**
+
+If you have USD and GBP values on a base product, and apply a modifier that alters GBP, AUD and EUR, the ONLY currency value affected will be GBP; the USD value will remain the same, and no other currencies will be set on the variation product.
 
 {% tabs %}
-{% tab title="Request" %}
+{% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
      -H "Authorization: Bearer XXXX" \
@@ -164,12 +166,6 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
       ]
     }
 }
-```
-{% endtab %}
-
-{% tab title="Response" %}
-```text
-
 ```
 {% endtab %}
 {% endtabs %}
