@@ -5,19 +5,22 @@ Modifiers help augmenting properties of a variation of a product, price, etc., b
 * See [Product Variations](product/using-product-variations.md) for more details on product-related variations.
 * See [API Reference ](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/product-variations/modifiers)documentation for more technical overview.
 
-Below, we document the most commonly used scenarios for using variations and modifiers, on products and prices.
+Below, we document the most commonly used scenarios for applying modifiers, on products and prices.
 
 #### Key points about modifiers:
 
+* You apply a modifier on a variation \(a child\) created from a base product/price, etc.
 * The maximum number of child products generated from a base product cannot exceed 200.
-* The `value` field should start with a hyphen, e.g. `"-medium"`.
+* The `value` field of a modifier should start with a hyphen, e.g. `"-medium"`.
 * You can only pass one modifier at a time. This will be added to an array of modifiers that have already been created for that particular variation.
 
 ### Product Modifiers
 
 Product modifiers create the variation products \(child products\) from the base product by augmenting different properties of that base product. 
 
-Once a `modifier_type` and its `value` has been specified, these will define how that property changes as the child products are built. 
+Once a `modifier_type` and its `value` has been specified, these will define how that property changes as the child products are built.
+
+In the example below, we are adding a `slug_append` : `-green` property-value pair to the already existing array of color modifiers that have been added to a variation, `Shirt color`.
 
 {% tabs %}
 {% tab title="cURL" %}
