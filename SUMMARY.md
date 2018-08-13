@@ -40,4 +40,5 @@
   * [Email Receipts](guides/serverless/email-receipts.md)
   * [Shipping SMS](guides/serverless/shipping-sms.md)
   * [Search services](guides/serverless/search-services.md)
+* [Modifiers](guides/modifiers.md)
 

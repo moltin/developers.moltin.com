@@ -120,9 +120,7 @@ Repeat the step for every option you want to add. In the example above, we've ad
 
 Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU so that each of them have a unique value. 
 
-{% hint style="info" %}
-For more details, see: Modifiers.
-{% endhint %}
+* For more details, see: [Modifiers](../modifiers.md).
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -231,7 +229,7 @@ Repeat the step for every option you want to add a modifier to. In the example a
 Now, we need to allocate the above logic to the product itself. In this example this would be the shirt.
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="cURL" %}
 ```javascript
 curl -X POST \
   https://api.moltin.com/v2/products/:parentId/relationships/variations \
