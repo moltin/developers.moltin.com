@@ -1,6 +1,6 @@
 # Modifiers
 
-Modifiers help augmenting properties of a variation of a product, price, etc., by creating an array of child products or prices. They help you keep your stock organized. For instance, instead of creating 3 different base products for three different shirt colors, you'll have one base product with 3 color variations. A modifier will then decide how to change a variation \(child\), for instance you can have three different descriptions of the base product split by their distinct colors displayed in your project. 
+Modifiers help augmenting properties of a variation of a product, price, etc., by creating an array of child products or prices. They help you keep your stock organized. For instance, instead of creating 3 different base products for three different shirt colors, you'll have one base product with 3 color variations. A modifier will then decide how to change a variation \(child\), for instance you can have three different descriptions of the base product split per color. 
 
 * See [Product Variations](product/using-product-variations.md) for more details on product-related variations.
 * See [API Reference ](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/product-variations/modifiers)documentation for more technical overview.
@@ -11,25 +11,110 @@ Below, we document the most commonly used scenarios for using variations and mod
 
 Product modifiers create the variation products \(child products\) from the base product by augmenting different properties of that base product. 
 
-Once a modifier type and its value has been specified, these will define how that property changes as the child products are built. The maximum number of child products generated from a base product cannot exceed 200.
+Once a `modifier_type` and its `value` has been specified, these will define how that property changes as the child products are built. 
+
+{% hint style="warning" %}
+`value` always starts with a hyphen, e.g. `"-medium"`.
+{% endhint %}
+
+The maximum number of child products generated from a base product cannot exceed 200.
 
 {% tabs %}
 {% tab title="Request" %}
 ```bash
-
-
+curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+          "data": {
+              "type": "modifier",
+              "modifier_type": "slug_append",
+              "value": "-green"
+  }
+} 
 ```
 {% endtab %}
 
 {% tab title="Response" %}
 ```bash
 {
-     "data": {
-   type": "product-modifier",
-   "modifier_type": "description_append",
-   "value": VALUE
-     }
- }
+    "data": {
+        "type": "product-variation",
+        "id": "ccfb0d2c-8ed5-4dd8-ab41-ba883f4d3fbb",
+        "name": "Shirt color",
+        "options": [
+            {
+                "id": "581dd431-38f0-415f-98fc-ec64b5aa7f9d",
+                "name": "red",
+                "description": "Color red",
+                "modifiers": [
+                    {
+                        "id": "d675108f-3c6e-4c03-bea0-eae03e009214",
+                        "type": "slug_append",
+                        "value": "-red"
+                    },
+                    {
+                        "id": "48eadcae-dd11-4d40-be23-6e6404a43b3b",
+                        "type": "sku_append",
+                        "value": "-red"
+                    }
+                ]
+            },
+            {
+                "id": "f4413e4d-8258-4510-87f9-4af0d75bfcb1",
+                "name": "blue",
+                "description": "Color Blue",
+                "modifiers": [
+                    {
+                        "id": "1118633c-c947-4f91-8b29-d055fac2d8b7",
+                        "type": "slug_append",
+                        "value": "-blue"
+                    },
+                    {
+                        "id": "84b062ac-436d-4a20-8322-1319d39414b9",
+                        "type": "sku_append",
+                        "value": "-blue"
+                    }
+                ]
+            },
+            {
+                "id": "143814e1-c75f-46d4-8d14-97d15405321f",
+                "name": "green",
+                "description": "Color green",
+                "modifiers": [
+                    {
+                        "id": "b0e2f026-bb1f-4369-86a0-b4f3f367c2b6",
+                        "type": "slug_append",
+                        "value": "-green"
+                    },
+                    {
+                        "id": "8eabf166-6617-4969-807e-72f4c5a64948",
+                        "type": "sku_append",
+                        "value": "-green"
+                    }
+                ]
+            }
+        ],
+        "relationships": {
+            "options": {
+                "data": [
+                    {
+                        "type": "option",
+                        "id": "581dd431-38f0-415f-98fc-ec64b5aa7f9d"
+                    },
+                    {
+                        "type": "option",
+                        "id": "f4413e4d-8258-4510-87f9-4af0d75bfcb1"
+                    },
+                    {
+                        "type": "option",
+                        "id": "143814e1-c75f-46d4-8d14-97d15405321f"
+                    }
+                ]
+            }
+        }
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
