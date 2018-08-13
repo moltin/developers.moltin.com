@@ -13,6 +13,7 @@ Below, we document the most commonly used scenarios for applying modifiers, on p
 * The maximum number of child products generated from a base product cannot exceed 200.
 * The `value` field of a modifier should start with a hyphen, e.g. `"-medium"`.
 * You can only pass one modifier at a time. This will be added to an array of modifiers that have already been created for that particular variation.
+* At minimum,  a variation should have a  `sku` and a `slug` modifier.
 
 ### Product Modifiers
 
