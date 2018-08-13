@@ -5,15 +5,14 @@ Modifiers help augmenting properties of a variation of a product, price, etc., b
 * See [Product Variations](product/using-product-variations.md) for more details on product-related variations.
 * See [API Reference ](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/product-variations/modifiers)documentation for more technical overview.
 
-Below, we document the most commonly used scenarios for applying modifiers, on products and prices.
+Below, we document the most commonly used scenarios for applying modifiers, on products themselves and their prices.
 
 #### Key points about modifiers:
 
-* You apply a modifier on a variation \(a child\) created from a base product/price, etc.
+* Modifiers attached to a variation option are applied to a base product to create child products.
 * The maximum number of child products generated from a base product cannot exceed 200.
-* The `value` field of a modifier should start with a hyphen, e.g. `"-medium"`.
-* You can only pass one modifier at a time. This will be added to an array of modifiers that have already been created for that particular variation.
-* At minimum,  a variation should have a  `sku` and a `slug` modifier.
+* You can only pass one modifier at a time. This will be added to a collection of modifiers that have already been created for that particular variation option.
+* At minimum,  a variation option **must** have a  `sku` and a `slug` modifier.
 
 ### Product Modifiers
 
@@ -21,7 +20,7 @@ Product modifiers create the variation products \(child products\) from the base
 
 Once a `modifier_type` and its `value` has been specified, these will define how that property changes as the child products are built.
 
-In the example below, we are adding a `slug_append` : `-green` property-value pair to the already existing array of color modifiers that have been added to a variation, `Shirt color`.
+In the example below, we are adding a `slug_append` : `-green` property-value pair to the already existing collection of color modifiers that have been added to a variation, `Shirt color`.
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -123,16 +122,48 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
 {% endtab %}
 {% endtabs %}
 
-### Price Modifiers
+### Product Price Modifiers
 
 Price modifiers help adjust the price of a product. As this kind of modifier deals with prices, the `value` of this modifier must be a collection of currency values, similar to that when specifying a product price. 
+
+Price collection on a modifier itself.
 
 While the modifier can have any number of currencies applied to it, only the currencies specified on the actual base product will be subjected to any modifiers. For example, if you have USD and GBP values on a base product, and apply a modifier that alters GBP, AUD and EUR, the ONLY currency value affected will be GBP; the USD value will remain the same, and no other currencies will be set on the variation product.
 
 {% tabs %}
 {% tab title="Request" %}
-```text
-
+```bash
+curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
+     -H "Authorization: Bearer XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+        "data": {
+          "type": "product-modifier",
+          "modifier_type": "price_increment",
+          "value": [
+          {
+              "currency": "GBP",
+              "amount": 1000,
+              "includes_tax": true
+          },
+          {
+              "currency": "USD",
+              "amount": 1500,
+              "includes_tax": false
+          },
+          {
+              "currency": "EUR",
+              "amount": 1200,
+              "includes_tax": true
+          },
+          {
+              "currency": "AUD",
+              "amount": 2000,
+              "includes_tax": false
+          }
+      ]
+    }
+}
 ```
 {% endtab %}
 
@@ -143,7 +174,7 @@ While the modifier can have any number of currencies applied to it, only the cur
 {% endtab %}
 {% endtabs %}
 
-### SKU/Slug Builder Modifiers
+### Product SKU/Slug Builder Modifiers
 
 Each variation must have at minimum `sku` and `slug` modifiers defined. These are mandatory, as they make each variation unique as a value.
 
