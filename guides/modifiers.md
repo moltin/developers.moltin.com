@@ -7,20 +7,20 @@ Modifiers help augmenting properties of a variation of a product, price, etc., b
 
 Below, we document the most commonly used scenarios for using variations and modifiers, on products and prices.
 
+#### Key points about modifiers:
+
+* The maximum number of child products generated from a base product cannot exceed 200.
+* The `value` field should start with a hyphen, e.g. `"-medium"`.
+* You can only pass one modifier at a time. This will be added to an array of modifiers that have already been created for that particular variation.
+
 ### Product Modifiers
 
 Product modifiers create the variation products \(child products\) from the base product by augmenting different properties of that base product. 
 
 Once a `modifier_type` and its `value` has been specified, these will define how that property changes as the child products are built. 
 
-{% hint style="warning" %}
-`value` always starts with a hyphen, e.g. `"-medium"`.
-{% endhint %}
-
-The maximum number of child products generated from a base product cannot exceed 200.
-
 {% tabs %}
-{% tab title="Request" %}
+{% tab title="cURL" %}
 ```bash
 curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
      -H "Authorization: Bearer XXXX" \
