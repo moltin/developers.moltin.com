@@ -120,7 +120,7 @@ Repeat the step for every option you want to add. In the example above, we've ad
 
 Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU so that each of them have a unique value. 
 
-* For more details, see: [Modifiers](../modifiers.md).
+* For more details, see: [Modifiers](modifiers.md).
 
 {% tabs %}
 {% tab title="cURL" %}

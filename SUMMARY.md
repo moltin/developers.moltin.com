@@ -29,6 +29,7 @@
 * [Work with Inventory](guides/work-with-inventory.md)
 * [Product](guides/product/README.md)
   * [Product Variations](guides/product/using-product-variations.md)
+  * [Product Modifiers](guides/product/modifiers.md)
   * [Extend a Product](guides/product/extending-product.md)
   * [Related Products](guides/product/related-products.md)
 * [Payment](guides/payment/README.md)
@@ -40,5 +41,4 @@
   * [Email Receipts](guides/serverless/email-receipts.md)
   * [Shipping SMS](guides/serverless/shipping-sms.md)
   * [Search services](guides/serverless/search-services.md)
-* [Modifiers](guides/modifiers.md)
 
