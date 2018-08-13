@@ -1,4 +1,4 @@
-# Use Promotions
+# Associate Promotion with a Brand
 
 Promotions allow you to provide discounts to customers. By defining a Promotion and a code, you put in place the facility to offer discounts to customers, applied directly to their shopping carts.
 

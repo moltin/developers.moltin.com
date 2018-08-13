@@ -23,7 +23,7 @@
 
 * [Custom Data](guides/custom-data.md)
 * [Create a Wishlist](guides/create-a-wishlist.md)
-* [Use Promotions](guides/using-promotions.md)
+* [Associate Promotion with a Brand](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
 * [Create a formatted order csv](guides/creating-a-formatted-order-csv.md)
 * [Work with Inventory](guides/work-with-inventory.md)
