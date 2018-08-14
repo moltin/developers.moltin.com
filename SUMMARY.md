@@ -25,6 +25,7 @@
   * [Product Variations](guides/product/using-product-variations.md)
   * [Product Modifiers](guides/product/modifiers.md)
   * [Extend a Product](guides/product/extending-product.md)
+  * [Related Products](guides/product/product-relationships.md)
 * [Payment](guides/payment/README.md)
   * [Apple Pay with Swift](guides/payment/apple-google-pay.md)
   * [Payment Request API](guides/payment/payment-request-api.md)
