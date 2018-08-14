@@ -1,6 +1,6 @@
 # Your First API Request
 
-This section covers how to get started with making your first API request. You may use the API directly with a cURL request or make use of one of our supported [SDKs](example-projects/).
+This section covers how to get started with making your first API request. You may use the API directly with a cURL request or make use of one of our supported [SDKs](example-projects.md).
 
 ## 1. Install SDK \(recommended\)
 

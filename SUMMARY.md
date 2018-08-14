@@ -5,13 +5,7 @@
   * [Setup](getting-started/setup.md)
   * [Launch Checklist](getting-started/launch-checklist.md)
 * [Your First API Request](your-first-api-request.md)
-* [Example Projects](example-projects/README.md)
-  * [Angular](example-projects/angular.md)
-  * [React + Shopkit](example-projects/shopkit.md)
-  * [Swift](example-projects/swift.md)
-  * [Vue](example-projects/vue.md)
-  * [GraphQL](example-projects/graphql.md)
-  * [Next.js](example-projects/next.js.md)
+* [Example Projects](example-projects.md)
 
 ## Developer Tools
 
