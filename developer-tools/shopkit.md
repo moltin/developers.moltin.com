@@ -101,7 +101,7 @@ export default () => (
 
 ### Product Grid
 
-For pages you wish to display an array of products, you can use the `<ProductGrid />` component to render all `live` products, or products by category, collection or brand ID.
+For pages you wish to display an array of products, you can use the `<ProductGrid />` component to render all `live` products.
 
 {% hint style="warning" %}
 You will need to import `Button`, if you wish to enable add to cart functionality.
@@ -112,9 +112,6 @@ You will need to import `Button`, if you wish to enable add to cart functionalit
 | **Prop** | **Default** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- |
 | `maxProducts` | `12` | No | Set the max products per page |
-| `categoryId` | `undefined` | No | Filter products by Category |
-| `collectionId` | `undefined` | No | Filter products by Collection |
-| `brandId` | `undefined` | No | Filter products by Brand |
 | `children` | `undefined` | **Yes** | A custom render function for grid |
 
 #### Example
