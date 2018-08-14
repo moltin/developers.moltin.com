@@ -1,6 +1,6 @@
 # Product Modifiers
 
-Modifiers help augmenting properties of a variation of a product, price, etc., by creating an array of child products or prices. They help you keep your stock organized. For instance, instead of creating 3 different base products for three different shirt colors, you'll have one base product with 3 color variations. A modifier will then decide how to change a variation \(child\), for instance you can have three different descriptions of the base product split per color. 
+Modifiers augment the properties of a base product \(price, SKU etc.\), by creating an collection of child products. They help you keep your stock organized. For instance, instead of creating 3 different base products for three different shirt colors, you'll have one base product with a variation using 3 colors. A modifier will then decide how to change the child product's properties, for instance you could have three different descriptions for each child product based on the color. 
 
 * See [Product Variations](using-product-variations.md) for more details on product-related variations.
 * See [API Reference ](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/product-variations/modifiers)documentation for more technical overview.
