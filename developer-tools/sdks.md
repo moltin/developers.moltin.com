@@ -2,7 +2,7 @@
 
 Moltin officially maintains and supports both a JavaScript SDK and Swift SDK. Other SDKs are community driven and happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
 
-Full details on installing the SDKs and making [your first API request](../your-first-api-request.md) is documented [here](../your-first-api-request.md#1-install-sdk-recommended).
+See: [Your First API Request](../your-first-api-request.md) for full details on installing the SDKs and making your first API request.
 
 ## [JavaScript SDK](https://github.com/moltin/js-sdk)
 
@@ -26,7 +26,7 @@ Browse the [README](https://github.com/moltin/js-sdk#moltin-javascript-sdk) for 
 
 It supports creating a client with `implicit` and `client_credential` permissions and exposes `GET`, `POST`, `PUT` and `DELETE` HTTP methods.
 
-This library is useful if you don't require all of the helpers the JS SDK provides.
+This library is useful, if you don't require all of the helpers the JS SDK provides.
 
 ```bash
 yarn add @moltin/request # npm install @moltin/request
@@ -59,7 +59,7 @@ Browse the [README](https://github.com/moltin/ios-sdk#moltin-ios-sdk) for furthe
 
 ## Other SDKs
 
-We happily provide community driven SDKs that provide easy access to the Moltin API using your favorite language.
+We happily provide community-driven SDKs that provide easy access to the Moltin API using your favorite language.
 
 Not all API features are available but feel free to contribute via a Pull Request.
 
