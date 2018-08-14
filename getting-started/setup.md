@@ -9,7 +9,7 @@ Basic project configuration happens at the Moltin [account](https://accounts.mol
 
 ## Sign up as a user
 
-Use the [Moltin website](https://moltin.com/) to sign up for an account, and add your first project. Once you've created an account, and added your first project, you'll get access to dashboard where you can manage your existing projects. From now on, you can sign in to your dashboard and account separately.
+Use the [Moltin website](https://moltin.com/) to sign up for an account and add your first project. Once you've created an account and added your project\(s\), you'll get access to dashboard where you can manage your existing projects. From now on, you can sign in to your dashboard and account separately.
 
 ## Manage your account
 
