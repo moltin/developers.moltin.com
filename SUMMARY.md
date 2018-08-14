@@ -15,8 +15,8 @@
 
 ## Developer Tools
 
-* [Postman](developer-tools/postman.md)
 * [SDKs](developer-tools/sdks.md)
+* [Postman](developer-tools/postman.md)
 * [Shopkit](developer-tools/shopkit.md)
 
 ## Guides
