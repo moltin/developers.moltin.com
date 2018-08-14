@@ -29,7 +29,7 @@ You can invite users that are already registered with Moltin, but it is not a re
 
 ### Delete team members {#manage-your-team}
 
-Delete existing users through your [Moltin account](https://accounts.moltin.com/). Deleting users is permanent. You can re-add deleted users who will receive a new set of credentials \(`client_id` and `client_secret).`
+Delete existing users through your [Moltin account](https://accounts.moltin.com/). Deleting users is permanent. You can re-add deleted users who will receive a new set of credentials \(`client_id` and `client_secret`\).
 
 {% hint style="info" %}
 #### Project owners
