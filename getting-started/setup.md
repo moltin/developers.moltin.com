@@ -57,7 +57,7 @@ Moltin's API provides the ability to to configure global settings across your pr
 
 Access to Moltin's API is protected by [authentication tokens](https://docs.moltin.com/basics/authentication). Tokens are generated using API keys and can be found via both: [Moltin account](https://accounts.moltin.com/dashboard) and  [Moltin dashboard](https://dashboard.moltin.com). 
 
-Every user is provided with `client_id` and `client_secret` keys. These API keys are per user per project, and are used to generate two types of [authentication tokens](https://docs.moltin.com/basics/authentication).
+Every user is provided with `client_id` and `client_secret` keys. These API keys are unique to every user and every project, and are used to generate two types of [authentication tokens](https://docs.moltin.com/basics/authentication).
 
 {% hint style="warning" %}
 You should never share the `client_secret` or use it client side.
