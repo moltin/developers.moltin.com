@@ -1,6 +1,6 @@
 # SDKs
 
-Moltin officially maintains and supports both a [JavaScript SDK](https://github.com/moltin/js-sdk) and [Swift SDK](https://github.com/moltin/ios-sdk). Other SDKs are community driven and happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
+Moltin officially maintains and supports both a JavaScript SDK and Swift SDK. Other SDKs are community driven and happily hosted within the [Moltin GitHub](https://github.com/moltin) organization.
 
 Full details on installing the SDKs and making [your first API request](../your-first-api-request.md) is documented [here](../your-first-api-request.md#1-install-sdk-recommended).
 
