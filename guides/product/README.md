@@ -6,7 +6,5 @@ This page collates all content on products and how to work with them within your
 
 {% page-ref page="extending-product.md" %}
 
-{% page-ref page="related-products.md" %}
-
 
 

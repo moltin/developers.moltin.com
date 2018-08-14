@@ -2,7 +2,7 @@
 description: A walkthrough of implementing an Apple Pay into an existing IOS app.
 ---
 
-# Apple Pay
+# Apple Pay with Swift
 
 ## End result
 
