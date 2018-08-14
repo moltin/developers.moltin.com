@@ -15,8 +15,6 @@ curl -X "POST" "https://api.moltin.com/oauth/access_token" \
 
 ### 2. Create a product variation
 
-This will be a variation of a product you **already have** in Moltin. To create a product, use [Moltin dashboard](https://dashboard.moltin.com) or [Moltin's API](https://docs.moltin.com/catalog/products). 
-
 A typical example of a product variation is product size. You could foresee needing a small, medium and large variation for a shirt.
 
 {% tabs %}
@@ -118,14 +116,14 @@ Repeat the step for every option you want to add. In the example above, we've ad
 
 ### 4. Create modifiers for your options
 
-Modifiers determine how your variations are going to be build. At minimum, you'll need a modifier for each slug and SKU so that each of them have a unique value. 
+Modifiers determine how the child products built will vary from the base product. The minimum requirement is that each variation option **MUST** have both a SKU and a slug modifier. This is because these properties must be unique across your product rage.
 
 * For more details, see: [Modifiers](modifiers.md).
 
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
+curl -X POST https://api.moltin.com/v2/variations/:variationId/options/:optionID \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
@@ -226,19 +224,19 @@ Repeat the step for every option you want to add a modifier to. In the example a
 
 ### 5. Create the Product Variations
 
-Now, we need to allocate the above logic to the product itself. In this example this would be the shirt.
+Now, we need to allocate the variations to the base product. In this example, this would be the shirt.
 
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
 curl -X POST \
-  https://api.moltin.com/v2/products/:parentId/relationships/variations \
+  https://api.moltin.com/v2/products/:productId/relationships/variations \
   -H "Authorization: Bearer XXXX" \
   -H 'content-type: application/json' \
   -d '{
      "data": [ {
         "type": "product-variation",
-         "id": "{{sizeVariationId}}"
+         "id": "{{variationId}}"
       }]
  }'
 ```
@@ -311,9 +309,9 @@ curl -X POST \
 {% endtabs %}
 
 {% hint style="info" %}
-Replace `parentId` with the **ID** of the product.  
+Replace `productId` with the **ID** of the base product.  
 
-Replace `sizeVariationId`with the **ID** for the variation you created \(step 2\).
+Replace `variationId`with the **ID** for the variation you created \(step 2\).
 {% endhint %}
 
 ###  6. Build Child Variations
@@ -325,13 +323,7 @@ You'll need an endpoint below to trigger the process that will compile all of th
 ```javascript
 curl -X POST https://api.moltin.com/v2/products/:productId/build/ \
      -H "Content-Type: application/json" \
-     -H "Authorization: Bearer XXXX" \
-     -d $'{
-      "data": {
-        "type": "product-variation",
-        "name": "Shirt Size"
-      }
-    }'
+     -H "Authorization: Bearer XXXX"
 ```
 {% endtab %}
 
@@ -401,8 +393,6 @@ curl -X POST https://api.moltin.com/v2/products/:productId/build/ \
 
 {% hint style="info" %}
 Replace `parentId` with the **ID** of the base product.  
-
-Replace `name` with the **name** you used for the product variation \(step 1\).
 {% endhint %}
 
 ### Child Variations in use
