@@ -105,9 +105,9 @@ let moltin = Moltin(withClientID: "<your client ID>")
 
 ## 3. Make your first API request
 
-You'll need to authenticate to make your first API request and every request must contain your `Bearer` token inside the `header`. If you're using an SDK, these silently handle authentication so you don't need to call the authenticate method directly.
+You'll need to authenticate to make your first API request, and every request must contain your `Bearer` token inside the `header`. If you're using an SDK, these silently handle authentication so you don't need to call the authenticate method directly.
 
-Below are some example API requests you can make. **Try them out!**
+Below, are some example API requests you can make. **Try them out!**
 
 {% tabs %}
 {% tab title="cURL" %}
