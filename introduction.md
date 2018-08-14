@@ -1,6 +1,6 @@
 # Welcome to Moltin
 
-The **Moltin Developer Portal** aims to quickly get you started with various commerce-related concepts using the Moltin API. 
+The **Moltin Developer Portal** aims at quickly getting you started with various commerce-related concepts using the Moltin's API. 
 
 Use the portal to:
 
