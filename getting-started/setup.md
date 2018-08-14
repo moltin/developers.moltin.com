@@ -17,7 +17,7 @@ Once you are a registered user and have a [Moltin account](https://accounts.molt
 
 ### Add projects {#add-projects}
 
-Use your [Moltin account](https://accounts.moltin.com/) to add as many projects as you need. If you need to delete any project, contact [Moltin support](https://support.moltin.com/hc/en-us), and we will do it for you. For more details on managing projects, see the **Manage your projects** section below.
+Use your [Moltin account](https://accounts.moltin.com/) to add as many projects as you need. If you need to delete any project, contact [Moltin support](https://support.moltin.com/hc/en-us), and we will do it for you. For more details on managing projects, see the [**Manage your projects**](setup.md#manage-your-projects) section below.
 
 ### Invite team members {#invite-team}
 
