@@ -8,26 +8,26 @@ Use the portal to:
 * Make your first API request.
 * Familiarize yourself with commerce-specific concepts.
 * Learn about available features & third-party integrations, and how to make best use of them.
-* Have a hands-on walkthrough on how to get up and running in no time using predefined developer tools.
+* Have a hands-on walkthrough on how to get up and running in no time using reference applications and developer tools.
 * Get new ideas by reviewing numerous ready-made examples adapted for various languages.
 
 ### Where to begin
 
 If you are new to eCommerce development, we recommend you to familiarize yourself with the main concepts outlined in the sections right below. These will help you understand the main idea behind Moltin, and facilitate the process of choosing the best approach from designing system architecture to selecting tools.
 
-If you are still not sure how you’d like your project to look like or which tools to use, we recommend you to review and analyze various examples of Moltin implementations that you can find under **Developer Tools**.
+If you are still not sure how you’d like your project to look like or which tools to use, we recommend you to review and analyze various examples of Moltin implementations that you can find under **Developer Tools** \(see the Table of Contents to the left\).
 
-Once your project is properly planned out, visit the **Quick Start** section to get yourself up and running in no time with one of our SDKs. Treat the **Setup** section as a checklist providing you with all to-dos necessary for a basic configuration.
+Once your project is properly planned out, visit [**Example Projects**](example-projects/) to get yourself up and running in no time with one of our SDKs. Treat [**Setup**](getting-started/setup.md) as a checklist providing you with all to-dos necessary for a basic configuration.
 
-Most importantly, if you feel you are stuck or feel you could use a helpful hand, do not hesitate to join our [community forum](https://forum.moltin.com). Remember, we love developers!
+Most importantly, if you feel stuck or feel you could use a helpful hand, do not hesitate to join our [community forum](https://forum.moltin.com). Remember, we love developers!
 
 ### What exactly is Moltin
 
 Moltin is a microservice solution offering flexible API and scalable services tailored to the individual business ecosystem. Use it to create a complete and bespoke eCommerce experience from managing inventory to checking out an order.
 
-The diagram below shows various means of implementing the API, and outlines backend integration layer.
+The diagram below shows various means of implementing the API and outlines backend integration layer.
 
-![Moltin flows into existing architecture](.gitbook/assets/architecture.png)
+![Moltin flows into any existing architecture](.gitbook/assets/architecture.png)
 
 ### What does Moltin offer
 
@@ -37,11 +37,11 @@ The diagram below groups available features into some basic commerce concepts to
 
 ![Commerce features grouped into concepts](.gitbook/assets/concepts.png)
 
-Due to granular nature of an API, it is possible to scale your project to your current needs, expanding on features as the need arises. Moreover, decentralized and not constrained by a programming language, an API-based service is fairly easy to plug into any existing IT infrastructure or device.
+Due to a granular nature of an API, it is possible to scale your project to your current needs, expanding on features, as the need arises. Moreover, decentralized and not constrained by a programming language, an API-based service is fairly easy to plug into any existing IT infrastructure or device.
 
 ### Beyond APIs
 
-Moltin’s main focus is to provide tools and means for any eCommerce-related platform to succeed. As such, to complement the API, Moltin offers a wide variety of open-source applied scenarios, SDKs and implementation best practices to share with developers in need of a helpful nudge or inspiration.
+Moltin’s main focus is to provide tools and means for any eCommerce-related experience to succeed. As such, to complement the API, Moltin offers a wide variety of open-source applied scenarios, SDKs and implementation best practices to share with developers in need of a helpful nudge or inspiration.
 
 The diagram below showcases most common integrations, and lists major eCommerce features a project could include.
 
