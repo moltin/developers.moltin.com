@@ -51,13 +51,11 @@ Use the dashboard to manage projects. In detail you can:
 
 ### Project settings {#project-settings}
 
-The Moltin API provides the ability to to configure global settings across your project. Right now, there are limited global settings but over time we will add more.
-
-Please let us know of any suggestions for global settings.
+Moltin's API provides the ability to to configure global settings across your project at the API-level only. See: [Settings](https://docs.moltin.com/advanced/settings) for more details.
 
 ## Get your API Keys
 
-Access to the Moltin API is protected by [authentication tokens](https://docs.moltin.com/basics/authentication). Tokens are generated using API keys and can be found via both: [Moltin account](https://accounts.moltin.com/dashboard) and  [Moltin dashboard](https://dashboard.moltin.com). 
+Access to Moltin's API is protected by [authentication tokens](https://docs.moltin.com/basics/authentication). Tokens are generated using API keys and can be found via both: [Moltin account](https://accounts.moltin.com/dashboard) and  [Moltin dashboard](https://dashboard.moltin.com). 
 
 Every user is provided with `client_id` and `client_secret` keys. These API keys are per user per project, and are used to generate two types of [authentication tokens](https://docs.moltin.com/basics/authentication).
 
