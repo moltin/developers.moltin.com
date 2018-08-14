@@ -4,7 +4,7 @@ Moltin officially maintains and supports both a [JavaScript SDK](https://github.
 
 Full details on installing the SDKs and making [your first API request](../your-first-api-request.md) is documented [here](../your-first-api-request.md#1-install-sdk-recommended).
 
-## JavaScript SDK
+## [JavaScript SDK](https://github.com/moltin/js-sdk)
 
 Supporting both [Node.js](https://nodejs.org) and the client-side, the JS SDK silently handles the following:
 
@@ -18,9 +18,23 @@ The JS SDK is available via [Yarn](https://yarnpkg.com/en/package/@moltin/sdk) a
 yarn add @moltin/sdk # npm install --save @moltin/sdk
 ```
 
-Browse the [README](https://github.com/moltin/js-sdk#moltin-javascript-sdk) for further instructions.
+Browse the [README](https://github.com/moltin/js-sdk#moltin-javascript-sdk) for further usage details.
 
-## Swift SDK
+## [JS Request Library](https://github.com/moltin/moltin-request)
+
+`@moltin/request` is a minimal Moltin API request library available via [npm](https://www.npmjs.com/package/@moltin/request). 
+
+It supports creating a client with `implicit` and `client_credential` permissions and exposes `GET`, `POST`, `PUT` and `DELETE` HTTP methods.
+
+This library is useful if you don't require all of the helpers the JS SDK provides.
+
+```bash
+yarn add @moltin/request # npm install @moltin/request
+```
+
+Browse the [README](https://github.com/moltin/moltin-request#moltinrequest) for further usage details.
+
+## [Swift SDK](https://github.com/moltin/ios-sdk)
 
 You'll want to install the Swift SDK to support your iOS, macOS, watchOS and tvOS applications.
 
@@ -41,7 +55,7 @@ import moltin
 let moltin: Moltin = Moltin(withClientID: 'xxxx')
 ```
 
-Browse the [README](https://github.com/moltin/ios-sdk#moltin-ios-sdk) for further instructions.
+Browse the [README](https://github.com/moltin/ios-sdk#moltin-ios-sdk) for further usage details.
 
 ## Other SDKs
 
