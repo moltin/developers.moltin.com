@@ -2,10 +2,6 @@
 
 Moltin maintains a [collection of examples](https://github.com/moltin-examples/react-microsite) that demonstrate how to use the API with a variety of server-side and client-side libraries. See each library below to view the details on how to use it with the Moltin API.
 
-## Angular
-
-* [Source Code](https://github.com/moltin-examples/progressive-web-app)
-
 ## React + Shopkit
 
 The Moltin [react-microsite](https://github.com/moltin-examples/react-microsite) example is built with React and uses [Shopkit](developer-tools/shopkit.md) to display a product carousel, add to cart button, cart and checkout flow.
@@ -22,6 +18,8 @@ now moltin-examples/react-microsite -e MOLTIN_CLIENT_ID=x
 
 ## Next.js
 
+[Next.js](https://nextjs.org/) is a lightweight React framework for static and server-rendered applications. This example is built using the Moltin JS SDK and provides a simple checkout flow.
+
 * [Demo](https://moltin-nextjs-demo-store.now.sh/)
 * [Source Code](https://github.com/moltin-examples/nextjs-demo-store)
 
@@ -35,6 +33,13 @@ The Vue example projects demonstrates how to connect the Moltin JS SDK to get al
 
 * [Demo](https://moltin-examples.github.io/vue-demo-store)
 * [Source Code](https://github.com/moltin-examples/vue-demo-store)
+
+## Angular
+
+This example Progressive Web App project uses the [Ionic framework](https://ionicframework.com/) and the Moltin SDK.
+
+* [Demo](https://evening-peak-15305.herokuapp.com/#/home)
+* [Source Code](https://github.com/moltin-examples/progressive-web-app)
 
 ## GraphQL
 
