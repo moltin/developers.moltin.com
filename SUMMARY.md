@@ -37,7 +37,7 @@
   * [Own Payment Gateway](guides/payment/implement-own-payment-gateway.md)
 * [Serverless](guides/serverless/README.md)
   * [Short Order ID](guides/serverless/short-order-id.md)
+  * [Algolia Order Sync](guides/serverless/algolia-order-sync.md)
   * [Email Receipts](guides/serverless/email-receipts.md)
   * [Shipping SMS](guides/serverless/shipping-sms.md)
-  * [Search services](guides/serverless/search-services.md)
 
