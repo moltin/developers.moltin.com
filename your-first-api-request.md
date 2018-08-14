@@ -1,12 +1,12 @@
 # Your First API Request
 
-This section covers how to get started with making your first API request. You may use the API directly with a cURL request or make use of one of our supported SDKs.
+This section covers how to get started with making your first API request. You may use the API directly with a cURL request or make use of one of our supported [SDKs](example-projects/).
 
 ## 1. Install SDK \(recommended\)
 
-Although you can interact with the API directly using a plain old http request, developers often rely on one of our SDKs.
+Although you can interact with the API directly using a plain old HTTP request, developers often rely on one of our SDKs.
 
-Currently we actively maintain the JavaScript and Swift SDKs, and with the support of our open source community, host a variety of other SDKs on our GitHub.
+Currently we actively maintain the JavaScript and Swift SDKs, and with the support of our open source community, host a variety of other SDKs on our [GitHub](https://github.com/moltin).
 
 Following the steps below, you can quickly get up and running with your API keys.
 
