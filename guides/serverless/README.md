@@ -8,5 +8,7 @@ This page collates all content on integrating serverless microservices into your
 
 {% page-ref page="shipping-sms.md" %}
 
+{% page-ref page="algolia-order-sync.md" %}
+
 
 

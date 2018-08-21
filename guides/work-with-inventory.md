@@ -1,9 +1,5 @@
 # Work with Inventory
 
-{% hint style="danger" %}
-The features outlined below are in **beta** status and limited to designated stores. To use them on your store, please email us at beta@moltin.com
-{% endhint %}
-
 Inventory is part of Moltin dashboard, and keeps track of the quantity of your products. There are 3 numbers associated with inventory in Moltin:
 
 1. **Total:** the total number of products in the warehouse, including available and allocated \(explained below\).
