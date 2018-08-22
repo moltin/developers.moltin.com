@@ -25,7 +25,7 @@ The flowchart below depicts the process of an unpaid order.
 
 The flowchart below depicts the process of paying for an order.
 
-![](../.gitbook/assets/payment-flow-2x.png)
+![](../.gitbook/assets/payment-flow-2x-1.png)
 
 ### How stock is managed
 
