@@ -19,13 +19,13 @@ There are three mandatory steps to a complete Moltin order in relation to invent
 
 The flowchart below depicts the process of an unpaid order.
 
-![Processing an unpaid order](../.gitbook/assets/image2.png)
+![](../.gitbook/assets/unpaid-order-flow-2x.png)
 
 #### Payment flow
 
 The flowchart below depicts the process of paying for an order.
 
-![Paying for an order](../.gitbook/assets/image1.png)
+![](../.gitbook/assets/payment-flow-2x.png)
 
 ### How stock is managed
 
