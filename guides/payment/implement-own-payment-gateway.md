@@ -6,7 +6,7 @@ description: A walkthrough on implementing own manual payment gateway
 
 ### What's an own gateway
 
-Gateways provide access to external payment services. Moltin natively supports a number of payment gateway you can use for your project, such as Stripe, CardConnect, Braintree and Ayden. However, if you already have a gateway provider you wish to use, and it's not officially supported by Moltin, you can add it through the manual option.
+Gateways provide access to external payment services. Moltin natively supports a number of payment gateway you can use for your project, such as Stripe, CardConnect, Braintree or Ayden. However, if you already have a gateway provider you wish to use, and it's not officially supported by Moltin, you can add it through the manual option.
 
 {% hint style="info" %}
 You can only have one manual gateway configured.
