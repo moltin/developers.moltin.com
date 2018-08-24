@@ -11,7 +11,7 @@ At the moment, Moltin supports the following third-party gateways:
 
 For all other integrations that are not yet officially supported, use own **manual gateway**.
 
-{% page-ref page="apple-google-pay.md" %}
+{% page-ref page="apple-pay-with-swift.md" %}
 
 {% page-ref page="payment-request-api.md" %}
 
