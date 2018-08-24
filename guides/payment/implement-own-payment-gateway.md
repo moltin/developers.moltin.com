@@ -79,8 +79,7 @@ This is the point where the customer’s information is attached to the order as
 {% tabs %}
 {% tab title="cURL" %}
 ```bash
-curl -X POST \
-  https://api.moltin.com/v2/carts/:reference/checkout \
+curl -X POST https://api.moltin.com/v2/carts/:reference/checkout \
   -H 'authorization: Bearer XXX' \
   -H 'content-type: application/json' \
   -d '{
@@ -120,30 +119,28 @@ curl -X POST \
 const MoltinGateway = require('@moltin/sdk').gateway
 ​
 const Moltin = MoltinGateway({
-  client_id: 'X',
-  client_secret: 'X'
+  client_id: 'X'
 })
-
-moltin.Cart.Checkout({
-  gateway: 'manual',
-  bill_to: {
-    first_name: 'Jon',
-    last_name:  'Doe',
-    address_1:  '123 Sunny Street',
-    address_2:  'Sunnycreek',
-    city:       'Sunnyvale',
-    county:     'California',
-    country:    'US',
-    postcode:   'CA94040',
-    phone:      '6507123124'
-  },
-  ship_to: 'bill_to',
-  shipping: 'free_shipping'
-}, function(order) {
-    // Handle the order
-}, function(error) {
-    // Something went wrong...
-});
+​
+const reference = 'XXXX'
+const customerId = 'XXXX'
+​
+const billing = {
+  first_name: 'John',
+  last_name: 'Doe',
+  line_1: '2nd Floor British India House',
+  line_2: '15 Carliol Square',
+  city: 'Newcastle Upon Tyne',
+  postcode: 'NE1 6UF',
+  county: 'Tyne & Wear',
+  country: 'United Kingdom'
+}
+​
+Moltin.Cart(reference)
+  .Checkout(customerId, billing)
+  .then(order => {
+    // Do something
+  })
 ```
 {% endtab %}
 {% endtabs %}
