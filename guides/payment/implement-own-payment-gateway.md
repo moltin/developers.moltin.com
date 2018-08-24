@@ -27,11 +27,11 @@ For specific instructions on how to use your chosen gateway provider you will ne
 By default all payment methods \(gateways\) are disabled.
 {% endhint %}
 
-Enable the payment gateway using your [Moltin dashboard](https://dashboard.moltin.com/) or through the Moltin's API. 
+Enable the payment gateway using your Moltin dashboard or through the Moltin's API. 
 
 #### Enable in your dashboard
 
-1. In your project's dashboard, go to **Settings** and select **Gateways**. This will take you to the main **Gateways** page where you’ll be able to view the list of all supported gateways.
+1. In your project's [dashboard](https://dashboard.moltin.com/), go to **Settings** and select **Gateways**. This will take you to the main **Gateways** page where you’ll be able to view the list of all supported gateways.
 2. To enable the **Manual** gateway, click its **eye** icon, and then make sure that the **Enabled** checkbox is selected.
 3. Click **Save**. This will take you back to the main Gateways screen. You’ll notice that the Manual gateway now has a green tick next to it.
 
