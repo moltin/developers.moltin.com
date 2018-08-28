@@ -29,7 +29,7 @@
 * [Payment](guides/payment/README.md)
   * [Apple Pay with Swift](guides/payment/apple-pay-with-swift.md)
   * [Payment Request API](guides/payment/payment-request-api.md)
-  * [Own Payment Gateway](guides/payment/implement-own-payment-gateway.md)
+  * [Custom Payment Gateways](guides/payment/implement-own-payment-gateway.md)
 * [Serverless](guides/serverless/README.md)
   * [Short Order ID](guides/serverless/short-order-id.md)
   * [Email Receipts](guides/serverless/email-receipts.md)

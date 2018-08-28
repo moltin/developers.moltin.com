@@ -1,8 +1,8 @@
 ---
-description: A walkthrough on implementing own manual payment gateway
+description: A walkthrough on implementing a custom or third party payment gateway.
 ---
 
-# Own Payment Gateway
+# Custom Payment Gateways
 
 ### What's the manual gateway
 
