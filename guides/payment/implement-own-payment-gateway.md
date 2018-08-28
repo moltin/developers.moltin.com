@@ -6,13 +6,13 @@ description: A walkthrough on implementing own manual payment gateway
 
 ### What's the manual gateway
 
-Gateways provide access to external payment services. Moltin natively supports a number of payment gateway you can use for your project, such as Stripe, CardConnect, Braintree or Ayden. However, if you already have a gateway provider you wish to use, and it's not officially supported by Moltin, you can add it through the manual option. Essentially the manual gateway allows you to record authorized and captured payments from third party payment gateways that Moltin does not officially support out of the box. 
+Gateways provide access to external payment services. Moltin natively supports a number of payment gateway you can use for your project, such as Stripe, CardConnect, Braintree or Ayden. However, if you already have a gateway provider you wish to use, that isn't supported out of the box, or you would like to collect payments in a different way \(e.g. cash on delivery\), you can add it through the manual option. Essentially the manual gateway allows you to record authorized and captured payments from third party payment gateways or through your own logic or business processes.
 
 #### The Manual Gateway payment flow
 
 ![](../../.gitbook/assets/manual-payment-gateway-flow-2x%20%281%29.png)
 
-The diagram above provides a quick overview of how to go from unpaid order to paid order with Moltin using your own payment gateway which will be broken down in further in the guide below.
+The diagram above provides a quick overview of how to go from unpaid order to paid order with Moltin using a third party payment gateway which will be broken down in further in the guide below.
 
 {% hint style="info" %}
 You can only enable one manual gateway but you can integrate with as many third party providers as required through the same process described in the diagram above.
