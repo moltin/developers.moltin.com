@@ -1,6 +1,6 @@
-# Work with Inventory
+# Working with Inventory
 
-Inventory is part of Moltin dashboard, and keeps track of the quantity of your products. There are 3 numbers associated with inventory in Moltin:
+Our inventory service allows you and your business to keep track of the quantity of each product that you have in stock, including a transactional historic log. There are 3 numbers associated with inventory in Moltin:
 
 1. **Total:** the total number of products in the warehouse, including available and allocated \(explained below\).
 2. **Available:** the total number of products minus those already allocated.

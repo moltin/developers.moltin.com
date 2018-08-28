@@ -20,7 +20,7 @@
 * [Associate Promotion with a Brand](guides/using-promotions.md)
 * [Create a Blog](guides/create-a-blog.md)
 * [Create a formatted order csv](guides/create-a-formatted-order-csv.md)
-* [Work with Inventory](guides/work-with-inventory.md)
+* [Working with Inventory](guides/work-with-inventory.md)
 * [Product](guides/product/README.md)
   * [Product Variations](guides/product/using-product-variations.md)
   * [Product Modifiers](guides/product/modifiers.md)
