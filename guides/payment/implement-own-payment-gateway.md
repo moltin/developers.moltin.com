@@ -10,7 +10,7 @@ Gateways provide access to external payment services. Moltin natively supports a
 
 #### The Manual Gateway payment flow
 
-![](../../.gitbook/assets/manual-payment-gateway-flow-2x%20%281%29.png)
+![](../../.gitbook/assets/manual-payment-gateway-flow-2x-1.png)
 
 The diagram above provides a quick overview of how to go from unpaid order to paid order with Moltin using a third party payment gateway which will be broken down in further in the guide below.
 
