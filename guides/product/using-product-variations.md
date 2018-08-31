@@ -1,6 +1,8 @@
 # Product Variations
 
-Variations allow you to organize your products per certain characteristics, such as color or size. Use variations to manage your stock more efficiently. Variations are reusable, so you could attach the same variation to any number of products.
+Variations allow you to organize your products per certain characteristics, such as color or size. Use variations to manage your stock more efficiently. Variations are reusable, so you could attach the same variation to any number of products.  
+
+For example if you have a t-shirt size variation you can setup all of your sizes so when you create a new t-shirt product, you can link that product to the existing t-shirt size variation. Meaning you won’t have to recreate every size every time you add a new t-shirt.
 
 ### 1. Get your access token
 
@@ -116,7 +118,7 @@ Repeat the step for every option you want to add. In the example above, we've ad
 
 ### 4. Create modifiers for your options
 
-Modifiers determine how the child products built will vary from the base product. The minimum requirement is that each variation option **MUST** have both a SKU and a slug modifier. This is because these properties must be unique across your product rage.
+Modifiers determine how the child products built will vary from the base product. The minimum requirement is that each variation option **MUST** have both a `SKU` and a `slug` modifier\(`_append`, `_prepend`,  `_equals`\). This is because these properties must be unique across your product rage.
 
 * For more details, see: [Modifiers](modifiers.md).
 
@@ -222,9 +224,13 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options/:optionID
 
 Repeat the step for every option you want to add a modifier to. In the example above, we've added small, medium and large options and slug and SKU modifiers \(see the Response tab for details\).
 
-### 5. Create the Product Variations
+### 5. Create the Product Relationships
 
 Now, we need to allocate the variations to the base product. In this example, this would be the shirt.
+
+{% hint style="info" %}
+Repeat this for every product you wish to relate to this variation.
+{% endhint %}
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -316,12 +322,12 @@ Replace `variationId`with the **ID** for the variation you created \(step 2\).
 
 ###  6. Build Child Variations
 
-You'll need an endpoint below to trigger the process that will compile all of the variations.
+Now that the variation is set up and it has products assigned to it, you'll need to trigger the process that will compile all of the variations and create the child variations.
 
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X POST https://api.moltin.com/v2/products/:productId/build/ \
+curl -X POST https://api.moltin.com/v2/products/:parentId/build/ \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer XXXX"
 ```
@@ -397,7 +403,57 @@ Replace `parentId` with the **ID** of the base product.
 
 ### Child Variations in use
 
-For adding a product defined by a variation to a cart or checking it out, make sure to use the **child product ID**, not the product ID.
+For adding a product defined by a variation to a cart or checking it out, make sure to use the **child product ID**, not the product ID.  You can view your products variation relationships within the [product object. ](https://docs.moltin.com/catalog/products/get-a-product)
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.moltin.com/v2/products/:id \
+     -H "Authorization: Bearer XXXX" \
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```bash
+ {
+            "type": "product",
+            "id": "e6808653-a328-427c-9fcf-c4e0093cbd10",
+            "name": "Deck Shoe",
+            "slug": "deck-shoe_74",
+            "sku": "deck-shoe_74",
+            "manage_stock": false,
+            "description": "Modern boat shoes were invented in 1935 by American Paul A. Sperry",
+            "price": [
+                {
+                    "amount": 5891,
+                    "currency": "USD",
+                    "includes_tax": true
+                }
+            ],
+            "status": "live",
+            "commodity_type": "physical",
+            "meta": {
+                "timestamps": {
+                    "created_at": "2018-07-23T15:29:41+00:00",
+                    "updated_at": "2018-07-23T15:29:41+00:00"
+                },
+                "stock": {
+                    "level": 0,
+                    "availability": "out-stock"
+                }
+            },
+            "relationships": {
+                "parent": {
+                    "data": {
+                        "type": "product",
+                        "id": "23230da6-5c0e-473e-b4aa-9ff76228df4b"
+                    }
+                }
+            }
+        }
+```
+{% endtab %}
+{% endtabs %}
 
 ##  {#3-tie-the-variation-to-the-parent-product}
 
