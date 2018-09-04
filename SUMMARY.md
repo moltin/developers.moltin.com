@@ -6,6 +6,7 @@
   * [Launch Checklist](getting-started/launch-checklist.md)
 * [Your First API Request](your-first-api-request.md)
 * [Example Projects](example-projects.md)
+* [Checkout workflow](checkout-workflow.md)
 
 ## Developer Tools
 
