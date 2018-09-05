@@ -2,7 +2,7 @@
 
 Use the Moltin API to create a blog. Use Flow API \(custom data\) to create a new resource: a blog object to store blog content you can surface on your website.
 
-* See: [Custom Data](custom-data.md) to learn about Flows.
+* See: [Custom Data](./) to learn about Flows.
 
 ### Summary of steps required:
 

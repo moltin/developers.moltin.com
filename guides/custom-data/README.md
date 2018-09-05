@@ -12,9 +12,9 @@ If you wish to store extra fields per product, such as `manufactured_date` for c
 
 Click the links below to view examples of how to use Flows to extend resources.
 
-{% page-ref page="product/extending-product.md" %}
+{% page-ref page="../product/extending-product.md" %}
 
-{% page-ref page="serverless/short-order-id.md" %}
+{% page-ref page="../serverless/short-order-id.md" %}
 
 ## New resources
 
