@@ -5,6 +5,10 @@ Modifiers augment the properties of a base product \(price, SKU, etc.\) by creat
 * See [Product Variations](using-product-variations.md) for more details on product-related variations.
 * See [API Reference ](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/product-variations/modifiers)documentation for more technical overview.
 
+When creating a variation matrix with options, the child builder endpoint will require SKU and Slug to be modified as these fields are unique per product.
+
+![](../../.gitbook/assets/variations-explanation-2x.png)
+
 Below, we document the most commonly used scenarios for applying modifiers, on products themselves and their prices.
 
 #### Key points about modifiers:
