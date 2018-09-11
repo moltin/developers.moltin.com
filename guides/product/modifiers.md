@@ -176,7 +176,7 @@ Each variation must have at minimum `sku` and `slug` modifiers defined. These ar
 
 #### Simple unique SKUs/Slugs
 
-By using the append method, it's possible to construct a child products SKU or slug quickly.
+By using the append method, it's possible to construct unique child products SKUs or slugs quickly.
 
 ![](../../.gitbook/assets/variations-explanation-2x.png)
 
