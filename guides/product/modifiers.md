@@ -178,7 +178,7 @@ Each variation must have at minimum `sku` and `slug` modifiers defined. These ar
 
 By using the append method, it's possible to construct unique child products SKUs or slugs quickly.
 
-![](../../.gitbook/assets/variations-explanation-2x.png)
+![](../../.gitbook/assets/variations-explanation-2x-1.png)
 
 #### Controlling unique SKUs/Slugs
 
@@ -188,11 +188,11 @@ If you need more control over your SKUs and slugs it is possible to use the "see
 
 BaseProduct SKU: `BP01-{COLOUR}-{SIZE}` Modifier1:`{"seek":"COLOUR", "set":"BLU"}` Modifier2:`{"seek":"COLOUR", "set":"RED"}`
 
-ModifierA:`{"seek":"SIZE", "set":"LRG"}` ModifierB:`{"seek":"SIZE", "set":"SML"}`
+ModifierA:`{"seek":"SIZE", "set":"LG"}` ModifierB:`{"seek":"SIZE", "set":"SM"}`
 
 The above modifiers applied via variations for size and colour would produce the following SKUs in the corresponding variation product:
 
-`BP01-BLU-LRG` `BP01-BLU-SML` `BP01-RED-LRG` `BP01-RED-SML`
+`BP01-BLU-LG` `BP01-BLU-SM` `BP01-RED-LG` `BP01-RED-SM`
 
-You could create the same via sku\_append modifier using values like `-RED` and `-LRG`; the advantage of the builder modifiers is that they are agnostic of the order the modifiers are applied.
+You could create the same via sku\_append modifier using values like `-RED` and `-LG`; the advantage of the builder modifiers is that they are agnostic of the order the modifiers are applied.
 
