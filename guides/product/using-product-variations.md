@@ -2,7 +2,7 @@
 
 ### Overview
 
-Variations allow you to generate child products on a product based on a number of options. In the simple example below we have a size variation with three options \(small, medium and large\) and a color variation with three options \(green, red and blue\). This creates a variation matrix with 9 possible unique combinations or "child products".
+Variations allow you to generate child products on a product based with a number of options. In the simple example below we have a size variation with three options \(small, medium and large\) and a color variation with three options \(green, red and blue\). This creates a variation matrix with 9 possible unique combinations or "child products".
 
 ![](../../.gitbook/assets/simple-product-variations-matrix-2x.png)
 
