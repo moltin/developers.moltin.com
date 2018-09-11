@@ -6,7 +6,7 @@ Variations allow you to generate child products on a product based with a number
 
 ![](../../.gitbook/assets/simple-product-variations-matrix-2x.png)
 
-It's possible to create many more variations and options than the simple example above. The limit is currently set to  300 possible unique combinations. Creating additional variations or options and attaching them to a product exponentially increases the number of unique combinations. For example, adding a third variation with three options to the example above would mean 3x3x3, a total of 27 unique child products would be created.
+It's possible to create many more variations and options than the simple example above. The limit is currently set to 250 possible unique combinations. Creating additional variations or options and attaching them to a product exponentially increases the number of unique combinations. For example, adding a third variation with three options to the example above would mean 3x3x3, a total of 27 unique child products would be created.
 
 ### Re-usability
 
