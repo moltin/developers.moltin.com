@@ -5,10 +5,6 @@ Modifiers augment the properties of a base product \(price, SKU, etc.\) by creat
 * See [Product Variations](using-product-variations.md) for more details on product-related variations.
 * See [API Reference ](https://docs.moltin.com/~/drafts/-LJYudcRbr7F0jcg1KME/primary/catalog/product-variations/modifiers)documentation for more technical overview.
 
-When creating a variation matrix with options, the build child products endpoint will require SKU and Slug to be modified as these fields are unique per product.
-
-![](../../.gitbook/assets/variations-explanation-2x.png)
-
 Below, we document the most commonly used scenarios for applying modifiers, on products themselves and their prices.
 
 #### Key points about modifiers:
@@ -178,6 +174,8 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
 
 Each variation must have at minimum `sku` and `slug` modifiers defined. These are mandatory, as they make each variation unique as a value.
 
+![](../../.gitbook/assets/variations-explanation-2x.png)
+
 The value of the modifier must contain two property-value pairs: `"seek": "XXX"` and `"set" : "YYY"`. In order for this kind of modifier to participate in the variation products building process, the base product should have a SKU/slug set with a place holder like: `{XXX}`. The modifier works by replacing the placeholder with the value you wish to set. You should only specify the contents of the `{ }` in the seek property - the modifier will take care of the rest.
 
 **For example:**
@@ -191,6 +189,4 @@ The above modifiers applied via variations for size and colour would produce the
 `BP01-BLU-LRG` `BP01-BLU-SML` `BP01-RED-LRG` `BP01-RED-SML`
 
 You could create the same via sku\_append modifier using values like `-RED` and `-LRG`; the advantage of the builder modifiers is that they are agnostic of the order the modifiers are applied.
-
-
 
