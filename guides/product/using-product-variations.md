@@ -4,6 +4,8 @@ Variations allow you to organize your products per certain characteristics, such
 
 For example if you have a t-shirt size variation you can setup all of your sizes so when you create a new t-shirt product, you can link that product to the existing t-shirt size variation. Meaning you won’t have to recreate every size every time you add a new t-shirt.
 
+![The process to create a matrix of child products based on variations, options and modifiers.](../../.gitbook/assets/product_variations_options_modifiers-2x.png)
+
 ### 1. Get your access token
 
 You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
