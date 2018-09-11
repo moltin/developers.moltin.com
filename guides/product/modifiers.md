@@ -174,9 +174,15 @@ curl -X POST https://api.moltin.com/v2/variations/:variationId/options \
 
 Each variation must have at minimum `sku` and `slug` modifiers defined. These are mandatory, as they make each variation unique as a value.
 
+#### Simple unique SKUs/Slugs
+
+By using the append method, it's possible to construct a child products SKU or slug quickly.
+
 ![](../../.gitbook/assets/variations-explanation-2x.png)
 
-The value of the modifier must contain two property-value pairs: `"seek": "XXX"` and `"set" : "YYY"`. In order for this kind of modifier to participate in the variation products building process, the base product should have a SKU/slug set with a place holder like: `{XXX}`. The modifier works by replacing the placeholder with the value you wish to set. You should only specify the contents of the `{ }` in the seek property - the modifier will take care of the rest.
+#### Controlling unique SKUs/Slugs
+
+If you need more control over your SKUs and slugs it is possible to use the "seek" and "set" method. The value of the modifier must contain two property-value pairs: `"seek": "XXX"` and `"set" : "YYY"`. In order for this kind of modifier to participate in the variation products building process, the base product should have a SKU/slug set with a place holder like: `{XXX}`. The modifier works by replacing the placeholder with the value you wish to set. You should only specify the contents of the `{ }` in the seek property - the modifier will take care of the rest.
 
 **For example:**
 
