@@ -6,7 +6,7 @@ Variations allow you to generate child products on a product based on a number o
 
 ![](../../.gitbook/assets/simple-product-variations-matrix-2x.png)
 
-It's possible to create many more variations and options than the simple example above. The current limit is currently set to allow you to have up to 300 possible unique combinations built. Creating additional variations or options and attaching them to a product exponentially increases the number of unique combinations. For example adding a third variation with three options to the example above would mean 3x3x3, a total of 27 unique child products would be created.
+It's possible to create many more variations and options than the simple example above. The limit is currently set to  300 possible unique combinations. Creating additional variations or options and attaching them to a product exponentially increases the number of unique combinations. For example, adding a third variation with three options to the example above would mean 3x3x3, a total of 27 unique child products would be created.
 
 ### Re-usability
 
@@ -16,7 +16,7 @@ Variations are also re-usable, so you could attach the same variation to any num
 
 ### Setup Summary
 
-The process to use and setup variations on your product catalog is fairly linear, the diagram below highlights the first time setup process we'll cover in the guide below. In short you will want a base product and to have variations, options and modifiers defined. Then simply link the product to the variation/s and run the build endpoint to generate the variation matrix of child products.
+The process to use and set up variations on your product catalog is fairly linear. The diagram below highlights the first-time setup process we'll cover in this guide. In short, you will want a base product to have variations, options and modifiers defined. Then, simply link the product to the variation\(s\), and run the build endpoint to generate the variation matrix of child products.
 
 ![](../../.gitbook/assets/product_variations_options_modifiers-2x-4.png)
 
