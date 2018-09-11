@@ -1,6 +1,6 @@
 # Product Variations
 
-## Overview
+### Overview
 
 Variations allow you to generate child products on a product based on a number of options. In the simple example below we have a size variation with three options \(small, medium and large\) and a color variation with three options \(green, red and blue\). This creates a variation matrix with 9 possible unique combinations or "child products".
 
@@ -20,7 +20,9 @@ The process to use and set up variations on your product catalog is fairly linea
 
 ![](../../.gitbook/assets/product_variations_options_modifiers-2x-4.png)
 
-## Implementation Guide
+### Implementation Guide
+
+Follow the steps below to create a product with several size and color variations.
 
 ### 1. Get your access token
 
