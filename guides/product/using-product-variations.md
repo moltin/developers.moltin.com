@@ -1,10 +1,24 @@
 # Product Variations
 
-Variations allow you to organize your products per certain characteristics, such as color or size. Use variations to manage your stock more efficiently. Variations are reusable, so you could attach the same variation to any number of products.  
+## Overview
 
-For example if you have a t-shirt size variation you can setup all of your sizes so when you create a new t-shirt product, you can link that product to the existing t-shirt size variation. Meaning you won’t have to recreate every size every time you add a new t-shirt.
+Variations allow you to generate child products on a product based on a number of options. In the example below we have a size variation with three options \(small, medium and large\) and a color variation with three options \(green, red and blue\). This creates a variation matrix with 9 possible unique combinations or "child products".
+
+![](../../.gitbook/assets/simple-product-variations-matrix-2x.png)
+
+### Re-usability
+
+Variations are also re-usable, so you could attach the same variation to any number of products. In the example below we have a shoe size variation with 5 options. This variation has been linked to the two shoe products that should inherit this property. The T-shirt product is not linked to the Shoe Size variation. This means you won’t have to recreate a new size variation every time you add a new shoe, simply create a link between the existing variation and the new product.
+
+![](../../.gitbook/assets/products-vs-variations-2x.png)
+
+### Setup Summary
+
+The process to use and setup variations on your product catalog is fairly linear, the diagram below highlights the first time setup process we'll cover in the guide below. In short you will want a base product and to have variations, options and modifiers defined. Then simply link the product to the variation/s and run the build endpoint to generate the variation matrix of child products.
 
 ![](../../.gitbook/assets/product_variations_options_modifiers-2x-4.png)
+
+## Implementation Guide
 
 ### 1. Get your access token
 
@@ -458,6 +472,8 @@ curl -X GET https://api.moltin.com/v2/products/:id \
 {% endtabs %}
 
 ##  {#3-tie-the-variation-to-the-parent-product}
+
+
 
 
 
