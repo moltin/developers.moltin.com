@@ -60,7 +60,7 @@ dependencies: [
 
 ## 2. Create a client \(recommended\)
 
-One of the biggest advantages of using an SDK is the built-in support for storing and renewing your authentication token.
+One of the biggest advantages of using an SDK is the built-in support for storing and renewing your [authentication](https://docs.moltin.com/basics/authentication) token.
 
 {% tabs %}
 {% tab title="JavaScript SDK" %}
