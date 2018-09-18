@@ -21,7 +21,7 @@
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
 * [Create a Promotion](guides/create-a-promotion.md)
 * [Create a formatted order csv](guides/create-a-formatted-order-csv.md)
-* [Working with Inventory](guides/work-with-inventory.md)
+* [Work with Inventory](guides/work-with-inventory.md)
 * [Product](guides/product/README.md)
   * [Product Variations](guides/product/using-product-variations.md)
   * [Product Modifiers](guides/product/modifiers.md)
