@@ -1,8 +1,8 @@
-# Create a Promotion
+# Working with Promotions
 
 Promotions allow you to provide discounts to customers. By defining a Promotion and a code, you put in place the facility to offer discounts to customers applied directly to their shopping carts.
 
-The promotions you create **require** codes to be attached to them. These codes are subsequently used by customers to apply promotions directly to carts and provide the stipulated discount. It is up to you to decide how you wish to distribute the codes to your customers; however, feel free to check out our [UI example](create-a-promotion.md#apply-the-promotion) below.
+The promotions you create **require** codes to be attached to them. These codes are subsequently used by customers to apply promotions directly to carts and provide the stipulated discount. It is up to you to decide how you wish to distribute the codes to your customers; however, feel free to check out our [UI example](working-with-promotions.md#apply-the-promotion) below.
 
 **Set up a promotion in two simple steps:**
 

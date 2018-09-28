@@ -1,4 +1,4 @@
-# Work with Inventory
+# Working with Inventory
 
 Our inventory service allows you and your business to keep track of the quantity of each product that you have in stock, including a transactional historic log. There are 3 numbers associated with inventory in Moltin:
 
