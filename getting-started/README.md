@@ -10,5 +10,3 @@ Get yourself up and running in 5 simple steps:
 4. Get the Moltin API Keys.
 5. Start making your first API requests.
 
-## 
-
