@@ -45,14 +45,9 @@ Finally, when the order is marked as shipped, that stock is finally fully decrem
 
 ### How to check inventory of a product
 
-You can check the inventory of a product in two ways:
+Make a request to the inventories service: `https://api.moltin.com/v2/inventories/:productId`Expect this inventories response to be always up to date and accurate.
 
-1. Make a request to the inventories service: `https://api.moltin.com/v2/inventories/:productId`
-2. Make a request for the product itself, and look at the `stock` field: `https://api.moltin.com/v2/products/:id`
-
-The inventories service is the source of truth, and we can only poll that every second; the product field for stock may be less up to date than asking the inventories service directly.
-
-Expect delays of 1 second or potentially more \(during high traffic\) for the product response to be up to date. Expect the inventories response to be always up to date.
+If you request a product directly, you will also notice a `stock` field, **please do not use this field to read any stock values**, as it is not currently updated. In future, this value will reflect the true inventory service value.
 
 ### Implications of the Moltin inventories flows
 
