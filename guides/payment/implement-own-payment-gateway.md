@@ -38,7 +38,7 @@ Enable the payment gateway using your [Moltin dashboard](https://dashboard.molti
 #### Enable in your dashboard
 
 1. In your project's dashboard, go to **Settings** and select **Gateways**. This will take you to the main **Gateways** page where you’ll be able to view the list of all supported gateways.
-2. To enable the **Manual** gateway, click its **eye** icon, and then make sure that the **Enabled** checkbox is selected.
+2. To enable the **Manual** gateway, click its **edit** icon, and then make sure that the **Enabled** checkbox is selected.
 3. Click **Save**. This will take you back to the main Gateways screen. You’ll notice that the Manual gateway now has a green tick next to it.
 
 #### Enable through the API
@@ -76,7 +76,7 @@ curl -X PUT https://api.moltin.com/v2/gateways/manual \
 
 ### Process workflow
 
-As per the usual workflow, you need to create a cart and allow the items to be added to the cart. For more details on the usual product workflow, see: Typical checkout flow.
+As per the usual workflow, you need to create a cart and allow the items to be added to the cart. For more details on the usual product workflow, see:  [Checkout workflow](../../checkout-workflow.md).
 
 #### Checkout the cart
 
@@ -245,7 +245,7 @@ Moltin.Orders.Transactions(id).then(transactions => {
 
 ### Manage your stock
 
-Optionally, if managing stock, make sure it is manually decremented.
+Optionally, if managing stock, make sure it is manually decremented. For more details, see: [Work with inventory](../work-with-inventory.md).
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -281,12 +281,6 @@ Moltin.Inventories.DecrementStock(productId, quantity).then(stock => {
 ```
 {% endtab %}
 {% endtabs %}
-
-## 
-
-
-
-
 
 
 
