@@ -18,7 +18,7 @@ Moltin allows you to generate custom data by extending the existing resources or
 
 The easiest way to import an existing data set into Moltin is through the API. Prior to importing, make sure your data is organised according to your needs. This guide will provide some ideas on how to organise your data effectively to match Moltin’s standards.
 
- All endpoints are read, write and update \(CRUD\). This means that you can programatically interact with your data. Typically, data import is used with Products, Customers, or Orders. For more hands-on detail on how to import data, see: Import Catalogue Data.
+ All endpoints are read, write and update \(CRUD\). This means that you can programatically interact with your data. Typically, data import is used with Products, Customers, or Orders. For more hands-on detail on how to import data, see: [Import Catalogue Data](guides/uploading-csv-data.md).
 
 ### **Create new data**
 
