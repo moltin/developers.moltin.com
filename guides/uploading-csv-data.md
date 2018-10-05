@@ -18,7 +18,7 @@ In this guide we will look at importing product data, and establishing relations
 
 Before you proceed with the import, you'll need:
 
-* A file that contains the product data you wish to import into Moltin \(the file needs to match Moltin standards\),
+* A file that contains the product data you wish to import into Moltin \(the file needs to match [Moltin standards](../organize-your-data-with-moltin.md)\),
 * [Moltin's project](../getting-started/setup.md) \(aka store\).
 
 ### Scenario setup
