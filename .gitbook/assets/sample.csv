@@ -1,0 +1,3 @@
+id,sku,name,brand,url,addtocart_url,image_url,thumbnail_url,description,price,msrp,categories,rating,num_ratings
+123,ABJ-252,Nike Track Jacket,Nike,http://www.mystore.com/ABJ252.html,http://www.mystore.com/addtocart?id=123,http://www.mystore.com/images/ABJ252.jpg,http://www.mystore.com/thumbnails/ABJ252.jpg,This is a really great jacket. It's available in several colors and will keep you warm.,49.99,54.99,Apparel|Women's,5,4
+162,ADI-42,Adidas Soccer Shirt,Adidas,http://www.mystore.com/ADI42.html,http://www.mystore.com/addtocart?id=162,http://www.mystore.com/images/ADI42.jpg,http://www.mystore.com/thumbnails/ADI42.jpg,This is a white t-shirt with a soccer ball on it.,13.99,18.99,Apparel|Men's,3.5,2
