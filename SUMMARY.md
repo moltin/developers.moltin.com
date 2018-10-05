@@ -7,6 +7,7 @@
 * [Your First API Request](your-first-api-request.md)
 * [Example Projects](example-projects.md)
 * [Checkout workflow](checkout-workflow.md)
+* [Organize your data with Moltin](organize-your-data-with-moltin.md)
 
 ## Developer Tools
 
