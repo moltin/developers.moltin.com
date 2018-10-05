@@ -9,7 +9,7 @@ At the moment, Moltin supports the following third-party gateways:
 * Braintree
 * CardConnect
 
-For all other integrations that are not yet officially supported, use own **manual gateway**.
+For all other integrations that are not yet officially supported, you can directly integrate with your payment gateway of choice and link this back to Moltin with the [**manual gateway**](implement-own-payment-gateway.md).
 
 {% page-ref page="apple-pay-with-swift.md" %}
 
