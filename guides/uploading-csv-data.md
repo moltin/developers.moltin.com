@@ -262,19 +262,19 @@ Review the relationships you wish to establish in your catalogue.  The key is to
 ```javascript
         //TIE PRODUCT to Category
         console.log(
-          "Assigning product id [%s] with brand name [%s]",
+          "Assigning product id [%s] with category name [%s]",
           productM.data.id,
-          product.brand
+          product.category
         );
 
-        const productsbrand = brandsM.find(function(productsbrand) {
-          return productsbrand.name === product.brand;
+        const productscategory = categoryM.find(function(productscategory) {
+          return productscategory.name === product.category;
         });
 
         await Moltin.Products.CreateRelationships(
           productM.data.id,
-          "brand",
-          productsbrand.id
+          "category",
+          productscategory.id
         );
 ```
 {% endcode-tabs-item %}
@@ -283,7 +283,22 @@ Review the relationships you wish to establish in your catalogue.  The key is to
 
 {% tab title="Collection" %}
 ```javascript
+        //TIE PRODUCT to Collection
+        console.log(
+          "Assigning product id [%s] with collection name [%s]",
+          productM.data.id,
+          product.collection
+        );
 
+        var productscollection = collectionsM.find(function(productscollection) {
+          return productscollection.name === product.collection;
+        });
+
+        await Moltin.Products.CreateRelationships(
+          productM.data.id,
+          "collection",
+          productscollection.id
+        );
 ```
 {% endtab %}
 
@@ -362,5 +377,5 @@ You can clean: `products`, `categories`, `brands`, and `Files` \(images\). To re
 
 ### Where to go from here
 
-This is the most basic script that can be used to get you started.  This can be extended to solve parent children hierarchy need and product variations.  The general paradigm can also be used in other language and environments. add a link to data model content.
+This is the most basic script that can be used to get you started.  This can be extended to solve parent children hierarchy need and product variations.  The general paradigm can also be used in other language and environments. 
 
