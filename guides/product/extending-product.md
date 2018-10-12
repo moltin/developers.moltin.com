@@ -1,7 +1,8 @@
 ---
 description: >-
-  Extending the product object is a great way to customize the object to have
-  all information you need to display a product.
+  Extending the product object enables pre-defined product information for
+  display and/or to power custom business logic elsewhere in your application
+  that requires this additional data to function.
 ---
 
 # Extend a Product
