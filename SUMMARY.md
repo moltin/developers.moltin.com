@@ -21,6 +21,7 @@
 * [Custom Data](guides/custom-data/README.md)
   * [Create a Blog](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
+* [Working with Custom Cart](guides/working-with-custom-cart.md)
 * [Working with Promotions](guides/working-with-promotions.md)
 * [Create a formatted order csv](guides/create-a-formatted-order-csv.md)
 * [Working with Inventory](guides/work-with-inventory.md)
