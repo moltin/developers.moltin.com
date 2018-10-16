@@ -12,7 +12,7 @@ We will walk you through the three common ways custom carts are leveraged. There
 
 Playground to follow along: [https://moltin-cart-example.herokuapp.com/index.html](https://moltin-cart-example.herokuapp.com/index.html)
 
-Code to follow along: [https://gist.github.com/gje4/3a42d1984dcf4f5bed77d24a21a5d9b3](https://gist.github.com/gje4/3a42d1984dcf4f5bed77d24a21a5d9b3)
+Code to follow along: [https://gist.github.com/gje4/3a42d1984dcf4f5bed77d24a21a5d9b3](https://gist.github.com/gje4/165d0570a3e4d4fea56a1acc34991c31)
 
 ### Scenario 1
 
