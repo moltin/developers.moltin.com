@@ -14,9 +14,7 @@ Playground to follow along: [https://moltin-cart-example.herokuapp.com/index.htm
 
 Code to follow along: [https://gist.github.com/gje4/3a42d1984dcf4f5bed77d24a21a5d9b3](https://gist.github.com/gje4/165d0570a3e4d4fea56a1acc34991c31)
 
-### Scenario 1
-
-#### Allowing a user to purchase an item that does not exist in Moltin
+### Scenario 1 Allow a user to purchase an item that doesn't exist in Moltin
 
 **Setup**:  A made-up product that does not exist in Moltin. This means it will not have a product id.
 
@@ -159,9 +157,7 @@ Code to follow along: [https://gist.github.com/gje4/3a42d1984dcf4f5bed77d24a21a5
 {% endtab %}
 {% endtabs %}
 
-### Scenario 2
-
-#### Adding shipping fees to a Product
+### Scenario 2 Add shipping fees to a product
 
 **Setup**: A user may want to buy a product from a different country which requires an additional shipping fee. In this example, we will apply a flat fee. This is meant to give you a basic example of how this could work with your own internal shipping logic or a third party shipping API.
 
@@ -302,9 +298,7 @@ Moltin.Cart(exampleCart2).AddCustomItem(item).then(cart => {
 {% endtab %}
 {% endtabs %}
 
-### Scenario 3
-
-#### Adding tax to a cart
+### Scenario 3 Add tax to a cart
 
 **Setup**: You may want to collect a set amount of tax after you find out where the user is shipping the product to. You are able to add a tax amount as an item to the user's order to account for the tax you need to collect. This is a basic example of how this could work with your own internal tax logic or a third party API.
 
