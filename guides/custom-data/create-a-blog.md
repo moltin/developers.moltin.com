@@ -343,7 +343,7 @@ curl -X POST https://api.moltin.com/v2/flows/{Flow:slug}/entries \
 
 ### Create relationships to organize your data
 
-Create Fields related to a Flow to adapt a data model to how you wish to present it on the front-end, e.g. posts per author, posts per category, etc.
+Create Fields related to a Flow to adapt a data model to how you wish to present it on the frontend, e.g. posts per author, posts per category, etc.
 
 To create a relationship, take the Flow you want to relate your Fields to, and use its slug in the URL of the request. Then, specify which Field you wish to relate to in the request body, and repeat it for every Field you wish to relate to this Flow.
 
