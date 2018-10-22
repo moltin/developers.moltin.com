@@ -1,13 +1,17 @@
 # Create a Blog
 
-Use the Moltin API to create a blog. Use Flow API \(custom data\) to create a new resource: a blog object to store blog content you can surface on your website.
+If you want to use a single platform for multiple solutions, Moltin API gives you the ability to use custom data to create a blog and manage your content with some light configuration. 
+
+### How to expand Moltin API to create a blog
+
+Use Flow API \(custom data\) to create a new resource: a blog object to store blog content you can surface on your website.
 
 * See: [Custom Data](./) to learn about Flows.
 
 ### Summary of steps required:
 
 * Create a Flow that will contain your blog object.
-* Create Fields to create blog's building blocks \(date, title, blog post entry fields, etc.\).
+* Create Fields to create blog's building blocks \(date, title, blog post entry, fields, etc.\).
 * Create Entries to store the actual content \(blog posts\).
 
 ### Get your access token
@@ -23,7 +27,7 @@ curl -X "POST" "https://api.moltin.com/oauth/access_token" \
 
 ### Create a new custom Flow 
 
-Create a custom \(non-core\) Flow. This Flow is going to power a blog website, and used to store blog content objects.
+Create a custom \(non-core\) [Flow](./). This Flow is going to power a blog website, and used to store blog content objects.
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -73,7 +77,7 @@ Make sure to take note of the Flow ID returned \(the `id` field in the response\
 
 ### Create Fields
 
-Fields will be returned when you call the blog object. Repeat this for every blog feature you'd like to include, e.g. blog title, blog date, blog post content, etc. The example below shows how to create fields to store basic blog detail, title, date and content. 
+Fields will be returned when you call the blog object. Repeat this for every blog feature you'd like to include, e.g. blog title, blog date, blog post content, etc. The example below shows how to create fields to store basic blog detail: title, date and content. 
 
 Each Field must be passed separately.
 
@@ -284,13 +288,13 @@ curl -X POST https://api.moltin.com/v2/fields \
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-add about unique 
-{% endhint %}
-
 ### Create Entries for a Blog
 
 Entries represent the actual content each Field will contain. Create an Entry for every Field added. In this example, the Title, Date and Content Fields will be a part of the Entry created, as they were all flagged as required.
+
+#### Using slugs
+
+Slug forms the end part of the URL. Use it to create human-readable and search-engine-friendly URIs for your blog. 
 
 {% hint style="warning" %}
 Note that the slug used in the URL is case sensitive.
@@ -337,6 +341,181 @@ curl -X POST https://api.moltin.com/v2/flows/{Flow:slug}/entries \
 {% endtab %}
 {% endtabs %}
 
+### Create relationships to organize your data
+
+Create Fields related to a Flow to adapt a data model to how you wish to present it on the front-end, e.g. posts per author, posts per category, etc.
+
+To create a relationship, take the Flow you want to relate your Fields to, and use its slug in the URL of the request. Then, specify which Field you wish to relate to in the request body, and repeat it for every Field you wish to relate to this Flow.
+
+When fetching the Flow, it will list all Fields that are related to it.
+
+{% tabs %}
+{% tab title="cURL" %}
+**1.Create a Flow**
+
+```bash
+curl -X POST https://api.moltin.com/v2/flows \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "data": {
+    "type": "flow",
+    "name": "Joannas blog posts",
+    "slug": "blog_joanna",
+    "description": "stores Joannas blog posts",
+    "enabled": true
+  }
+}'
+```
+
+**2. Create Related Field**
+
+```bash
+curl -X POST https://api.moltin.com/v2/fields \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "data": {
+    "type": "field",
+    "name": "blog_title_3",
+    "slug": "blog_title_3",
+    "field_type": "string",
+    "description": "Joannas third blog post",
+    "required": true,
+    "unique": true,
+    "default": 0,
+    "enabled": true,
+    "order": 1,
+    "relationships": {
+        "flow": {
+            "data": {
+                "type": "flow",
+                "id": "a7b53c11-ece3-4c11-b0b6-05568fa636ad"
+            }
+        }
+    }
+  }
+}'
+```
+
+**3. Fetch the Flow with all Related Entries**
+
+```bash
+curl -X GET https://api.moltin.com/v2/flows/{Flow:id} \
+     -H "Authorization: XXXX" \
+     -H "Content-Type: application/json" \
+```
+{% endtab %}
+
+{% tab title="Response" %}
+**1.Created Flow**
+
+```bash
+{
+    "data": {
+        "id": "a7b53c11-ece3-4c11-b0b6-05568fa636ad",
+        "type": "flow",
+        "name": "Joanna's blog posts",
+        "slug": "blog_joanna",
+        "description": "stores Joanna's blog posts",
+        "enabled": true,
+        "links": {
+            "self": "https://api.moltin.com/v2/flows/a7b53c11-ece3-4c11-b0b6-05568fa636ad"
+        },
+        "relationships": {},
+        "meta": {
+            "timestamps": {
+                "created_at": "2018-10-17T15:12:21.276Z",
+                "updated_at": "2018-10-17T15:12:21.276Z"
+            }
+        }
+    }
+}
+```
+
+**2.Created Related Field**
+
+```bash
+{
+    "data": {
+        "id": "3901e3b5-edd2-4123-b464-a01cc4c554ee",
+        "type": "field",
+        "field_type": "string",
+        "slug": "blog_title_3",
+        "name": "blog_title_3",
+        "description": "Joanna's third blog post",
+        "required": true,
+        "unique": true,
+        "default": null,
+        "enabled": true,
+        "order": 1,
+        "omit_null": false,
+        "validation_rules": [],
+        "links": {
+            "self": "https://api.moltin.com/v2/flows/a7b53c11-ece3-4c11-b0b6-05568fa636ad/fields/3901e3b5-edd2-4123-b464-a01cc4c554ee"
+        },
+        "relationships": {
+            "flow": {
+                "data": {
+                    "id": "a7b53c11-ece3-4c11-b0b6-05568fa636ad",
+                    "type": "flow"
+                }
+            }
+        },
+        "meta": {
+            "timestamps": {
+                "created_at": "2018-10-17T15:13:47.411Z",
+                "updated_at": "2018-10-17T15:13:47.411Z"
+            }
+        }
+    }
+}
+```
+
+**3.Fetched Flow with all Related Fields listed by their unique IDs**
+
+```bash
+{
+    "data": {
+        "id": "a7b53c11-ece3-4c11-b0b6-05568fa636ad",
+        "type": "flow",
+        "name": "Joanna's blog posts",
+        "slug": "blog_joanna",
+        "description": "stores Joanna's blog posts",
+        "enabled": true,
+        "links": {
+            "self": "https://api.moltin.com/v2/flows/a7b53c11-ece3-4c11-b0b6-05568fa636ad"
+        },
+        "relationships": {
+            "fields": {
+                "data": [
+                    {
+                        "id": "93c4413a-01b8-4000-8aca-ae338518a078",
+                        "type": "field"
+                    },
+                    {
+                        "id": "fa1f5ed0-2cea-4fcd-b4d2-ced85fbc231b",
+                        "type": "field"
+                    },
+                    {
+                        "id": "3901e3b5-edd2-4123-b464-a01cc4c554ee",
+                        "type": "field"
+                    }
+                ]
+            }
+        },
+        "meta": {
+            "timestamps": {
+                "created_at": "2018-10-17T15:12:21.276Z",
+                "updated_at": "2018-10-17T15:12:21.276Z"
+            }
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Fetch Blog content to display
 
 Using the Moltin API, fetch the blog Flow which will now contain the blog post created above.
@@ -375,4 +554,8 @@ curl -X GET "https://api.moltin.com/v2/flows/posts/entries" \
 ```
 {% endtab %}
 {% endtabs %}
+
+ The data you've fetched is in JSON format, and you can render it according to your needs on your blog site.
+
+
 
