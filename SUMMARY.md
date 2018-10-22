@@ -17,7 +17,7 @@
 
 ## Guides
 
-* [Import Catalogue Data](guides/uploading-csv-data.md)
+* [Import Catalog Data](guides/uploading-csv-data.md)
 * [Custom Data](guides/custom-data/README.md)
   * [Create a Blog](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)

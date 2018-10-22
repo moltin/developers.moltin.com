@@ -6,7 +6,7 @@ description: >-
 
 # Create a formatted order csv
 
-## 1. Get your access token {#1-get-your-access-token}
+## 1. Get your access token <a id="1-get-your-access-token"></a>
 
 You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
 
@@ -19,7 +19,7 @@ const Moltin = MoltinGateway({
 })
 ```
 
-## 2. Fetch all of your order {#2-create-a-new-flow}
+## 2. Fetch all of your order <a id="2-create-a-new-flow"></a>
 
  You can use filter to only grab the orders you want.  Example of that would be to filter based on time.  In the example we will be grabbing them all
 
@@ -38,7 +38,7 @@ Moltin.Orders.All().then(orders => {
 })
 ```
 
-## 3. Creating an array that has orders and items {#2-create-a-new-flow}
+## 3. Creating an array that has orders and items <a id="2-create-a-new-flow"></a>
 
  Using the above API response you will want to loop through the data and create an array that has all if the data you may need.
 
@@ -82,7 +82,7 @@ exports.itemsLookup = function(order, items) {
 };
 ```
 
-## 4. Adding array to CSV {#2-create-a-new-flow}
+## 4. Adding array to CSV <a id="2-create-a-new-flow"></a>
 
 ```javascript
 Moltin.Orders

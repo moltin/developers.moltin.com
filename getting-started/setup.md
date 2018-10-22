@@ -15,11 +15,11 @@ Use the [Moltin website](https://moltin.com/) to sign up for an account and add 
 
 Once you are a registered user and have a [Moltin account](https://accounts.moltin.com/), you can create multiple projects \(also known as stores\), and invite team members to collaborate.
 
-### Add projects {#add-projects}
+### Add projects <a id="add-projects"></a>
 
 Use your [Moltin account](https://accounts.moltin.com/) to add as many projects as you need. If you need to delete any project, contact [Moltin support](https://support.moltin.com/hc/en-us), and we will do it for you. For more details on managing projects, see the [**Manage your projects**](setup.md#manage-your-projects) section below.
 
-### Invite team members {#invite-team}
+### Invite team members <a id="invite-team"></a>
 
 Invite team members to join specific projects via your [Moltin account](https://accounts.moltin.com/). Each team member will have full access to your project via the API and [dashboard](https://dashboard.moltin.com/app).
 
@@ -27,7 +27,7 @@ Every team member has their own unique API `client_id` and `client_secret`. This
 
 You can invite users that are already registered with Moltin, but it is not a requirement. An invitation for unregistered users additionally includes the link to the registration form.
 
-### Delete team members {#manage-your-team}
+### Delete team members <a id="manage-your-team"></a>
 
 Delete existing users through your [Moltin account](https://accounts.moltin.com/). Deleting users is permanent. You can re-add deleted users who will receive a new set of credentials \(`client_id` and `client_secret`\).
 
@@ -49,7 +49,7 @@ Use the dashboard to manage projects. In detail you can:
 * Manage your inventory.
 * Assign and manage promotions.
 
-### Project settings {#project-settings}
+### Project settings <a id="project-settings"></a>
 
 Moltin's API provides the ability to to configure global settings across your project at the API-level only. See: [Settings](https://docs.moltin.com/advanced/settings) for more details.
 

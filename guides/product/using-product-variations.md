@@ -475,7 +475,7 @@ curl -X GET https://api.moltin.com/v2/products/:id \
 {% endtab %}
 {% endtabs %}
 
-##  {#3-tie-the-variation-to-the-parent-product}
+##  <a id="3-tie-the-variation-to-the-parent-product"></a>
 
 
 

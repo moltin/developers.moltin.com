@@ -12,7 +12,7 @@ You can create your products via the API or the [Moltin dashboard](https://dashb
 
 When purchasing a fishing rod you may want to purchase other accessories such as a reel, tripod, tackle box, etc. First, we will create our fishing rod product, and then add the products that will be related.
 
-#### Fishing Rod: {#fishing-rod}
+#### Fishing Rod: <a id="fishing-rod"></a>
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -87,7 +87,7 @@ curl -X "POST" https://api.moltin.com/v2/products \
 
 Next, we will add some accessories:
 
-#### Fishing Reel: {#fishing-reel}
+#### Fishing Reel: <a id="fishing-reel"></a>
 
 ```bash
 curl -X POST https://api.moltin.com/v2/products \
@@ -113,7 +113,7 @@ curl -X POST https://api.moltin.com/v2/products \
 }'
 ```
 
-#### Tackle Box: {#tackle-box}
+#### Tackle Box: <a id="tackle-box"></a>
 
 ```bash
 curl -X POST https://api.moltin.com/v2/products \
@@ -140,7 +140,7 @@ curl -X POST https://api.moltin.com/v2/products \
 }'
 ```
 
-#### Beach Shelter: {#beach-shelter}
+#### Beach Shelter: <a id="beach-shelter"></a>
 
 ```bash
 curl -X POST https://api.moltin.com/v2/products \
@@ -217,7 +217,7 @@ curl -X POST https://api.moltin.com/v2/files \
 
 We can repeat this for every product image we need to upload, changing the file path for each call.
 
-### Main Images to Product Relationships {#main-images-to-product-relationships}
+### Main Images to Product Relationships <a id="main-images-to-product-relationships"></a>
 
 Now that we have our image files uploaded, we need to link them to their respective products, so that they can be included with our product calls for display.
 

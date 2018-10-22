@@ -1,10 +1,10 @@
-# Import Catalogue Data
+# Import Catalog Data
 
 ## Overview
 
 Moltin flexible API allows you to quickly and easily import data. CSV files are a very common way to extract and share data. All endpoint are read write and update, meaning you can import products, customer and orders. 
 
-In this guide we will look at importing product data, and establishing relationships in the API to have a functional product catalogue organized programatically.
+In this guide we will look at importing product data, and establishing relationships in the API to have a functional product catalog organized programatically.
 
 ### Setup Summary
 
@@ -111,9 +111,9 @@ module.exports = async function(path = ".") {
 {% endtab %}
 {% endtabs %}
 
-### Customize Moltin catalogue objects
+### Customize Moltin catalog objects
 
-In the import folder you will see all of the Moltin catalogue objects \(Brands, Categories, Collections and Main Image\).  This is where you can match the parsed data to the data you want to send to Moltin. In this example we will add Products with Brand, Collection, Category and file relationships.
+In the import folder you will see all of the Moltin catalog objects \(Brands, Categories, Collections and Main Image\). This is where you can match the parsed data to the data you want to send to Moltin. In this example we will add Products with Brand, Collection, Category and file relationships.
 
 #### Create Brands, Categories, Collections and Main Images
 
@@ -218,7 +218,7 @@ let productM = await Moltin.Products.Create({
 
 ### Create Product catalogue relationships
 
-Review the relationships you wish to establish in your catalogue.  The key is to use the id from the newly created product, and then find the corresponding catalogue attribute \(brand, category, etc\).
+Review the relationships you wish to establish in your catalog.  The key is to use the id from the newly created product, and then find the corresponding catalogue attribute \(brand, category, etc\).
 
 #### Example
 
