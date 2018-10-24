@@ -6,7 +6,7 @@ This section will walk you briefly through the entire checkout workflow, outlini
 
 ## Summary of a process workflow
 
-1. Add a product to a cart. A cart and its reference number is generated automatically by this action.
+1. Add a product to a cart. A cart and its reference number is generated.
 2. Manage the cart items \(add/remove items, increase/decrease quantity, etc.\).
 3. Check out the cart. An incomplete order is created.
 4. Pay for an order: provide billing and shipping details, if you're a new customer. The order is now in the **processing** status.
@@ -16,6 +16,10 @@ This section will walk you briefly through the entire checkout workflow, outlini
 ## How Moltin handles checkout
 
 The `cart` and its `reference` number is generated automatically as soon as a product is added to a cart. A request to add a product to cart will return a collection of cart `items`. 
+
+### Carts
+
+When a product is added to a cart, a cart is generated together with its unique reference ID that on checkout becomes a part of the order ID. If you're using our [JavaScript SDK](developer-tools/sdks.md#javascript-sdk), generating a cart reference ID is done for you; otherwise, add a cart reference generator to your functionality. For more details on carts, see: [How carts work](guides/how-carts-work.md).
 
 ### Promotions and custom items
 
