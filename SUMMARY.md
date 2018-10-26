@@ -22,7 +22,6 @@
 
 ## Guides
 
-* [Handling Subscriptions](guides/handling-subscriptions.md)
 * [Import Catalog Data](guides/uploading-csv-data.md)
 * [How carts work](guides/how-carts-work.md)
 * [Custom Data](guides/custom-data/README.md)
