@@ -4,9 +4,10 @@ This section will give you an idea of how a typical cart works. We will talk abo
 
 * how carts are generated,
 * how to create a cart reference id,
-* what happens when a cart is abandoned.
+* what happens when a cart is abandoned,
+* what happens to the checked out cart after the order is paid for.
 
-![Typical cart workflow](../.gitbook/assets/cart-workflow.png)
+![Typical cart workflow showcasing how an abandoned and checked out cart work](../.gitbook/assets/cart-workflow.png)
 
 ### Generating a cart
 
@@ -43,7 +44,11 @@ export function cartIdentifier(storage) {
 {% endtab %}
 {% endtabs %}
 
-### How abandoned carts are handled
+###  Abandoned carts
 
 A cart will exist 7 days, and then the API will purge it. However, this doesn't mean that the products added to that cart will be unavailable to other customers. If the [manage stock feature](work-with-inventory.md) is active, your stock won't be allocated until a payment attempt is made.
+
+### Handling a cart after order payment
+
+Once the cart has been checked out and the order has been paid for, the cart still exists, and needs to be [manually deleted](https://docs.moltin.com/carts-and-checkout/carts/delete-a-cart).
 
