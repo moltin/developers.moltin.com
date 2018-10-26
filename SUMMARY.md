@@ -17,11 +17,12 @@
 
 ## Guides
 
+* [Handling Subscriptions](guides/handling-subscriptions.md)
 * [Import Catalog Data](guides/uploading-csv-data.md)
+* [How carts work](guides/how-carts-work.md)
 * [Custom Data](guides/custom-data/README.md)
   * [Create a Blog](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
-* [How carts work](guides/how-carts-work.md)
 * [Working with Custom Cart](guides/working-with-custom-cart.md)
 * [Working with Promotions](guides/working-with-promotions.md)
 * [Create a formatted order csv](guides/create-a-formatted-order-csv.md)
