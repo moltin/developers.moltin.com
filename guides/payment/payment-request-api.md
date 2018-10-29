@@ -12,9 +12,7 @@ For demo on how Payment Request API works with Moltin, visit [GitHub](https://gi
 
 ### Limitations
 
-* Support for credit and debit cards only
-* Supported on Chrome \(53+\) for Android
-* Supported on Chrome \(61+\) and Edge \(15+\) for desktop
+* For gateway and browser support, consult the [Payment Request API documentation](https://developers.google.com/web/fundamentals/).
 
 ### Integration steps summary
 
