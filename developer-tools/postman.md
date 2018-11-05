@@ -8,6 +8,6 @@ One of the easiest ways to begin exploring the Moltin API is using [Postman](htt
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/f56bebbef7ecc72a6827)
 
-1. Configure the environment variable with your own `client_id` and `client_secret`.
+1. Configure the environment variable with your own `client_id` and `client_secret`. The collection uses multiple variables to be replaced with values or used with a configured environment. To learn more about environments, consult [Postman documentation](https://www.getpostman.com/docs/v6/postman/environments_and_globals/intro_to_environments_and_globals).
 2. Generate an access token using the implicit or client\_credentials requests within the Authentication folder.
 
