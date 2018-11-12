@@ -284,15 +284,15 @@ curl -X POST https://api.moltin.com/v2/carts/:cartID/checkout \
 {% endtab %}
 {% endtabs %}
 
-### Make a payment
+### Make a payment - generic overview
 
-Payment transactions are processed similarly for all gateways. The typical workflow includes three main steps:
+Payment transactions are processed similarly for all gateways. The typical workflow includes three main steps detailed below. For a specific 3rd party related details, see the [detailed walkthrough](payment-gateway-integration.md#third-party-payment-gateways-detailed-walkthrough) below.
 
 1. **A payment transaction is created and an attempt to pay is made.** The transaction is forwarded to the third party gateway specified by the customer \(this of course depends on how many active gateways you have configured\).
 2. **The payment is processed by the third party gateway.** Payment transactions are always processed outside of Moltin for security reasons. Typically, you'd use a token rather than pass the card details directly. If, however, you wish to pass the cart details directly to the third party provider, Moltin enforces the use of the secure HTTPS protocol.
 3. **If the transaction is successful, a** `200 OK` **response is returned.** Use the response \(success or failure\) to update the transaction, which will then in turn automatically update the order and payment statuses.
 
-#### Pay by card
+### Pay by card - generic overview
 
 Paying by card is the most typical scenario that looks the same on any gateway. You'd use a payments endpoint to send the card details to the gateway you've specified in the request.
 
@@ -343,7 +343,9 @@ Moltin.Orders.Payment(orderId, {
 {% endtab %}
 {% endtabs %}
 
-Below, we document third party integrations Moltin natively supports, and the payment methods they support. If you wish to use a provider that is not listed here, don't worry, you can still integrate it with Moltin using a [custom payment gateway](implement-own-payment-gateway.md).
+### Third party payment gateways - detailed walkthrough 
+
+Below, we document third party integrations Moltin natively supports, and supported payment methods. If you wish to use a provider that is not listed here, don't worry, you can still integrate it with Moltin using a [custom payment gateway](implement-own-payment-gateway.md).
 
 {% tabs %}
 {% tab title="Manual Gateway" %}
