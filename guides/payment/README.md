@@ -4,10 +4,10 @@ This page collates all content on integrating payment into your project. Click o
 
 At the moment, Moltin supports the following third-party payment gateways:
 
-* Stripe
-* Adyen
-* Braintree
-* CardConnect
+* [Stripe](payment-gateway-integration.md#make-a-payment)
+* [Adyen](payment-gateway-integration.md#make-a-payment)
+* [Braintree](payment-gateway-integration.md#make-a-payment)
+* [CardConnect](payment-gateway-integration.md#make-a-payment)
 
 For all other integrations that are not yet officially supported, you can directly integrate with your payment gateway of choice and link this back to Moltin with the [**manual gateway**](implement-own-payment-gateway.md).
 
