@@ -37,6 +37,7 @@
   * [Extend a Product](guides/product/extending-product.md)
   * [Related Products](guides/product/product-relationships.md)
 * [Payment](guides/payment/README.md)
+  * [Payment Gateway integration](guides/payment/payment-gateway-integration.md)
   * [Apple Pay with Swift](guides/payment/apple-pay-with-swift.md)
   * [Payment Request API](guides/payment/payment-request-api.md)
   * [Custom Payment Gateways](guides/payment/implement-own-payment-gateway.md)
