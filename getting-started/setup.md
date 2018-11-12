@@ -2,7 +2,7 @@
 
 The **Setup** section will take you step by step through basic project configuration.
 
-Basic project configuration happens at the Moltin [account](https://accounts.moltin.com/stores/1795057077903687859) and [dashboard](https://dashboard.moltin.com/app/orders/orders?dir=desc) level. You'll need to **register as a user** to get access to both.
+Basic project configuration happens at the Moltin [Dashboard](https://dashboard.moltin.com/app/orders/orders?dir=desc). You'll need to **register as a user** to get access to API keys and any stores.
 
 * Use **account** to add projects and manage users \(first project is added as part of an account onboarding process\).
 * Use **dashboard** to manage your projects and project settings.
@@ -13,15 +13,11 @@ Use the [Moltin website](https://moltin.com/) to sign up for an account and add 
 
 ## Manage your account
 
-Once you are a registered user and have a [Moltin account](https://accounts.moltin.com/), you can create multiple projects \(also known as stores\), and invite team members to collaborate.
-
-### Add projects <a id="add-projects"></a>
-
-Use your [Moltin account](https://accounts.moltin.com/) to add as many projects as you need. If you need to delete any project, contact [Moltin support](https://support.moltin.com/hc/en-us), and we will do it for you. For more details on managing projects, see the [**Manage your projects**](setup.md#manage-your-projects) section below.
+Once you are a registered user and have a [Moltin account](https://dashboard.moltin.com), you can create multiple projects \(also known as stores\), and invite team members to collaborate.
 
 ### Invite team members <a id="invite-team"></a>
 
-Invite team members to join specific projects via your [Moltin account](https://accounts.moltin.com/). Each team member will have full access to your project via the API and [dashboard](https://dashboard.moltin.com/app).
+Invite team members to join specific projects via your [Moltin Dashboard](https://dashboard.moltin.com). Each team member will have full access to your project via the API and [Dashboard](https://dashboard.moltin.com/app).
 
 Every team member has their own unique API `client_id` and `client_secret`. This is really helpful if you invite external developers to work on your project, you can easily revoke their access at anytime.
 
@@ -29,7 +25,7 @@ You can invite users that are already registered with Moltin, but it is not a re
 
 ### Delete team members <a id="manage-your-team"></a>
 
-Delete existing users through your [Moltin account](https://accounts.moltin.com/). Deleting users is permanent. You can re-add deleted users who will receive a new set of credentials \(`client_id` and `client_secret`\).
+Delete existing users through your [Dashboard](https://dashboard.moltin.com). Deleting users is permanent. You can re-add deleted users who will receive a new set of credentials \(`client_id` and `client_secret`\).
 
 {% hint style="info" %}
 #### Project owners
@@ -39,7 +35,7 @@ Each user can invite and delete other users; however, normal users can't delete 
 
 ## Manage your projects
 
-Projects \(aka stores\) are managed through the [Moltin dashboard](https://dashboard.moltin.com/). If you have multiple projects, switch between them using the dashboard's store switcher.
+Projects \(aka stores\) are managed through the [Moltin Dashboard](https://dashboard.moltin.com/). If you have multiple projects, switch between them using the dashboard's store switcher.
 
 Use the dashboard to manage projects. In detail you can:
 
@@ -55,7 +51,7 @@ Moltin's API provides the ability to to configure global settings across your pr
 
 ## Get your API Keys
 
-Access to Moltin's API is protected by [authentication tokens](https://docs.moltin.com/basics/authentication). Tokens are generated using API keys and can be found via both: [Moltin account](https://accounts.moltin.com/dashboard) and  [Moltin dashboard](https://dashboard.moltin.com). 
+Access to Moltin's API is protected by [authentication tokens](https://docs.moltin.com/basics/authentication). Tokens are generated using API keys and can be found via the [Moltin Dashboard](https://dashboard.moltin.com).
 
 Every user is provided with `client_id` and `client_secret` keys. These API keys are unique to every user and every project, and are used to generate two types of [authentication tokens](https://docs.moltin.com/basics/authentication).
 
