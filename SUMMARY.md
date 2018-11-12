@@ -13,6 +13,7 @@
 * [Example Projects](example-projects.md)
 * [Checkout workflow](checkout-workflow.md)
 * [Organize your data with Moltin](organize-your-data-with-moltin.md)
+* [Currency](currency.md)
 
 ## Developer Tools
 
