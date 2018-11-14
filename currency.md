@@ -40,7 +40,7 @@ Default currency is USD and it’s also enabled by default. You can set up any c
 ### Multiple currency - key points:
 
 * You can configure several currency types for your project.
-* Carts don’t support multiple currency.
+* Carts don’t support multiple currency. If you add products with mixed currency, they will automatically fall back and use the default currency that is set up for these currency. Otherwise, `display_price` will be 0.
 
 ### Using currencies header with products
 
