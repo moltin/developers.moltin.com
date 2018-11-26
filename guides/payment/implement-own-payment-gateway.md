@@ -20,10 +20,18 @@ You can only enable one manual gateway but you can integrate with as many third 
 
 ### Prerequisites
 
-* Moltin [account](https://accounts.moltin.com/dashboard) and [dashboard](https://dashboard.moltin.com/).
-* Third party payment integration of your choice.
+* Moltin [dashboard](https://dashboard.moltin.com/) to add credentials and enable the gateway.
+* Third party payment integration of your choice to use for payment.
 
-### Third party integration
+### PayPal integration
+
+For PayPal-specific integration:
+
+* Configure manual gateway with Moltin, as described below.
+* Install the [PayPal SDK](https://github.com/paypal/PayPal-node-SDK) using the `client_credentials`token. 
+* Use manual gateway with `paypal.payment.create(create_payment_json)`.
+
+### Other third party integration
 
 For specific instructions on how to use your chosen gateway provider you will need to check the providers documentation and configure your code accordingly.
 
@@ -74,7 +82,7 @@ curl -X PUT https://api.moltin.com/v2/gateways/manual \
 {% endtab %}
 {% endtabs %}
 
-### Process workflow
+### Process workflow - generic walkthrough
 
 As per the usual workflow, you need to create a cart and allow the items to be added to the cart. For more details on the usual product workflow, see:  [Checkout workflow](../../checkout-workflow.md).
 
