@@ -24,6 +24,7 @@
 ## Guides
 
 * [Import Catalog Data](guides/uploading-csv-data.md)
+* [Manage customers](guides/manage-customers.md)
 * [How carts work](guides/how-carts-work.md)
 * [Custom Data](guides/custom-data/README.md)
   * [Create a Blog](guides/custom-data/create-a-blog.md)
