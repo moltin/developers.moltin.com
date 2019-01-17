@@ -19,7 +19,7 @@ The `cart` and its `reference` number is generated automatically as soon as a pr
 
 ### Carts
 
-When a product is added to a cart, a cart is generated together with its unique reference ID that on checkout becomes a part of the order ID. If you're using our [JavaScript SDK](developer-tools/sdks.md#javascript-sdk), generating a cart reference ID is done for you; otherwise, add a cart reference generator to your functionality. For more details on carts, see: [How carts work](guides/how-carts-work.md).
+When a product is added to a cart, a cart is generated together with its unique reference ID that on checkout becomes a part of the order ID. If you're using our [JavaScript SDK](developer-tools/sdks.md#javascript-sdk), generating a cart reference ID is done for you; otherwise, add a cart reference generator to your functionality. For more details on carts, see: [How carts work](guides/carts/how-carts-work.md).
 
 ### Promotions and custom items
 
