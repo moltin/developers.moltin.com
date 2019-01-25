@@ -6,8 +6,8 @@ This guide will show you how to calculate sales tax via TaxJar and integrate it 
 
 ### Prerequisites
 
-* [Moltin account](https://accounts.moltin.com/) \(a 30 day trial is available\). 
-* [TaxJar account](https://app.taxjar.com/) \(a 30 day trial is available\). 
+* [Moltin account](https://accounts.moltin.com/)
+* [TaxJar account](https://app.taxjar.com/)
 * Products configured through [Moltin dashboard](https://dashboard.moltin.com/) or through the API.
 
 ### Moltin tax integration key points:
