@@ -42,6 +42,7 @@
 * [Taxes](guides/taxes/README.md)
   * [Apply custom tax items](guides/taxes/apply-custom-tax-items.md)
   * [Integrate TaxJar with Moltin](guides/taxes/taxes-integrate-taxjar-with-moltin.md)
+  * [Taxes FAQ](guides/taxes/taxes-faq.md)
 * [Payment](guides/payment/README.md)
   * [Payment Gateway integration](guides/payment/payment-gateway-integration.md)
   * [Custom Payment Gateways](guides/payment/implement-own-payment-gateway.md)
