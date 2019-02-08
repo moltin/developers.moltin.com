@@ -95,6 +95,10 @@ curl -X POST https://api.moltin.com/v2/promotions \
 A promotion is located and applied through a code. Each Promotion can have unlimited number of codes. 
 
 {% hint style="info" %}
+Please note that codes will be automatically removed from a promotion once the promotion expires or is disabled.
+{% endhint %}
+
+{% hint style="info" %}
 The code is the one your customers will enter after they have added the items to their cart.
 {% endhint %}
 
