@@ -42,7 +42,7 @@ The Swift SDK is available to install via Cocoapods, Carthage and Swift Package 
 
 ```swift
 //In your podfile
-pod 'Moltin', '~> 3.0.11'
+pod 'Moltin', '~> 3.1.0'
 
 //Then run pod install in your terminal to install
 ```
