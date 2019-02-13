@@ -494,6 +494,52 @@ Moltin.Cart(reference)
 {% endtab %}
 {% endtabs %}
 
+### How promotions are applied
+
+To ensure tax calculations are approached with diligence, promotions that are cart-level, which is discounts that are not specific to any item, are shared out across the items in the cart. Currently, this entails dividing the amount of any promotional discount\(s\) equally amongst the product items in the cart.
+
+{% hint style="info" %}
+After distributing the discount amongst the cart items, any remainder is applied to the first cart item that is a product.
+{% endhint %}
+
+#### Sample scenario of how promotions are distributed in a cart
+
+The same issue occurs when the quantity of said item is greater than 1. In this instance we increment the discount remainder until it is divisible by the quantity of the cart item.
+
+An example:
+
+**Cart**
+
+| Item | Unit Price | Quantity | Total |
+| :--- | :--- | :--- | :--- |
+| T-shirt | $20 | 2 | $40 |
+| Hoodie | $30 | 1 | $30 |
+|  |  |  | $70 |
+
+Apply a discount of $40...
+
+$$
+40 / 3 = 13.33333333
+$$
+
+So we have $13.33 we can apply to each individual item...
+
+| Item | Unit Price | Quantity | Total |
+| :--- | :--- | :--- | :--- |
+| T-shirt | $6.67 | 2 | $13.34 |
+| Hoodie | $16.67 | 1 | $16.67 |
+|  |  |  | $30.01 |
+
+There's a $0.01discount leftover. In this situation the first product cart item has a quantity of 2, therefore, we would have to increment the remainder in order to maintain the same unit price for the cart item. The result would be:
+
+| Item | Unit Price | Quantity | Total |
+| :--- | :--- | :--- | :--- |
+| T-shirt | $6.66 | 2 | $13.32 |
+| Hoody | $16.67 | 1 | $16.67 |
+|  |  |  | $29.99 |
+
+The final amount discounted is $0.01 **more** than the target discount. We are looking to develop further strategies to apply discounts to eliminate such discrepancies.
+
 ### Next steps
 
 Once a Cart has been converted to an Order using either of the methods above, you will most likely want to [capture payment for order](https://docs.moltin.com/payments/paying-for-an-order).
