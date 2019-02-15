@@ -14,8 +14,6 @@ Click the links below to view examples of how to use Flows to extend resources.
 
 {% page-ref page="../product/extending-product.md" %}
 
-{% page-ref page="../serverless/short-order-id.md" %}
-
 ## New resources
 
 With the power of Flows, you can create new resources to power product reviews, wishlists, blog articles, staff profile pages, and many more.

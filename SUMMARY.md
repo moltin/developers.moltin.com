@@ -23,6 +23,7 @@
 
 ## Guides
 
+* [Integration examples](guides/serverless.md)
 * [Import Catalog Data](guides/uploading-csv-data.md)
 * [Manage customers](guides/manage-customers.md)
 * [Custom Data](guides/custom-data/README.md)
@@ -48,9 +49,4 @@
   * [Custom Payment Gateways](guides/payment/implement-own-payment-gateway.md)
   * [Apple Pay with Swift](guides/payment/apple-pay-with-swift.md)
   * [Payment Request API](guides/payment/payment-request-api.md)
-* [Serverless](guides/serverless/README.md)
-  * [Short Order ID](guides/serverless/short-order-id.md)
-  * [Email Receipts](guides/serverless/email-receipts.md)
-  * [Shipping SMS](guides/serverless/shipping-sms.md)
-  * [Algolia Order Sync](guides/serverless/algolia-order-sync.md)
 
