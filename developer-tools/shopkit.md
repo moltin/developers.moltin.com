@@ -96,44 +96,6 @@ export default () => (
 )
 ```
 
-### Product Grid
-
-For pages you wish to display an array of products, you can use the `<ProductGrid />` component to render all `live` products.
-
-{% hint style="warning" %}
-You will need to import `Button`, if you wish to enable add to cart functionality.
-{% endhint %}
-
-#### Props
-
-| **Prop** | **Default** | **Required** | **Description** |
-| :--- | :--- | :--- | :--- |
-| `maxProducts` | `12` | No | Set the max products per page |
-| `children` | `undefined` | **Yes** | A custom render function for grid |
-
-#### Example
-
-```javascript
-import React from 'react'
-import { Product, Button } from '@moltin/react-shopkit'
-​
-export default () => (
-  <Product id="1f6eaa8a-80dc-4b1d-a66d-4cc3a1f7f3bb">
-    {({ loading, error, data }) => {
-      if (loading) return <p>Loading!</p>
-      if (error) return <p>Error occured!</p>
-​
-      return (
-        <div>
-          <h2>{data.name}</h2>
-          <Button id={data.id} />
-        </div>
-      )
-    }}
-  </Product>
-)
-```
-
 ### Cart Button
 
 Shopkit abstracts the cart functionality to the `<ShopkitProvider />` component that wraps your entire application. Using the React [Context API](https://reactjs.org/docs/context.html#reactcreatecontext) internally we are able to manage all cart state in one place and make it available to all other components.
