@@ -4,10 +4,9 @@ Moltin Shopkit is a minimalist component library that enables developers to easi
 
 Shopkit is built on top of the Moltin [JS SDK](https://github.com/moltin/js-sdk), removing all of the setup boilerplate to get up and running with React. There are several components available that return a function you can use to render various types of components in your application.
 
-* [`<Button />`](shopkit.md#button)
+* [`<BuyButton />`](shopkit.md#button)
 * [`<Product />`](shopkit.md#product)
-* [`<ProductGrid />`](shopkit.md#product-grid)
-* [`<Cart />`](shopkit.md#cart)
+* [`<CartButton />`](shopkit.md#cart)
 
 ## Installation
 
@@ -38,9 +37,9 @@ Next, you can use the components listed below inside your application and they w
 
 The components below can be imported and configured for use inside your application.
 
-### Button
+### Buy Button
 
-The quickest way to add Moltin to your website is to use the `<Button />` component. Simply specify a Product ID and instantly have it added to the cart functionality.
+The quickest way to add Moltin to your website is to use the `<BuyButton />` component. Simply specify a Product ID and instantly have it added to the cart functionality.
 
 #### Props
 
@@ -54,14 +53,12 @@ The quickest way to add Moltin to your website is to use the `<Button />` compon
 
 ```javascript
 import React from 'react'
-import { Button } from '@moltin/react-shopkit'
+import { BuyButton } from '@moltin/react-shopkit'
 
 export default () => (
-  <Button productId="61abf56a-194e-4e13-a717-92d2f0c9d4df">
-    {({addToCart}) => (
-      <button onClick={addToCart}>Add to Cart</button>
-    )}
-  </Button>
+  <BuyButton id="61abf56a-194e-4e13-a717-92d2f0c9d4df">
+    {({ addToCart }) => <button onClick={addToCart}>Add to Cart</button>}
+  </BuyButton>
 )
 ```
 
@@ -137,13 +134,9 @@ export default () => (
 )
 ```
 
-### Cart
+### Cart Button
 
-Shopkit abstracts the cart functionality to the `ShopkitProvider` component that wraps your entire application. Using the [React Context API](https://reactjs.org/docs/context.html#reactcreatecontext) internally we are able to manage all cart state in one place and make it available to all other components.
-
-{% hint style="warning" %}
-You will need to import `Button`, if you wish to enable add to cart functionality.
-{% endhint %}
+Shopkit abstracts the cart functionality to the `<ShopkitProvider />` component that wraps your entire application. Using the React [Context API](https://reactjs.org/docs/context.html#reactcreatecontext) internally we are able to manage all cart state in one place and make it available to all other components.
 
 #### Props
 
@@ -155,22 +148,26 @@ You will need to import `Button`, if you wish to enable add to cart functionalit
 
 ```javascript
 import React from 'react'
-import { Cart } from '@moltin/react-shopkit'
+import { CartButton } from '@moltin/react-shopkit'
 ​
 export default () => (
-  <Cart>
-    {({ total, count, shown, onClick, items, updateCartQuantity, removeFromCart }) => {
-      if (loading) return <p>Loading!</p>
-      if (error) return <p>Error occured!</p>
-​
-      return (
-        <div>
-          <h2>{data.name}</h2>
-          <Button id={data.id} />
-        </div>
-      )
-    }}
-  </Cart>
+  <CartButton>
+    {({
+      total,
+      count,
+      shown,
+      onClick,
+      items,
+      updateCartQuantity,
+      removeFromCart
+    }) => (
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
+    )}
+  </CartButton>
 )
 ```
 
