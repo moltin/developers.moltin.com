@@ -29,7 +29,7 @@ In this guide, we will look to implement a CSV file of products that have main i
 To use another format adjust to the file format you need `delimiter: ','` \([http://csv.adaltas.com/parse/](http://csv.adaltas.com/parse/)\)
 {% endhint %}
 
-1. Download the sample Shopify data. Use the data file to follow along with the guide.
+1. Download the sample Shopify data we would use to import into Moltin. Use the data file to follow along with the guide.
 
 {% file src="../.gitbook/assets/apparel \(2\).csv" %}
 
