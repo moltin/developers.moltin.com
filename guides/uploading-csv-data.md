@@ -2,9 +2,9 @@
 
 ## Overview
 
-Moltin flexible API allows you to quickly and easily import data. CSV files are a very common way to extract and share data. All endpoint are read write and update, meaning you can import products, customer and orders. 
+Moltin flexible API allows you to quickly and easily import data. CSV files are a very common way to extract and share data. All endpoint are read write and update, meaning you can import products, customers, and orders. 
 
-In this guide we will look at importing product data, and establishing relationships in the API to have a functional product catalog organized programatically.
+In this guide we will look at importing product data and establishing relationships in the API to have a functional product catalog organized programatically.
 
 ### Setup Summary
 
