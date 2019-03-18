@@ -336,17 +336,35 @@ Review the relationships you wish to establish in your catalog.  The key is to u
 
 ### Add your site credentials
 
-Add in your Moltin client token in the top of the moltin.js file.
+You can either setup an .env file that will be used globally on the project or replace all placeholders in the project.
+
+Add a .env file to your project.  Add in your keys.
+
+{% tabs %}
+{% tab title=".env" %}
+{% code-tabs %}
+{% code-tabs-item title=".env" %}
+```javascript
+NEW_SITE_CLIENT_ID=XXXXXX
+NEW_SITE_SECRET=XXXXXX
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
+
+Search and replace process.env.NEW\_SITE\_CLIENT\_ID, process.env.NEW\_SITE\_SECRET, with your keys.  Below is an example, note there are several files you will need to update.
 
 {% tabs %}
 {% tab title="Client Id" %}
 {% code-tabs %}
 {% code-tabs-item title="moltin.js" %}
 ```javascript
-const Moltin = MoltinGateway({
-  client_id: "MOLTIN_CLIENT_ID",
-  client_secret: "MOLTIN_CLIENT_SECRET"
+const client = new MoltinClient({
+  client_id: process.env.NEW_SITE_CLIENT_ID,
+  client_secret: process.env.NEW_SITE_SECRET
 });
+
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
