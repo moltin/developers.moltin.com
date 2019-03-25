@@ -475,7 +475,13 @@ curl -X GET https://api.moltin.com/v2/products/:id \
 {% endtab %}
 {% endtabs %}
 
-##  <a id="3-tie-the-variation-to-the-parent-product"></a>
+## Rebuilding Child Products <a id="3-tie-the-variation-to-the-parent-product"></a>
+
+You can hit the product/build endpoint at any time, whether you already generated child products or not. It will perform a rebuild of your child products for you.
+
+If you have not updated any variations, options or modifiers, the resulting child products will be exactly the same as before.
+
+If you have updated any variations, options or modifiers, then your old child products will be replaced with new ones based on the alterations made.
 
 
 
