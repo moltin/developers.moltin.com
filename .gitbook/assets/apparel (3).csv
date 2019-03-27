@@ -1,4 +1,4 @@
-id,sku,name,description,vendor,price_moltin,Tags,status,main_image,brand,category,collection
+id,sku,name,description,vendor,price,Tags,status,main_image,brand,category,collection
 123,ABJ-252,Ocean Blue Shirt,Ocean blue cotton shirt with a narrow collar and buttons down the front and long sleeves. Comfortable fit and tiled kalidoscope patterns.,partners-demo,49.99,men,draft,https://burst.shopifycdn.com/photos/young-man-in-bright-fashion_925x.jpg,Cool Brand,Mens,Top Picks
 350,ADI-47,Yellow Wool Jumper,Ultra-stylish black and red striped silk blouse with buckle collar and matching button pants.,partners-demo,59.99,women,draft,https://burst.shopifycdn.com/photos/striped-blouse-fashion_925x.jpg,Cool Brand,Mens,Top Picks
 986,ADI-48,Floral White Top,"Womans zipped leather jacket. Adjustable belt for a comfortable fit, complete with shoulder pads and front zip pocket. ",partners-demo,23.99,women,draft,https://burst.shopifycdn.com/photos/leather-jacket-and-tea_925x.jpg,Cool Brand,Mens,Top Picks

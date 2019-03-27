@@ -10,7 +10,7 @@ In this guide we will look at importing product data and establishing relationsh
 
 1. Prepare a file with data and setup a project with Moltin.
 2. Install the sample script from GitHub.
-3. Review the code in the sample script. The code can be customized according to your needs.
+3. Review the code in the sample script. The code can be customized according to your needs.  \(The moltin objects adjusted to your data\)
 4. Review the commands that control how the script is run.
 5. Upload new/updated data programatically.
 
@@ -31,7 +31,7 @@ To use another format adjust to the file format you need `delimiter: ','` \([htt
 
 1. Download the sample Shopify data we would use to import into Moltin. Use the data file to follow along with the guide.
 
-{% file src="../.gitbook/assets/apparel \(2\).csv" %}
+{% file src="../.gitbook/assets/apparel \(2\).csv" caption="Test data" %}
 
 2. Install the script to upload the data you've created to Moltin. 
 
@@ -54,62 +54,48 @@ It is recommended to review your data before the upload, so that it matches Molt
 
 ### Adjust the data model
 
-Adjust the data model to match your CSV headers. The names of the headers in your CVS file need to match your code.  
+Adjust the data model to match your CSV headers. The names of the headers in your CVS file need to match your code.  The uploader is going to take all of the headers from your CSV and turn it into an Object you can use to send data to Moltin.
 
-{% hint style="info" %}
-The only header that matter is image that will be used as the main image.  This column must have the header main\_image.  All other images will be add as files to the product.
-{% endhint %}
-
-| id | sku | name | description | Vendor | price | Tags | status | main\_image | Brand | category | Collection |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 123 | ABJ-252 | Ocean Blue Shirt | Ocean blue cotton shirt with a narrow collar and buttons down the front and long sleeves. Comfortable fit and tiled kalidoscope patterns. | partners-demo | 49.99 | men | draft | [https://burst.shopifycdn.com/photos/young-man-in-bright-fashion\_925x.jpg](https://burst.shopifycdn.com/photos/young-man-in-bright-fashion_925x.jpg) | Cool Brand | Mens | Top Picks |
+It will then create flows for every field it does not recognize.  These flow fields will be applied to the product object.  You will want to adjust this list based on your data.  **This will ensure there is no overlap with Moltin fields and your custom fields**.
 
 {% tabs %}
-{% tab title="Object to match to headers" %}
+{% tab title="Moltin fields and your custom fields." %}
 {% code-tabs %}
-{% code-tabs-item title="data/uploadr.js" %}
+{% code-tabs-item title="moltinobjects.js" %}
 ```javascript
-module.exports = async function(path = ".") {
-  //need to be able to take in the objects we want to use
-  const [
-    //objects in order of maps
-    catalog
-  ] = await Promise.all([
-    //source data to parse
-    readCsvToArray(`${path}`, [
-      "id",
-      "sku",
-      "name",
-      "description",
-      "Vendor",
-      "price",
-      "tag",
-      "status",
-      "main_image",
-      "brand",
-      "category",
-      "collection",
-      "num_ratings"
-    ])
-  ]);
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-{% endtab %}
-
-{% tab title="Where the data is returned" %}
-{% code-tabs %}
-{% code-tabs-item title="data/uploadr.js" %}
-```javascript
-//The parsed data will be returned
-  return {
-    inventory: catalog
-  };
+//add in defualt moltin fields.  This is just a general list.  You may need to adjust.
+function checker(value) {
+  var moltinObjects = [
+    "price",
+    "title",
+    "sku",
+    "slug",
+    "type",
+    "id",
+    "status",
+    "commodity_type",
+    "meta",
+    "stock",
+    "relationships",
+    "manage_stock",
+    "description",
+    "main_image",
+    "relationships",
+    "brand",
+    "category",
+    "name"
+  ];
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+The only header that matter is image that will be used as the main image and price.  This column must have the header main\_image.  All other images will be add as files to the product.
+
+For the price of the product you must name the header something beside price as moltin base object must use price.  I recommend naming your price column **price\_moltin.**
+{% endhint %}
 
 ### Customize Moltin catalog objects
 
