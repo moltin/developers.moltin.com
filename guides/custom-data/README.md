@@ -15,9 +15,6 @@ There are two scenarios for using Flows:
 1. Extending an existing resource \(e.g. products, orders, etc.\).
 2. Adding a new resource \(e.g. blog, wishlist, etc.\).
 
-  
-
-
 ## Extending resources
 
 The most common usage of the Flows API is to extend existing resources like products, customers and orders. These are called core Flows and are handled by Moltin differently to non-core Flows - see: [Custom Data](https://docs.moltin.com/~/drafts/-LKaw44strBlTmOqfUwj/primary/advanced/custom-data) in the API Reference for details and the full list of core Flows.
