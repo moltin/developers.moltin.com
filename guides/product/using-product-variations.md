@@ -145,7 +145,7 @@ Modifiers determine how the child products built will vary from the base product
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl -X POST https://api.moltin.com/v2/variations/:variationId/options/:optionID \
+curl -X POST https://api.moltin.com/v2/variations/:variationId/options/:optionID/modifiers \
      -H "Authorization: Bearer XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
