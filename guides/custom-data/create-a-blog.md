@@ -1,5 +1,9 @@
 # Create a Blog with lightweight CMS
 
+### Scenario overview
+
+If you want to use a single platform for multiple solutions, Moltin API gives you the ability to use custom data to create a blog and manage your content with some light configuration. 
+
 ### Prerequisites
 
 To get started, all you need is access to Moltin dashboard so that you can set up your project \(you'll need Client ID and Client Secret\).
@@ -7,10 +11,6 @@ To get started, all you need is access to Moltin dashboard so that you can set u
 ### Assumption of knowledge
 
 This guide is aimed at everybody who has a basic understanding of object-oriented programming or JavaScript.
-
-### Scenario overview
-
-If you want to use a single platform for multiple solutions, Moltin API gives you the ability to use custom data to create a blog and manage your content with some light configuration. 
 
 ### How to expand Moltin API to create a blog
 
