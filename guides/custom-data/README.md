@@ -1,4 +1,4 @@
-# Custom Data
+# Custom data - Flows
 
 One of the great features of Moltin is the ability to extend existing core resources and the flexibility to create your own. With [Flows](https://docs.moltin.com/advanced/custom-data), you are able to create various types of fields, including strings, booleans, dates, integers and relationships with other custom flows.
 

@@ -1,6 +1,6 @@
 # Your First API Request
 
-Welcome! This is a great place to get started if you're new to Moltin.
+Welcome! This is a great place to get started, if you're new to Moltin.
 
 The guides below use the command line to make requests via cURL, but you could as easily use a [supported SDK](../developer-tools/sdks.md).
 

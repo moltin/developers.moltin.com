@@ -26,7 +26,7 @@
 * [Integration examples](guides/serverless.md)
 * [Import Catalog Data](guides/uploading-csv-data.md)
 * [Manage customers](guides/manage-customers.md)
-* [Custom Data](guides/custom-data/README.md)
+* [Custom data - Flows](guides/custom-data/README.md)
   * [Create a Blog](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
 * [Working with Promotions](guides/working-with-promotions.md)
