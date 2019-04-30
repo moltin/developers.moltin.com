@@ -27,7 +27,7 @@
 * [Import Catalog Data](guides/uploading-csv-data.md)
 * [Manage customers](guides/manage-customers.md)
 * [Custom data - Flows](guides/custom-data/README.md)
-  * [Create a Blog](guides/custom-data/create-a-blog.md)
+  * [Create a Blog with lightweight CMS](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
 * [Working with Promotions](guides/working-with-promotions.md)
 * [Create a formatted order csv](guides/create-a-formatted-order-csv.md)

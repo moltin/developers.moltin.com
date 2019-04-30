@@ -1,4 +1,14 @@
-# Create a Blog
+# Create a Blog with lightweight CMS
+
+### Prerequisites
+
+To get started, all you need is access to Moltin dashboard so that you can set up your project \(you'll need Client ID and Client Secret\).
+
+### Assumption of knowledge
+
+This guide is aimed at everybody who has a basic understanding of object-oriented programming or JavaScript.
+
+### Scenario overview
 
 If you want to use a single platform for multiple solutions, Moltin API gives you the ability to use custom data to create a blog and manage your content with some light configuration. 
 
@@ -8,13 +18,16 @@ Use Flow API \(custom data\) to create a new resource: a blog object to store bl
 
 * See: [Custom Data](./) to learn about Flows.
 
-### Summary of steps required:
+### Summary of steps required
 
-* Create a Flow that will contain your blog object.
-* Create Fields to create blog's building blocks \(date, title, blog post entry, fields, etc.\).
-* Create Entries to store the actual content \(blog posts\).
+1. Create a Flow that will contain your blog object.
+2. Create Fields to create blog's building blocks \(date, title, blog post entry, fields, etc.\).
+3. Create Entries to store the actual content \(blog posts\).
+4. Fetch blog content to display and render it according to your needs on your blog site.
 
-### Get your access token
+### Step-by-step walkthrough
+
+### 1. Get your access token
 
 Get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
 
@@ -25,7 +38,7 @@ curl -X "POST" "https://api.moltin.com/oauth/access_token" \
      -d "grant_type=client_credentials"
 ```
 
-### Create a new custom Flow 
+### 2. Create a new custom Flow 
 
 Create a custom \(non-core\) [Flow](./). This Flow is going to power a blog website, and used to store blog content objects.
 
@@ -75,7 +88,7 @@ curl -X POST "https://api.moltin.com/v2/flows" \
 Make sure to take note of the Flow ID returned \(the `id` field in the response\), you'll need this to create relationship between the Flow and its Fields.
 {% endhint %}
 
-### Create Fields
+### 3. Create Fields
 
 Fields will be returned when you call the blog object. Repeat this for every blog feature you'd like to include, e.g. blog title, blog date, blog post content, etc. The example below shows how to create fields to store basic blog detail: title, date and content. 
 
@@ -288,11 +301,11 @@ curl -X POST https://api.moltin.com/v2/fields \
 {% endtab %}
 {% endtabs %}
 
-### Create Entries for a Blog
+### 4. Create Entries for a Blog
 
 Entries represent the actual content each Field will contain. Create an Entry for every Field added. In this example, the Title, Date and Content Fields will be a part of the Entry created, as they were all flagged as required.
 
-#### Using slugs
+### Using slugs
 
 Slug forms the end part of the URL. Use it to create human-readable and search-engine-friendly URIs for your blog. 
 
@@ -341,7 +354,7 @@ curl -X POST https://api.moltin.com/v2/flows/{Flow:slug}/entries \
 {% endtab %}
 {% endtabs %}
 
-### Create relationships to organize your data
+### 5. Create relationships to organize your data
 
 Create Fields related to a Flow to adapt a data model to how you wish to present it on the frontend, e.g. posts per author, posts per category, etc.
 
@@ -516,7 +529,7 @@ curl -X GET https://api.moltin.com/v2/flows/{Flow:id} \
 {% endtab %}
 {% endtabs %}
 
-### Fetch Blog content to display
+### 6. Fetch Blog content to display
 
 Using the Moltin API, fetch the blog Flow which will now contain the blog post created above.
 
@@ -555,7 +568,9 @@ curl -X GET "https://api.moltin.com/v2/flows/posts/entries" \
 {% endtab %}
 {% endtabs %}
 
- The data you've fetched is in JSON format, and you can render it according to your needs on your blog site.
+### Expected outcome
+
+ Your blog is now surfaced on your website. The data you've fetched is in JSON format, and you can render it according to your needs directly on your blog site. You can now expand it by adding photo galleries, comments, reviews, etc.
 
 
 
