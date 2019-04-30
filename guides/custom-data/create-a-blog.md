@@ -570,7 +570,7 @@ curl -X GET "https://api.moltin.com/v2/flows/posts/entries" \
 
 ### Expected outcome
 
- Your blog is now surfaced on your website. The data you've fetched is in JSON format, and you can render it according to your needs directly on your blog site. You can now expand it by adding photo galleries, comments, reviews, etc.
+Your blog is now surfaced on your website. The data you've fetched is in JSON format, and you can render it according to your needs directly on your blog site. You can now expand it by adding photo galleries, comments, reviews, etc.
 
 
 
