@@ -13,7 +13,7 @@ So to put simply, Flows are like tables in a database. Fields are like columns w
 There are two scenarios for using Flows:
 
 1. Extending an existing resource \(e.g. products, orders, etc.\).
-2. Adding a new resource \(e.g. blog, wishlist, etc.\).
+2. Adding a new resource \(e.g. blog, wish list, customer review, etc.\).
 
 ## Extending resources
 
@@ -27,7 +27,7 @@ Click the links below to view examples of how to use Flows to extend resources.
 
 ## New resources
 
-With the power of Flows, you can create new resources to power product reviews, wishlists, blog articles, staff profile pages, and many more.
+With the power of Flows, you can create new resources to power product reviews, wish lists, blog articles, staff profile pages, and many more.
 
 Click the links below to view examples of how to use non-core \(custom\) Flows to create new resources.
 
