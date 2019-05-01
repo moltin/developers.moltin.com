@@ -20,10 +20,11 @@ Use Flow API \(custom data\) to create a new resource: a blog object to store bl
 
 ### Summary of steps required
 
-1. Create a Flow that will contain your blog object.
-2. Create Fields to create blog's building blocks \(date, title, blog post entry, fields, etc.\).
-3. Create Entries to store the actual content \(blog posts\).
-4. Fetch blog content to display and render it according to your needs on your blog site.
+* Create a Flow that will contain your blog object.
+* Create Fields to create blog's building blocks \(date, title, blog post entry, fields, etc.\).
+* Create Entries to store the actual content \(blog posts\).
+* Create relationships to organize data and manage the content.
+* Fetch blog content to display and render it according to your needs on your blog site.
 
 ### Step-by-step walkthrough
 
@@ -356,7 +357,9 @@ curl -X POST https://api.moltin.com/v2/flows/{Flow:slug}/entries \
 
 ### 5. Create relationships to organize your data
 
-Create Fields related to a Flow to adapt a data model to how you wish to present it on the frontend, e.g. posts per author, posts per category, etc.
+You can use the Moltin API to manage your content. You would use custom Flows for that. If you have a more robust CMS in mind, we recommend plugging in a third party content management tool, such as Contentful. 
+
+First, create Fields related to a Flow to adapt a data model to how you wish to present it on the frontend, e.g. posts per author, posts per category, etc.
 
 To create a relationship, take the Flow you want to relate your Fields to, and use its slug in the URL of the request. Then, specify which Field you wish to relate to in the request body, and repeat it for every Field you wish to relate to this Flow.
 
