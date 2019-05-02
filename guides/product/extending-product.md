@@ -70,28 +70,28 @@ Replace Flow\_ID with the ID that was generated for the Flow \(see step 2\).
 curl -X POST https://api.moltin.com/v2/fields \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
-     {
-  "data": {
-    "type": "field",
-    "name": "Field Name",
-    "slug": "field-name",
-    "field_type": "integer",
-    "description": "field description",
-    "required": false,
-    "unique": false,
-    "default": 0,
-    "enabled": true,
-    "order": 1,
-    "relationships": {
-        "flow": {
-            "data": {
-                "type": "flow",
-                "id": "Flow_ID"
-            }
+     -d $'{ 
+          "data": {
+            "type": "field",
+            "name": "Field Name",
+            "slug": "field-name",
+            "field_type": "integer",
+            "description": "field description",
+            "required": false,
+            "unique": false,
+            "default": 0,
+            "enabled": true,
+            "order": 1,
+            "relationships": {
+                "flow": {
+                    "data": {
+                        "type": "flow",
+                        "id": "Flow_ID"
         }
+      }
     }
   }
-}
+}'
 ```
 
 ### 4. Create an Entry
