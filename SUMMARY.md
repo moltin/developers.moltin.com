@@ -35,7 +35,7 @@
 * [Product](guides/product/README.md)
   * [Product Variations](guides/product/using-product-variations.md)
   * [Product Modifiers](guides/product/modifiers.md)
-  * [Extend a Product](guides/product/extending-product.md)
+  * [Extend a resource with Flows](guides/product/extending-product.md)
   * [Related Products](guides/product/product-relationships.md)
 * [Carts](guides/carts/README.md)
   * [How carts work](guides/carts/how-carts-work.md)
