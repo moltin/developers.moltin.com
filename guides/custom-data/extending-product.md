@@ -117,7 +117,7 @@ To verify whether your existing resource has been expanded with new fields, all 
 ```bash
 curl -X GET https://api.moltin.com/v2/products \
      -H "Authorization: XXXX" \
-     -H "Content-Type: application/json" \
+     -H "Content-Type: application/json"
 ```
 
 

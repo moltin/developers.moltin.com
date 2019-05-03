@@ -4,7 +4,7 @@ This page collates all content on products and how to work with them within your
 
 {% page-ref page="using-product-variations.md" %}
 
-{% page-ref page="extending-product.md" %}
+{% page-ref page="../custom-data/extending-product.md" %}
 
 {% page-ref page="modifiers.md" %}
 
