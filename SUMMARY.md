@@ -29,6 +29,7 @@
 * [Custom data - Flows](guides/custom-data/README.md)
   * [Extend a resource with Flows](guides/custom-data/extending-product/README.md)
     * [Extend the customer profile](guides/custom-data/extending-product/extend-the-customer-profile.md)
+    * [Extend the product model](guides/custom-data/extending-product/extend-product-model.md)
   * [Create a Blog with lightweight CMS](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
 * [Working with Promotions](guides/working-with-promotions.md)
