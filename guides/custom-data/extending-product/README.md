@@ -18,7 +18,7 @@ This guide will give you a general idea and know-how around extending an existin
 
 * Create a Flow for the endpoint you want to extend, e.g. products, orders, etc.
 * Create Fields to add custom data.
-* Create Entries to store data passed to your fields.
+* Create an object that includes your custom data.
 
 ### Step-by-step walkthrough
 
@@ -96,12 +96,12 @@ curl -X POST https://api.moltin.com/v2/fields \
 }'
 ```
 
-### 4. Create an Entry
+### 4. Create an object that includes your custom data
 
-The Entry will store data passed to your field. Create an Entry for every Field added. Replace `FIELD_SLUG` with the actual `slug` you used for the Field you wish to create an Entry for.
+Now, all you need to do is to create an object that will include all your custom data. Note that additionally to your custom fields, you'll need to include all fields required for that object. Replace `FIELD_SLUG` with the actual `slug` you used for the Field.
 
 ```bash
-curl -X POST https://api.moltin.com/v2/flows/:flowSlug/entries \
+curl -X POST https://api.moltin.com/v2/flows/:flowSlug/{{EXISTING_RESOURCE}} \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{

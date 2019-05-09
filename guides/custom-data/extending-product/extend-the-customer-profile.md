@@ -17,7 +17,9 @@ Extend a customer profile to add more customer-specific information that your bu
 
 * Create a Flow for the endpoint you want to extend: `customers`
 * Create Fields to add custom data.
-* Create Entries to store data passed to your fields.
+* Create `customer` that will include your custom data.
+
+Fetching the extended `customer` object will show all custom data added to that customer.
 
 ### Step-by-step walkthrough
 
@@ -118,6 +120,7 @@ Now, we've extended the customer profile and created our first customer with the
 ```bash
 curl -X GET https://api.moltin.com/v2/customers/{{CUSTOMER_ID}} \
      -H "Authorization: XXXX" 
+     -H "Content-Type: application/json"
 ```
 {% endtab %}
 
