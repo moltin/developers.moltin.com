@@ -61,7 +61,7 @@ Take note of the Flow's ID that is returned. You'll need this to create a Flow f
 
 ### 3. Create a Field
 
-The Field will be returned when you call the `customer` object. Replace `FLOW_ID` with the ID that was generated for the `customers` Flow in step 2. In this scenario, we have set the `unique` field to `false`, which means that entries can repeat themselves. This way we don't constrain customers to write an original description for their delivery details. The field is also not required, making an entry optional for customers to fill in. 
+Let's create the **Delivery Details** field now. The Field will be returned when you call the `customer` object. Replace `FLOW_ID` with the ID that was generated for the `customers` Flow in step 2. In this scenario, we have set the `unique` field to `false`, which means that entries can repeat themselves. This way we don't constrain customers to write an original description for their delivery details. The field is also not required, making an entry optional for customers to fill in. 
 
 ```bash
 curl -X POST https://api.moltin.com/v2/fields \
