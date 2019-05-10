@@ -1,7 +1,7 @@
 ---
 description: >-
   Extend product model to match your catalog data or enable additional
-  validation, such as age restriction.
+  validation, such as age restriction for movies.
 ---
 
 # Extend the product model
@@ -61,7 +61,7 @@ Take note of the Flow's `id` that is returned. You'll need this to create a Flow
 
 ### 3. Create a Field
 
-The Field will be returned when you call the `product` object. In the example below, we will add the age restriction field, so that products can now display appropriate MPAA film classification for each DVD product. We will use validation rules to determine which rating is appropriate based on age. In this example, we'll validate whether the DVD should be rated NC-17, which means the content is not accessible to anybody aged less than 17. To do that, you need to include all acceptable values to the `options` array.
+The Field will be returned when you call the `product` object. In the example below, we will add the age restriction field, so that products can display appropriate MPAA film classification for each DVD product. The validation will only accept valid classification values, such as G, P, PG, etc. that we will list the `options` array.
 
 {% hint style="info" %}
 Replace Flow\_ID with the ID that was generated for the Flow \(see step 2\).
@@ -103,7 +103,7 @@ curl -X POST https://api.moltin.com/v2/fields \
 
 ### 4. Create a product with your custom field
 
-Now, we need to start adding data to the customer profile, by calling the `products` endpoint and adding the new key for the custom field in the data object with the value for the age restriction. Take a note of the id returned for your customer.
+Now, we need to start adding data to the customer profile, by calling the `products` endpoint and adding the new key for the custom field in the data object with the value for the MPAA classification. Take a note of the id returned for your product.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/products \

@@ -6,18 +6,17 @@ description: >-
 
 # Extend the customer profile
 
-Extend a customer profile to add more customer-specific information that your business needs.![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
-
 ### Prerequisites
 
-* Moltin account \(you'll need Client ID and Client Secret of your store\).
+* Moltin account \(you'll need the Client ID and Client Secret of your store\).
 * Basic understanding of object-oriented programming or JavaScript.
 
 ### Summary of steps required
 
 * Create a Flow for the endpoint you want to extend: `customers`
 * Create Fields to add custom data.
-* Create `customer` that will include your custom data.
+* Create a `customer` that will include your custom data.
+* Update the `customer` with a new value.
 
 Fetching the extended `customer` object will show all custom data added to that customer.
 
@@ -38,10 +37,10 @@ curl -X POST https://api.moltin.com/oauth/access_token \
 
 ### 2. Create a core Flow
 
-Creating a new Flow, `customers`. Note that slug must match the plural name of the resource you're extending.
+Next, we will create a new Flow, `customers`. Note that the slug must match the plural name of the resource you're extending.
 
 {% hint style="info" %}
-If you already have a Flow for `customers`, skip to Create a Flow Field. You'll need the ID of the products Flow to continue.
+If you already have a Flow for `customers`, skip to Create a Flow Field. You'll need the ID of the customers Flow to continue.
 {% endhint %}
 
 ```bash
@@ -59,11 +58,11 @@ curl -X POST https://api.moltin.com/v2/flows \
       }'
 ```
 
-Take note of the Flow's id that is returned. You'll need this to create a Flow field, as described below.
+Take note of the Flow's ID that is returned. You'll need this to create a Flow field, as described below.
 
 ### 3. Create a Field
 
-The Field will be returned when you call the `customer` object. Replace `Flow_ID` with the ID that was generated for the `customers` Flow \(see step 2\). In this scenario, we have set the `unique` field to `false`, which means that entries can repeat themselves. This way we don't constrain customers to write an original description for their delivery details. The field is also not required, making an entry optional for customers to fill in. 
+The Field will be returned when you call the `customer` object. Replace `FLOW_ID` with the ID that was generated for the `customers` Flow in step 2. In this scenario, we have set the `unique` field to `false`, which means that entries can repeat themselves. This way we don't constrain customers to write an original description for their delivery details. The field is also not required, making an entry optional for customers to fill in. 
 
 ```bash
 curl -X POST https://api.moltin.com/v2/fields \
@@ -95,7 +94,7 @@ curl -X POST https://api.moltin.com/v2/fields \
 
 ### 4. Create a customer with your custom field
 
-Now, we need to start adding data to the customer profile, by calling the customers endpoint and adding the new key for the custom field in the data object with the value for the delivery details. Take a note of the id returned for your customer.
+Now, we need to start adding data to the customer profile, by calling the customers endpoint and adding the new key for the custom field in the data object with the value for the delivery details. Take a note of the ID returned for your customer.
 
 ```bash
 curl -X POST https://api.moltin.com/v2/customers \
@@ -106,7 +105,7 @@ curl -X POST https://api.moltin.com/v2/customers \
           "type": "customer",
           "name": "Ron Swanson",
           "email": "ron.swanson@gmail.com",
-          "delivery_details": "Leave at porch"
+          "delivery_details": "Do NOT leave in a government building"
         }
       }'
 ```
@@ -133,26 +132,28 @@ curl -X GET https://api.moltin.com/v2/customers/{{CUSTOMER_ID}} \
       "name": "Ron Swanson",
       "email": "ron.swanson@gmail.com",
       "password": false,
-      "delivery_details": "Leave at porch"
+      "delivery_details": "Do NOT leave in a government building"
    }
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-### Update the customer
+### 6. Update the customer
 
 To update the delivery details all you have to do is to pass the field you want to update to the `customer` endpoint.
 
 {% tabs %}
 {% tab title="cURL Request" %}
 ```bash
-curl -X PUT https://api.moltin.com/v2/customers \
+curl -X PUT https://api.moltin.com/v2/customers/{{CUSTOMER_ID}} \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
         "data": {
-          "delivery_details": "Leave behind bin"
+          "type": "customer",
+          "id": "{{CUSTOMER_ID}}",
+          "delivery_details": "Leave in Leslie Knope’s office?"
         }
       }'
 ```
@@ -167,7 +168,7 @@ curl -X PUT https://api.moltin.com/v2/customers \
       "name": "Ron Swanson",
       "email": "ron.swanson@gmail.com",
       "password": false,
-      "delivery_details": "Leave behind bin"
+      "delivery_details": "Leave in Leslie Knope’s office?"
    }
 }
 ```
