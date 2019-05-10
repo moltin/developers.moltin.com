@@ -16,7 +16,6 @@ description: >-
 * Create a Flow for the endpoint you want to extend: `products`
 * Create Fields to add custom data.
 * Create a `product` that will include your custom data.
-* Update the `product` value
 
 Fetching the extended `product` object will show all custom data added to that customer.
 
@@ -198,7 +197,7 @@ curl -X GET https://api.moltin.com/v2/products/{{PRODUCT_ID}} \
 {% endtab %}
 {% endtabs %}
 
-### 6. Update the product
+### Update the product
 
 To update the product all you have to do is to pass the field you want to update to the `product` endpoint.
 
