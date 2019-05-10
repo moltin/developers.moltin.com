@@ -152,7 +152,7 @@ curl -X PUT https://api.moltin.com/v2/customers/{{CUSTOMER_ID}} \
         "data": {
           "type": "customer",
           "id": "{{CUSTOMER_ID}}",
-          "delivery_details": "Leave in Leslie Knope’s office?"
+          "delivery_details": "Leave in Leslie Knope’s office"
         }
       }'
 ```
