@@ -117,7 +117,7 @@ curl -X POST https://api.moltin.com/v2/flows/:flowSlug/{{EXISTING_RESOURCE}} \
 To verify whether your existing resource has been expanded with new fields, all you need to do is call \(GET\) this resource. The fields will also be available in the [dashboard](https://dashboard.moltin.com/app) under custom data for each resource you have there.
 
 ```bash
-curl -X GET https://api.moltin.com/v2/products \
+curl -X GET https://api.moltin.com/v2/{{EXISTING_RESOURCE}} \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json"
 ```
