@@ -1,8 +1,25 @@
+---
+description: >-
+  You can use the Moltin API to extend your stores functionality by providing
+  users the ability to save products to a wishlist.
+---
+
 # Create a Wishlist
 
-You can use the Moltin API to extend your stores functionality by providing users the ability to save products to a wishlist.
+### Prerequisites
 
-## 1. Get your access token
+* Moltin dashboard \(you'll need Client ID and Client Secret of your store\).
+* Good understanding of object-oriented programming or JavaScript.
+
+### Summary of steps required:
+
+* Create a Flow that will contain your wishlist object.
+* Create `products` Field to store customer's desired products.
+* Create empty Entries to associate with products.
+* Create a relationship between an Entry and a product. This will be created every time a customer adds a product to a wishlist.
+* Associate a wishlist with a customer by adding a `customers` Flow and creating a `one-to-many` relationship between a customer and a wishlist.
+
+### 1. Get your access token
 
 You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.
 
@@ -13,7 +30,7 @@ curl -X "POST" "https://api.moltin.com/oauth/access_token" \
      -d "grant_type=client_credentials"
 ```
 
-## 2. Create a new custom Flow
+### 2. Create a new custom Flow
 
 Using the Moltin API, go ahead and create a flow for "**Wishlist**".
 
@@ -36,7 +53,7 @@ curl -X POST "https://api.moltin.com/v2/flows" \
 Make sure to take note of the Flow ID returned, you'll need this below as `WISHLIST_FLOW_ID`.
 {% endhint %}
 
-## 3. Create a new Field
+### 3. Create a new Field
 
 In this step we will create a field for \`products\`. This field will store the customers desired products.
 
@@ -62,7 +79,7 @@ curl -X POST "https://api.moltin.com/v2/fields" \
           "flow": {
             "data": {
               "type": "flow",
-              "id": "WISHLIST_FLOW_ID"
+              "id": "{{WISHLIST_FLOW_ID}}"
             }
           }
         }
@@ -70,7 +87,7 @@ curl -X POST "https://api.moltin.com/v2/fields" \
     }'
 ```
 
-## 4. Create a Flow Entry
+### 4. Create a Flow Entry
 
 With our custom Flow configured, we next create an empty Entry so we can associate products.
 
@@ -85,7 +102,7 @@ curl -X POST "https://api.moltin.com/v2/flows/wishlist/entries" \
     }'
 ```
 
-## 5. Add Product to Wishlist
+### 5. Add Product to Wishlist
 
 With our custom Flow entry, we can now associate products with a wishlist entry.
 
@@ -107,7 +124,7 @@ curl -X POST https://api.moltin.com/v2/flows/wishlist/entries/{ENTRY_ID}/relatio
     }'
 ```
 
-## 6. Get all Wishlists
+### 6. Get all Wishlists
 
 ```bash
 curl https://api.moltin.com/v2/flows/wishlist \
@@ -137,7 +154,7 @@ The response will contain the associated products \*\*per entry\*\* like below.
 
 Due to the `implicit` grant type, it is important we connect wishlist and customers. We'll do that next by extending the customer resource.
 
-## 7. Create a Customer Flow
+### 7. Create a Customer Flow
 
 We now need to associate a wishlist to a customer.
 
@@ -160,7 +177,7 @@ curl -X POST https://api.moltin.com/v2/flows \
     }'
 ```
 
-## 8. Configure relationship
+### 8. Configure relationship
 
 Now let’s create the relationships field that will link a customer to a wishlist \(note that we’re going to create a 'one to many' relationship because we might want customers to create multiple wishlists\):
 
@@ -206,7 +223,7 @@ curl -X POST https://api.moltin.com/v2/customers/{CUSTOMER_ID}/relationships/wis
     }'
 ```
 
-## 9. Get customer wishlists
+### 9. Get customer wishlists
 
 We’ve saved the wishlist to a customer, so when we make API calls to get that customer we will now see the wishlist\(s\) directly on the customer data object. Don't forget to set `?include=wishlists` to get the wishlist objects.
 
