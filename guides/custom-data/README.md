@@ -23,7 +23,7 @@ If you wish to store extra fields per product, such as `manufactured_date` for c
 
 Click the links below to view examples of how to use Flows to extend resources.
 
-{% page-ref page="extending-product/" %}
+{% page-ref page="extend-a-resource/" %}
 
 ## New resources
 
