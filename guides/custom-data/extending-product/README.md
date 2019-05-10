@@ -88,7 +88,7 @@ curl -X POST https://api.moltin.com/v2/fields \
                 "flow": {
                     "data": {
                         "type": "flow",
-                        "id": "Flow_ID"
+                        "id": "{{FLOW_ID}}"
         }
       }
     }
@@ -107,7 +107,7 @@ curl -X POST https://api.moltin.com/v2/flows/:flowSlug/{{EXISTING_RESOURCE}} \
      -d $'{
        "data": {
          "type": "entry",
-         "{FIELD_SLUG}": "a value",
+         "{{FIELD_SLUG}}": "a value",
        }
      }'
 ```
