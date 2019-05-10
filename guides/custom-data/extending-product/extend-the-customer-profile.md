@@ -16,7 +16,6 @@ description: >-
 * Create a Flow for the endpoint you want to extend: `customers`
 * Create Fields to add custom data.
 * Create a `customer` that will include your custom data.
-* Update the `customer` with a new value.
 
 Fetching the extended `customer` object will show all custom data added to that customer.
 
@@ -139,7 +138,7 @@ curl -X GET https://api.moltin.com/v2/customers/{{CUSTOMER_ID}} \
 {% endtab %}
 {% endtabs %}
 
-### 6. Update the customer
+### Update the customer
 
 To update the delivery details all you have to do is to pass the field you want to update to the `customer` endpoint.
 
