@@ -84,7 +84,7 @@ curl -X POST https://api.moltin.com/v2/fields \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{
-  	"data": {
+  	    "data": {
     	  "type": "field",
     	  "name": "Name",
     	  "slug": "name",
@@ -139,22 +139,22 @@ curl -X POST https://api.moltin.com/v2/fields \
      -H "Authorization: XXXX" \
      -H "Content-Type: application/json" \
      -d $'{ 
-          "data": {
-            "type": "field",
-            "name": "Consignment ID",
-            "slug": "consignment-id",
-            "field_type": "string",
-            "description": "field description",
-            "required": false,
-            "unique": false,
-            "default": 0,
-            "enabled": true,
-            "order": 1,
-            "relationships": {
-              "flow": {
-                "data": {
-                  "type": "flow",
-                  "id": "{{ORDERS_FLOW_ID}}"
+        "data": {
+          "type": "field",
+          "name": "Consignment ID",
+          "slug": "consignment-id",
+          "field_type": "string",
+          "description": "field description",
+          "required": false,
+          "unique": false,
+          "default": 0,
+          "enabled": true,
+          "order": 1,
+          "relationships": {
+            "flow": {
+              "data": {
+                "type": "flow",
+                "id": "{{ORDERS_FLOW_ID}}"
                }
             }
         }
@@ -242,22 +242,22 @@ curl -X POST https://api.moltin.com/v2/flows \
      -H "Content-Type: application/json" \
      -d $'{
      	"data":{  
-   	  "type":"field",
-   	  "name":"Shipping Provider",
-   	  "slug":"shipping-provider",
-   	  "description":"The shipping provider used to send the order",
-   	  "required":false,
-   	  "unique":false,
-   	  "field_type":"relationship",
-   	  "relationships":{  
-      	 "flow":{  
-           "data":{  
-             "type":"flow",
-             "id":"{{CARTS_FLOW_ID}}"
-                       }
-      		     }
+   	    "type":"field",
+   	    "name":"Shipping Provider",
+   	    "slug":"shipping-provider",
+   	    "description":"The shipping provider used to send the order",
+   	    "required":false,
+   	    "unique":false,
+   	    "field_type":"relationship",
+   	    "relationships":{  
+      	  "flow":{  
+            "data":{  
+              "type":"flow",
+              "id":"{{CARTS_FLOW_ID}}"
+                    }
+      		    }
    		   },
-   	   "validation_rules": [{  
+   	    "validation_rules": [{  
           "type":"one-to-one",
           "to":"shipping-provider"
       }]
