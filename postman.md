@@ -2,7 +2,7 @@
 
 One of the easiest ways to begin exploring the Moltin API is using [Postman](https://www.getpostman.com/). The [Postman collection](https://app.getpostman.com/run-collection/8d2630ced1f579e5e0dc) has full API coverage, and all you need to get started is your API keys.
 
-![](../.gitbook/assets/screen-shot-2018-07-09-at-13.00.31.png)
+![](.gitbook/assets/screen-shot-2018-07-09-at-13.00.31.png)
 
 ### Setup
 

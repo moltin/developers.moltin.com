@@ -10,20 +10,13 @@
   * [3. Checkout](your-first-api-request/3.-checkout.md)
   * [4. Pay for your order](your-first-api-request/4.-pay-for-your-order.md)
   * [5. Going further](your-first-api-request/5.-going-further.md)
-* [Example Projects](example-projects.md)
 * [Checkout workflow](checkout-workflow.md)
 * [Organize your data with Moltin](organize-your-data-with-moltin.md)
 * [Currency](currency.md)
-
-## Developer Tools
-
-* [SDKs](developer-tools/sdks.md)
-* [Shopkit](developer-tools/shopkit.md)
-* [Postman](developer-tools/postman.md)
+* [Postman](postman.md)
 
 ## Guides
 
-* [Integration examples](guides/serverless.md)
 * [Import Catalog Data](guides/uploading-csv-data.md)
 * [Manage customers](guides/manage-customers.md)
 * [Custom data - Flows](guides/custom-data/README.md)

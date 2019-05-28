@@ -55,7 +55,7 @@ curl -X PUT https://api.moltin.com/v2/gateways/stripe \
 
 ### Integrate with Moltin's checkout flow <a id="integrate-with-moltin"></a>
 
-Use Moltin API to create a checkout flow. See the [JavaScript SDK](../../developer-tools/sdks.md#javascript-sdk) for more API interactions. At minimum, you’ll need ability to:
+Use Moltin API to create a checkout flow. See the [JavaScript SDK]() for more API interactions. At minimum, you’ll need ability to:
 
 1. Add items to a cart.
 2. Check out a cart.

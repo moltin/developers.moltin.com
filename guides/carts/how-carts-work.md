@@ -11,7 +11,7 @@ This section will give you an idea of how a typical cart works. We will talk abo
 
 ### Generating a cart
 
-Once a product is added to a cart, the product itself becomes a cart item, and a cart together with its unique reference ID is created. If you're using our [JavaScript SDK](../../developer-tools/sdks.md#javascript-sdk), generating a cart reference ID is done for you; otherwise, add a cart reference generator to your functionality \(see [the section below](how-carts-work.md#generating-a-cart-reference-id) for ideas\).
+Once a product is added to a cart, the product itself becomes a cart item, and a cart together with its unique reference ID is created. If you're using our [JavaScript SDK](), generating a cart reference ID is done for you; otherwise, add a cart reference generator to your functionality \(see [the section below](how-carts-work.md#generating-a-cart-reference-id) for ideas\).
 
 Regardless of the way the reference ID was created \(through the SDK or a custom feature\), the API remembers it, and will use it to create an order ID. Make sure you take note of this field, as you will also need it.
 

@@ -17,7 +17,7 @@ If you are new to eCommerce development, we recommend you to familiarize yoursel
 
 If you are still not sure how you’d like your project to look like or which tools to use, we recommend you to review and analyze various examples of Moltin implementations that you can find under **Developer Tools** \(see the Table of Contents to the left\).
 
-Once your project is properly planned out, visit [**Example Projects**](example-projects.md) to get yourself up and running in no time with one of our SDKs. Treat [**Setup**](getting-started/setup.md) as a checklist providing you with all to-dos necessary for a basic configuration.
+Once your project is properly planned out, visit [**Example Projects**]() to get yourself up and running in no time with one of our SDKs. Treat [**Setup**](getting-started/setup.md) as a checklist providing you with all to-dos necessary for a basic configuration.
 
 Most importantly, if you feel stuck or feel you could use a helpful hand, do not hesitate to join our [community forum](https://forum.moltin.com). Remember, we love developers!
 
