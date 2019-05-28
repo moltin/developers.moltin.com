@@ -217,6 +217,20 @@ const payment = {
 Moltin.Orders.Payment(orderId, payment).then(() => {
   // Do something
 })
+
+```
+
+**Capture Transaction**
+
+```javascript
+const options = {
+   order: 'ORDER_ID_GOES_HERE',
+   transaction: 'TRANSACTION_ID_GOES_HERE'
+}
+ 
+ Moltin.Transactions.Capture(options).then(() => {
+ // Do something
+ })
 ```
 {% endtab %}
 {% endtabs %}
