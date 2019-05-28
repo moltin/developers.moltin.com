@@ -1,2 +1,12 @@
 structure:
   readme: ./introduction.md
+
+redirects:
+  guides/custom-data: https://www.moltin.com/developer/concepts/how-flows-work
+  guides/work-with-inventory: https://www.moltin.com/developer/concepts/how-inventory-works
+  guides/checkout-workflow: https://www.moltin.com/developer/concepts/checkout-workflow
+  guides/carts/how-carts-work: https://www.moltin.com/developer/concepts/how-carts-work
+  guides/product/using-product-variations: https://www.moltin.com/developer/concepts/product-variations
+  guides/organize-your-data-with-moltin: https://www.moltin.com/developer/concepts/organize-your-data-with-moltin
+  guides/product/modifiers: https://www.moltin.com/developer/concepts/product-modifiers
+  guides/payment/implement-own-payment-gateway: https://www.moltin.com/developer/concepts/manual-payment-gateway-custom
