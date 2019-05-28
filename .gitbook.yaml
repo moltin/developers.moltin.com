@@ -2,6 +2,7 @@ structure:
   readme: ./introduction.md
 
 redirects:
+  developer-tools/shopkit: https://www.moltin.com/commerce-solutions/shopkit
   guides/custom-data: https://www.moltin.com/developer/concepts/how-flows-work
   guides/work-with-inventory: https://www.moltin.com/developer/concepts/how-inventory-works
   guides/checkout-workflow: https://www.moltin.com/developer/concepts/checkout-workflow
