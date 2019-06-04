@@ -4,7 +4,7 @@ description: >-
   business needs.
 ---
 
-# Extend the customer profile
+# Extend the customer resource
 
 ### Prerequisites
 

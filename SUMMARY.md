@@ -13,7 +13,6 @@
 * [Checkout workflow](checkout-workflow.md)
 * [Organize your data with Moltin](organize-your-data-with-moltin.md)
 * [Currency](currency.md)
-* [Postman](postman.md)
 
 ## Guides
 
@@ -21,8 +20,8 @@
 * [Manage customers](guides/manage-customers.md)
 * [Custom data - Flows](guides/custom-data/README.md)
   * [Extend a resource with Flows](guides/custom-data/extend-a-resource/README.md)
-    * [Extend the customer profile](guides/custom-data/extend-a-resource/extend-the-customer-profile.md)
-    * [Extend the product model](guides/custom-data/extend-a-resource/extend-product-model.md)
+    * [Extend the customer resource](guides/custom-data/extend-a-resource/extend-the-customer-resource.md)
+    * [Extend the product resource](guides/custom-data/extend-a-resource/extend-product-resource.md)
     * [Extend the order and cart resources](guides/custom-data/extend-a-resource/extend-the-order-and-cart-resources.md)
   * [Create a Blog with lightweight CMS](guides/custom-data/create-a-blog.md)
   * [Create a Wishlist](guides/custom-data/create-a-wishlist.md)
@@ -45,4 +44,5 @@
   * [Custom Payment Gateways](guides/payment/implement-own-payment-gateway.md)
   * [Apple Pay with Swift](guides/payment/apple-pay-with-swift.md)
   * [Payment Request API](guides/payment/payment-request-api.md)
+* [Postman](postman.md)
 

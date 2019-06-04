@@ -25,9 +25,9 @@ Click the links below to view examples of how to use Flows to extend resources.
 
 {% page-ref page="extend-a-resource/" %}
 
-{% page-ref page="extend-a-resource/extend-the-customer-profile.md" %}
+{% page-ref page="extend-a-resource/extend-the-customer-resource.md" %}
 
-{% page-ref page="extend-a-resource/extend-product-model.md" %}
+{% page-ref page="extend-a-resource/extend-product-resource.md" %}
 
 ## New resources
 

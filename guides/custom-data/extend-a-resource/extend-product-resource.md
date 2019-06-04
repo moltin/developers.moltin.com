@@ -4,7 +4,7 @@ description: >-
   validation, such as age restriction for movies.
 ---
 
-# Extend the product model
+# Extend the product resource
 
 ### Prerequisites
 
