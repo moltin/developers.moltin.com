@@ -53,7 +53,7 @@ curl -X POST "https://api.moltin.com/v2/flows" \
 Make sure to take note of the Flow ID returned, you'll need this below as `WISHLIST_FLOW_ID`.
 {% endhint %}
 
-### 3. Create a new Field
+### 3. Tell a Wishlist it will have Products \(create a new Field\)
 
 In this step we will create a field for \`products\`. This field will store the customers desired products.
 
@@ -87,7 +87,7 @@ curl -X POST "https://api.moltin.com/v2/fields" \
     }'
 ```
 
-### 4. Create a Flow Entry
+### 4. Create an empty Wishlist \(flow entry\)
 
 With our custom Flow configured, we next create an empty Entry so we can associate products.
 
@@ -154,7 +154,7 @@ The response will contain the associated products \*\*per entry\*\* like below.
 
 Due to the `implicit` grant type, it is important we connect wishlist and customers. We'll do that next by extending the customer resource.
 
-### 7. Create a Customer Flow
+### 7. Extend the Customers Entity \(create a customer flow\)
 
 We now need to associate a wishlist to a customer.
 
@@ -177,7 +177,7 @@ curl -X POST https://api.moltin.com/v2/flows \
     }'
 ```
 
-### 8. Configure relationship
+### 8. Link a customer to a wishlist \(configure relationship\)
 
 Now let’s create the relationships field that will link a customer to a wishlist \(note that we’re going to create a 'one to many' relationship because we might want customers to create multiple wishlists\):
 
@@ -223,7 +223,7 @@ curl -X POST https://api.moltin.com/v2/customers/{CUSTOMER_ID}/relationships/wis
     }'
 ```
 
-### 9. Get customer wishlists
+### 9. Get a customers wishlists
 
 We’ve saved the wishlist to a customer, so when we make API calls to get that customer we will now see the wishlist\(s\) directly on the customer data object. Don't forget to set `?include=wishlists` to get the wishlist objects.
 
@@ -274,7 +274,34 @@ curl -X GET https://api.moltin.com/v2/customers/{CUSTOMER_ID}?include=wishlists 
 }
 ```
 
+### Adding a new wishlist
 
+To summarise the steps above,  in order to add a new wishlist with new products and a customer who owns it, you should do the following:
+
+* Create a new empty entry in the wishlist flow \(Step 4\)
+* Add products to the new entry \(Step 5\)
+* Associate the entry with a customer \(Step 8\)
+
+### Deleting a wishlist
+
+In order to delete the wishlist, you just need its entry ID, which you can get by following step 9. Once you have the ID, you can call the following:
+
+{% code-tabs %}
+{% code-tabs-item title="Delete Wishlist Entry" %}
+```bash
+curl -X DELETE https://api.moltin.com/v2/flows/wishlist/entries/{ENTRY_ID} \
+     -H "Authorization: XXXX"
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+After you have done this, you should also delete the relationship which exists on the customer, by following the delete method [outlined here](https://docs.moltin.com/api/advanced/custom-data/entry-relationships).
+
+### Updating a wishlist
+
+Should your customer wish to add another product to their wishlist, you can follow step 5, which as per the [docs](https://docs.moltin.com/api/advanced/custom-data/entry-relationships), will append a new relationship without affecting the existing related products.
+
+Should your customer wish to remove a product from their wishlist, you should follow the delete method, again [outlined here](https://docs.moltin.com/api/advanced/custom-data/entry-relationships).
 
 
 
