@@ -4,6 +4,7 @@ This section will give you an idea of how a typical cart works. We will talk abo
 
 * how carts are generated,
 * how to create a cart reference id,
+* how a cart's value is calculated,
 * what happens when a cart is abandoned,
 * what happens to the checked out cart after the order is paid for.
 
@@ -44,9 +45,13 @@ export function cartIdentifier(storage) {
 {% endtab %}
 {% endtabs %}
 
+### How a cart is calculated
+
+A cart's value depends on [taxes](../taxes/) and any applied [promotions](../working-with-promotions.md). Different [calculation methods](../../calculation-methods.md) may be used to arrive at the cart totals.
+
 ###  Abandoned carts
 
-A cart will exist 7 days, and then the API will purge it. However, this doesn't mean that the products added to that cart will be unavailable to other customers. If the [manage stock feature](../work-with-inventory.md) is active, your stock won't be allocated until a payment attempt is made.
+A cart will exist 7 days, and then the API will purge it. However, this doesn't mean that the products added to that cart will be unavailable to other customers. If the [manage stock feature]() is active, your stock won't be allocated until a payment attempt is made.
 
 ### Handling a cart after order payment
 

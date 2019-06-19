@@ -267,7 +267,7 @@ Moltin.Orders.Transactions(id).then(transactions => {
 
 ### Manage your stock
 
-Optionally, if managing stock, make sure it is manually decremented. For more details, see: [Work with inventory](../work-with-inventory.md).
+Optionally, if managing stock, make sure it is manually decremented. For more details, see: [Work with inventory]().
 
 {% tabs %}
 {% tab title="cURL" %}

@@ -496,7 +496,7 @@ Moltin.Cart(reference)
 
 ### How promotions are applied
 
-Promotions are applied to a cart using a simple strategy. Your promotions will appear as cart items in your cart with negative values. The summation of cart items will simply subtract any promotion amount from the sub-total.
+How promotions are applied to a cart differ depending on the [calcuation method](../calculation-methods.md) in use. Your promotions will appear as cart items in your cart with negative values. Using `simple` method, the summation of cart items will simply subtract any promotion amount from the sub-total. Using the `line` method, promotions are distributed across the cart's items and subtracted from the line's sub-total.
 
 ### Next steps
 

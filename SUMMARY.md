@@ -43,5 +43,6 @@
   * [Custom Payment Gateways](guides/payment/implement-own-payment-gateway.md)
   * [Apple Pay with Swift](guides/payment/apple-pay-with-swift.md)
   * [Payment Request API](guides/payment/payment-request-api.md)
-* [Postman](postman.md)
+* [Postman](guides/postman.md)
+* [Calculation methods](calculation-methods.md)
 

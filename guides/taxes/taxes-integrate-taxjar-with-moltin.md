@@ -12,11 +12,11 @@ This guide will show you how to calculate sales tax via TaxJar and integrate it 
 
 ### Moltin tax integration key points:
 
-* Tax calculation logic depends on whether `includes_tax` on the product is set to true or false:
+* **Tax calculation logic.**  The `includes_tax` field on the product can be set to true or false:
   * `true` Moltin will perform a backward calculation of taxes meaning the original product price will not be affected during checkout.
   * `false` Moltin will calculate tax and add it to the original product price.
-* **Promotions and Taxes.** Taxes are calculated after all promotional savings have been applied.
-* **Cart-level promotions.** Promotional savings are equally distributed across all items in the cart. If there is a remainder after distributing promotional savings across cart items, the promo saving will be rounded up, so that there is no remainder left.
+* **Promotions and Taxes.** How taxes are calculated depends on the [calculation method](../../calculation-methods.md) and may be added before or after promotional savings have been applied.
+* **Cart-level promotions.** The way promotional savings are applied to carts depends on the [calculation method](../../calculation-methods.md). They may either be applied as negative cart items or equally distributed across all items in the cart. If there is a remainder after distributing promotional savings across cart items, the promo saving will be rounded up, so that there is no remainder left.
 
 ### Tax scenario overview
 

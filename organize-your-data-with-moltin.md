@@ -37,7 +37,7 @@ The core data unit would be the product you wish to sell, and it can be grouped 
 
 ### **Product inventory**
 
-Every product has its price and stock levels that are managed by the [inventory service](guides/work-with-inventory.md). This in turn communicates with products service, and keep your data up to date and in sync in real time.
+Every product has its price and stock levels that are managed by the [inventory service](). This in turn communicates with products service, and keep your data up to date and in sync in real time.
 
 ### Product catalogue
 

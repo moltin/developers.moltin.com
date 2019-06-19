@@ -43,7 +43,7 @@ The status of an order and the status of shipping are handled separately, and so
 
 ### Inventory
 
-If enabled, you can manage your stock. As such, your stock will be automatically updated as soon as a product is checked out. For more details, see: [Work with Inventory](guides/work-with-inventory.md).
+If enabled, you can manage your stock. As such, your stock will be automatically updated as soon as a product is checked out. For more details, see: [Work with Inventory]().
 
 ### 
 
