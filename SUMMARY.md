@@ -9,7 +9,6 @@
   * [2. Add to Cart](your-first-api-request/2.-add-to-cart.md)
   * [3. Checkout](your-first-api-request/3.-checkout.md)
   * [4. Pay for your order](your-first-api-request/4.-pay-for-your-order.md)
-  * [5. Going further](your-first-api-request/5.-going-further.md)
 * [Checkout workflow](checkout-workflow.md)
 * [Organize your data with Moltin](organize-your-data-with-moltin.md)
 * [Currency](currency.md)
