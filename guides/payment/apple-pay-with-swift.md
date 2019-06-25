@@ -4,6 +4,10 @@ description: A walkthrough of implementing an Apple Pay into an existing IOS app
 
 # Apple Pay with Swift
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/integrate-apple-pay-with-swift). 
+{% endhint %}
+
 ## End result
 
 Your IOS app will be integrated with Apple Pay, so the end users can pay for an order on their phones.

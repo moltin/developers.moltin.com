@@ -1,5 +1,9 @@
 # Setup
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/getting-started-with-moltin).
+{% endhint %}
+
 The **Setup** section will take you step by step through basic project configuration.
 
 Basic project configuration happens at the Moltin [Dashboard](https://dashboard.moltin.com/app/orders/orders?dir=desc). You'll need to **register as a user** to get access to API keys and any stores.

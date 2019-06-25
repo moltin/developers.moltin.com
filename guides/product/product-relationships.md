@@ -4,6 +4,10 @@ description: Describes how to create a related products feature using flows.
 
 # Related Products
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/create-related-products-with-flows).
+{% endhint %}
+
 When creating a store it is useful to show the customer items that can be related to the product you are viewing. For example if you were to buy a pair of boxing gloves you may also want to buy a gum shield or some wraps for your hands. By displaying these related products a customer can conveniently add them to a cart without having to search through your product catalogue. One way we can achieve this is by using the flexibility of Flows and the relationship field. In this example, I am going to create a related-products feature for an online fishing and tackle store. You can follow along with this example, and modify the calls to use products and images relevant to your store.
 
 ### Create products

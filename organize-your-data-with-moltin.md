@@ -6,6 +6,10 @@ description: >-
 
 # Organize your data with Moltin
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/organize-your-data-with-moltin). 
+{% endhint %}
+
 ### **Moltin data structure overview**
 
 As with any API, every entity in Moltin includes required and optional fields which must or can be passed in respectively. These are documented in greater detail by our [API Reference](https://docs.moltin.com/catalog/product-variations). If you have data that is non-standard to Moltin, you can generate/import custom data.

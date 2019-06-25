@@ -1,5 +1,9 @@
 # Launch Checklist
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/getting-started-with-moltin).
+{% endhint %}
+
 Below are a few things to consider before launching an online store, mobile app or IoT integration. Depending on the type of project you're launching, your checklist may look a little different.
 
 Consider these as helpful reminders. 😉

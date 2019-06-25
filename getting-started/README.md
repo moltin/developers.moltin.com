@@ -1,5 +1,9 @@
 # Getting Started
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/getting-started-with-moltin).
+{% endhint %}
+
 Getting Started walks you through a basic project configuration \([**Setup**](https://developers.moltin.com/getting-started/setup)\), and lists some typical steps to consider before you launch your project \([**Launch Checklist**](https://developers.moltin.com/getting-started/launch-checklist)\).
 
 Get yourself up and running in 5 simple steps:

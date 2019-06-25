@@ -1,5 +1,9 @@
 # Checkout workflow
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/checkout-workflow).
+{% endhint %}
+
 This section will walk you briefly through the entire checkout workflow, outlining the checkout process that happens under Moltin's hood, and explaining at which point a product turns into an order and an order becomes complete.
 
 ![Typical Checkout flow](.gitbook/assets/checkout-flow.png)

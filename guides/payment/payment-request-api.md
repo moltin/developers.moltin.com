@@ -1,5 +1,9 @@
 # Payment Request API
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/integrate-payment-request-api-with-moltin).
+{% endhint %}
+
 [Payment Request API](https://developers.google.com/web/fundamentals/payments/) is a browser API that standardizes the checkout flow across the web. It also expedites the payment process by capturing required payment information.
 
 {% hint style="info" %}

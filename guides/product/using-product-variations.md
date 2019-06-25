@@ -1,5 +1,9 @@
 # Product Variations
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/product-variations). 
+{% endhint %}
+
 ### Overview
 
 Variations allow you to generate child products on a product based with a number of options. In the simple example below we have a size variation with three options \(small, medium and large\) and a color variation with three options \(green, red and blue\). This creates a variation matrix with 9 possible unique combinations or "child products".

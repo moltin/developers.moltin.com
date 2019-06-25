@@ -7,6 +7,10 @@ description: >-
 
 # Extend a resource with Flows
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/extend-an-existing-resource-with-flows).
+{% endhint %}
+
 This guide will give you a general idea and know-how around extending an existing resources with custom schema. For more detailed guides on how to extend specific resources, expand the table of contents on the left.
 
 ### Prerequisites

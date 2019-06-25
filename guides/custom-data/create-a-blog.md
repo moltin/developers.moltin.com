@@ -7,6 +7,10 @@ description: >-
 
 # Create a Blog with lightweight CMS
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/create-a-blog-schema-with-flows). 
+{% endhint %}
+
 ### Prerequisites
 
 * Moltin dashboard \(you'll need Client ID and Client Secret of your store\).

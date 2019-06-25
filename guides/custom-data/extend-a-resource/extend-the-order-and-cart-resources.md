@@ -1,5 +1,9 @@
 # Extend the order and cart resources
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/extend-order-and-cart-with-flows).
+{% endhint %}
+
 Extend the order resource to add shipping provider and a consignment number.![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
 
 ### Prerequisites

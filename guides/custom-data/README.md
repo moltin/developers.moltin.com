@@ -1,5 +1,9 @@
 # Custom data - Flows
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts page](https://www.moltin.com/developer/concepts/how-flows-work).
+{% endhint %}
+
 One of the great features of Moltin is the ability to extend existing core resources and the flexibility to create your own. With [Flows](https://docs.moltin.com/advanced/custom-data), you are able to create various types of fields, including strings, booleans, dates, integers and relationships with other custom flows.
 
 The Moltin API aims to provide predictable, easy to use, RESTful endpoints that can power any ecommerce project. With Flows, you are able to apply Moltin to almost any use case.

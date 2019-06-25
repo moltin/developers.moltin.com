@@ -1,5 +1,9 @@
 # Taxes FAQ
 
+{% hint style="danger" %}
+Content moved to [Moltin Developer Blog](https://www.moltin.com/blog/february-2019-ama-working-with-taxes).
+{% endhint %}
+
 ## Taxes in general
 
 **Q:** **How can I make sure I calculate taxes correctly?**

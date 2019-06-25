@@ -1,5 +1,9 @@
 # Manage customers
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts page](https://www.moltin.com/developer/concepts/how-to-manage-customers).
+{% endhint %}
+
 Manage your customers through the API or directly through [Moltin dashboard](https://dashboard.moltin.com/).
 
 ### **Create a customer**

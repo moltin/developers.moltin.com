@@ -6,6 +6,10 @@ description: >-
 
 # Create a formatted order csv
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/create-a-formatted-order-csv). 
+{% endhint %}
+
 ## 1. Get your access token <a id="1-get-your-access-token"></a>
 
 You will need to get a [`client_credentials`](https://docs.moltin.com/basics/authentication/client-credential-token) access token to follow along making the API requests outlined below.

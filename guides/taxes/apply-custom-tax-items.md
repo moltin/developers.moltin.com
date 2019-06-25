@@ -1,5 +1,9 @@
 # Apply custom tax items
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/how-taxes-work).
+{% endhint %}
+
 Add tax to items in your cart to apply relevant taxes for checked out products.  
 
 This guide will show you how to apply a flat rate sales tax to every cart item in your Moltin cart.   For more information on the tax object, see the [API Reference](https://docs.moltin.com/carts-and-checkout/carts/cart-items/tax-items#the-tax-item-object).

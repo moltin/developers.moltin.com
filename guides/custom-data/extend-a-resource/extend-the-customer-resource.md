@@ -6,6 +6,10 @@ description: >-
 
 # Extend the customer resource
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/extend-customer-resource-with-flows). 
+{% endhint %}
+
 ### Prerequisites
 
 * Moltin account \(you'll need the Client ID and Client Secret of your store\).

@@ -1,5 +1,9 @@
 # Payment
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/how-payment-gateways-work).
+{% endhint %}
+
 This page collates all content on integrating payment into your project. Click on a box below to access the guide you wish to read.
 
 At the moment, Moltin supports the following third-party payment gateways:

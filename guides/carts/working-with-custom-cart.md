@@ -1,5 +1,9 @@
 # Working with Custom Cart
 
+{% hint style="danger" %}
+Content moved to [Developer Concepts](https://www.moltin.com/developer/concepts/when-to-use-a-custom-cart).
+{% endhint %}
+
 Custom carts allow you to process an order for any type of item you wish to sell. The item does not need to exists in Moltin, which means custom cart items can be used for all sort of use cases.
 
 **Places in the user flow you would use Custom cart**

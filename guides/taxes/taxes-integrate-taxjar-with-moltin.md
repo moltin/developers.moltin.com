@@ -1,5 +1,9 @@
 # Integrate TaxJar with Moltin
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/integrate-taxjar-with-moltin). 
+{% endhint %}
+
 Add tax to items in your cart and calculate taxes using   TaxJar that provides a sales tax API for developers to get calculations for products.  
 
 This guide will show you how to calculate sales tax via TaxJar and integrate it with your Moltin cart.   For more information on the tax object, see the [API Reference](https://docs.moltin.com/carts-and-checkout/carts/cart-items/tax-items#the-tax-item-object).

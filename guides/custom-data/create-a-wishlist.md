@@ -6,6 +6,10 @@ description: >-
 
 # Create a Wishlist
 
+{% hint style="danger" %}
+Content moved to [Developer Guides](https://www.moltin.com/developer/guides/create-a-wishlist-with-flows). 
+{% endhint %}
+
 ### Prerequisites
 
 * Moltin dashboard \(you'll need Client ID and Client Secret of your store\).
